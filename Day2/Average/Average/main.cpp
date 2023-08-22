@@ -6,9 +6,17 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
+using namespace std;
+int main() {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    float score_1; float score_2; float score_3; float score_4; float score_5;
+    float score_average;
+    
+    cout << "Enter 5 assignment scores: \n";
+    cin >> score_1 >> score_2 >> score_3 >> score_4 >> score_5;
+    
+    score_average = (score_1 + score_2 + score_3 + score_4 + score_5)/5;
+    cout << "Average:" << score_average << "\n";
+    
     return 0;
 }
