@@ -9,19 +9,12 @@
 using namespace std;
 int main() {
     // insert code here...
-    int price_in_cents;
-    int paid_in_cents;
-    int change;
-    int quarters;
-    int dimes;
-    int nickles;
-    int pennies;
-    int change_remain;
+    int price_in_cents, paid_in_cents, change, quarters, dimes, nickles, pennies, change_remain;
     
     cout << "Enter item price in cents: \n";
     cin >> price_in_cents;
     
-    cout << "\n Enter amount paid in cents: \n";
+    cout << "\nEnter amount paid in cents: \n";
     cin >> paid_in_cents;
     
     change = paid_in_cents - price_in_cents;
@@ -33,7 +26,7 @@ int main() {
     change_remain = change_remain - nickles * 5;
     pennies = change_remain;
     
-    cout << "Change = " << change << "cents \n";
+    cout << "\n" <<"Change = " << change << "cents \n";
     cout << "Quarters: " << quarters << "\n";
     cout << "Dimes: " << dimes << "\n";
     cout << "Nickles: " << nickles << "\n";
