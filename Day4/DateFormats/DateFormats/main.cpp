@@ -27,7 +27,7 @@ int main() {
         }
     }
     
-    if(std::stoi(USdate.substr(0,2)) < 1 || std::stoi(USdate.substr(0,2)) >12 ||std::stoi(USdate.substr(3,2)) <1 || std::stoi(USdate.substr(3,2)) > 31 || std::stoi(USdate.substr(6,4)) < 1000 || std::stoi(USdate.substr(6,4)) > 9999){
+    if(std::stoi(USdate.substr(0,2)) < 1 || std::stoi(USdate.substr(0,2)) >12 ||std::stoi(USdate.substr(3,2)) <1 || std::stoi(USdate.substr(3,2)) > 31 || std::stoi(USdate.substr(6,4)) < 1000 || USdate.length() > 10){
         
         std::cout << "Invalid date.\n";
         
