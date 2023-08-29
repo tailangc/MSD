@@ -19,9 +19,10 @@ int main() {
     }
     
     
+    std::cout << "Roman numeral version: \n";
+    
     
     while(num > 0){
-        std::cout << "Roman numeral version: \n";
         if(num >= 1000){
             std::cout << "M";
             num = num - 1000;
@@ -75,7 +76,7 @@ int main() {
             num = num -1;
         }
     }
-    
+  
     std::cout << "\n";
     
     return 0;
