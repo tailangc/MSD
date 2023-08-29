@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC9CD5562A9D15C700215D0A /* LetterHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD5542A9D15C700215D0A /* LetterHelpers.cpp */; };
-		FC9CD55C2A9D174800215D0A /* WordHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD55A2A9D174800215D0A /* WordHelpers.cpp */; };
-		FCCA339E2A9963AA00192495 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCCA339D2A9963AA00192495 /* main.cpp */; };
+		FC9CD5722A9D36C000215D0A /* VectorUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD5712A9D36C000215D0A /* VectorUtil.cpp */; };
+		FC9CD5742A9D36F500215D0A /* VectorTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC9CD5732A9D36F500215D0A /* VectorTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FCCA33982A9963AA00192495 /* CopyFiles */ = {
+		FC9CD5642A9D363A00215D0A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,16 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC9CD5542A9D15C700215D0A /* LetterHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LetterHelpers.cpp; sourceTree = "<group>"; };
-		FC9CD5552A9D15C700215D0A /* LetterHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LetterHelpers.hpp; sourceTree = "<group>"; };
-		FC9CD55A2A9D174800215D0A /* WordHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WordHelpers.cpp; sourceTree = "<group>"; };
-		FC9CD55B2A9D174800215D0A /* WordHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WordHelpers.hpp; sourceTree = "<group>"; };
-		FCCA339A2A9963AA00192495 /* StringAnalyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringAnalyzer; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCCA339D2A9963AA00192495 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FC9CD5662A9D363A00215D0A /* VectorHW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VectorHW; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC9CD5702A9D368400215D0A /* VectorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorUtil.h; sourceTree = "<group>"; };
+		FC9CD5712A9D36C000215D0A /* VectorUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorUtil.cpp; sourceTree = "<group>"; };
+		FC9CD5732A9D36F500215D0A /* VectorTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FCCA33972A9963AA00192495 /* Frameworks */ = {
+		FC9CD5632A9D363A00215D0A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,69 +41,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FCCA33912A9963AA00192495 = {
+		FC9CD55D2A9D363A00215D0A = {
 			isa = PBXGroup;
 			children = (
-				FCCA339C2A9963AA00192495 /* StringAnalyzer */,
-				FCCA339B2A9963AA00192495 /* Products */,
+				FC9CD5682A9D363A00215D0A /* VectorHW */,
+				FC9CD5672A9D363A00215D0A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FCCA339B2A9963AA00192495 /* Products */ = {
+		FC9CD5672A9D363A00215D0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCCA339A2A9963AA00192495 /* StringAnalyzer */,
+				FC9CD5662A9D363A00215D0A /* VectorHW */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCCA339C2A9963AA00192495 /* StringAnalyzer */ = {
+		FC9CD5682A9D363A00215D0A /* VectorHW */ = {
 			isa = PBXGroup;
 			children = (
-				FCCA339D2A9963AA00192495 /* main.cpp */,
-				FC9CD5542A9D15C700215D0A /* LetterHelpers.cpp */,
-				FC9CD5552A9D15C700215D0A /* LetterHelpers.hpp */,
-				FC9CD55A2A9D174800215D0A /* WordHelpers.cpp */,
-				FC9CD55B2A9D174800215D0A /* WordHelpers.hpp */,
+				FC9CD5712A9D36C000215D0A /* VectorUtil.cpp */,
+				FC9CD5702A9D368400215D0A /* VectorUtil.h */,
+				FC9CD5732A9D36F500215D0A /* VectorTest.cpp */,
 			);
-			path = StringAnalyzer;
+			path = VectorHW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FCCA33992A9963AA00192495 /* StringAnalyzer */ = {
+		FC9CD5652A9D363A00215D0A /* VectorHW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCCA33A12A9963AA00192495 /* Build configuration list for PBXNativeTarget "StringAnalyzer" */;
+			buildConfigurationList = FC9CD56D2A9D363A00215D0A /* Build configuration list for PBXNativeTarget "VectorHW" */;
 			buildPhases = (
-				FCCA33962A9963AA00192495 /* Sources */,
-				FCCA33972A9963AA00192495 /* Frameworks */,
-				FCCA33982A9963AA00192495 /* CopyFiles */,
+				FC9CD5622A9D363A00215D0A /* Sources */,
+				FC9CD5632A9D363A00215D0A /* Frameworks */,
+				FC9CD5642A9D363A00215D0A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = StringAnalyzer;
-			productName = StringAnalyzer;
-			productReference = FCCA339A2A9963AA00192495 /* StringAnalyzer */;
+			name = VectorHW;
+			productName = VectorHW;
+			productReference = FC9CD5662A9D363A00215D0A /* VectorHW */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FCCA33922A9963AA00192495 /* Project object */ = {
+		FC9CD55E2A9D363A00215D0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					FCCA33992A9963AA00192495 = {
+					FC9CD5652A9D363A00215D0A = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = FCCA33952A9963AA00192495 /* Build configuration list for PBXProject "StringAnalyzer" */;
+			buildConfigurationList = FC9CD5612A9D363A00215D0A /* Build configuration list for PBXProject "VectorHW" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,31 +109,30 @@
 				en,
 				Base,
 			);
-			mainGroup = FCCA33912A9963AA00192495;
-			productRefGroup = FCCA339B2A9963AA00192495 /* Products */;
+			mainGroup = FC9CD55D2A9D363A00215D0A;
+			productRefGroup = FC9CD5672A9D363A00215D0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FCCA33992A9963AA00192495 /* StringAnalyzer */,
+				FC9CD5652A9D363A00215D0A /* VectorHW */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FCCA33962A9963AA00192495 /* Sources */ = {
+		FC9CD5622A9D363A00215D0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9CD55C2A9D174800215D0A /* WordHelpers.cpp in Sources */,
-				FCCA339E2A9963AA00192495 /* main.cpp in Sources */,
-				FC9CD5562A9D15C700215D0A /* LetterHelpers.cpp in Sources */,
+				FC9CD5722A9D36C000215D0A /* VectorUtil.cpp in Sources */,
+				FC9CD5742A9D36F500215D0A /* VectorTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FCCA339F2A9963AA00192495 /* Debug */ = {
+		FC9CD56B2A9D363A00215D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +190,7 @@
 			};
 			name = Debug;
 		};
-		FCCA33A02A9963AA00192495 /* Release */ = {
+		FC9CD56C2A9D363A00215D0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -247,7 +241,7 @@
 			};
 			name = Release;
 		};
-		FCCA33A22A9963AA00192495 /* Debug */ = {
+		FC9CD56E2A9D363A00215D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -255,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		FCCA33A32A9963AA00192495 /* Release */ = {
+		FC9CD56F2A9D363A00215D0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -266,25 +260,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCCA33952A9963AA00192495 /* Build configuration list for PBXProject "StringAnalyzer" */ = {
+		FC9CD5612A9D363A00215D0A /* Build configuration list for PBXProject "VectorHW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCCA339F2A9963AA00192495 /* Debug */,
-				FCCA33A02A9963AA00192495 /* Release */,
+				FC9CD56B2A9D363A00215D0A /* Debug */,
+				FC9CD56C2A9D363A00215D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCCA33A12A9963AA00192495 /* Build configuration list for PBXNativeTarget "StringAnalyzer" */ = {
+		FC9CD56D2A9D363A00215D0A /* Build configuration list for PBXNativeTarget "VectorHW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCCA33A22A9963AA00192495 /* Debug */,
-				FCCA33A32A9963AA00192495 /* Release */,
+				FC9CD56E2A9D363A00215D0A /* Debug */,
+				FC9CD56F2A9D363A00215D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FCCA33922A9963AA00192495 /* Project object */;
+	rootObject = FC9CD55E2A9D363A00215D0A /* Project object */;
 }
