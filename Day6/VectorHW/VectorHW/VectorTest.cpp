@@ -35,7 +35,7 @@ int main()
 
   // We can use list initialization syntax:
   vector<int> v1 = {3, 1, 0, -1, 5};
-
+    vector<int> v3 = {};
   // Or we can repeatedly push_back items
   vector<int> v2;
   v2.push_back(1);
@@ -77,6 +77,10 @@ int main()
   if (FindMax(v2) !=3){
       ErrorExit("FindMax - test 2");
     }
+    
+  if (FindMax(v3) !=-1){
+        ErrorExit("FindMax - test 3");
+      }
 
 //  if (FindMax(empty) == 99){
 //        ErrorExit("FindMax - empty");
@@ -89,6 +93,10 @@ int main()
     if (FindMin(v2) != 1){
         ErrorExit("FinMin - test 2");
     }
+    
+    if (FindMin(v3) != -1){
+        ErrorExit("FinMin - test 3");
+    }
 
     if (Average(v1) != 1){
         ErrorExit("Average - test 1");
@@ -97,6 +105,9 @@ int main()
     if (Average(v2) != 2){
         ErrorExit("Average - test2");
     }
+    if (Average(v3) != -1){
+        ErrorExit("Average - test3");
+    }
 
     if (IsSorted(v1)){
         ErrorExit("IsSorted - test1");
@@ -104,6 +115,10 @@ int main()
 
     if (IsSorted(v2) == false){
         ErrorExit("IsSorted - test2");
+    }
+    
+    if (IsSorted(v3) == false){
+        ErrorExit("IsSorted - test3");
     }
   // TODO: Add your own tests that thoroughly exercise your VectorUtil library.
 
