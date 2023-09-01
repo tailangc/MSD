@@ -32,7 +32,7 @@ bool IsVowel(char c){
 }
 
 bool IsConsonants(char c){
-    if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U' || c == ' ' || c == '!' || c == '?' || c == '.' || c == ',' || c == 'y' || c == 'Y'){
+    if (IsVowel(c)|| IsPunctuation(c)|| c == ' '){
         return false;
     }
     return true;

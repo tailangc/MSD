@@ -48,10 +48,14 @@ bool Contains( vector<int> input, int lookFor )
  */
 int FindMin( vector<int> input )
 {
+    if(input.size()==0){
+        return -1;
+    }
+    
     int min = input[0];
-    for (int i : input){
-        if (i < min){
-            min = i;
+    for (int i=1; i<input.size()-1; i++){ 
+        if (input[i] < min){
+            min = input[i];
         }
     }
     return min;
@@ -71,10 +75,13 @@ int FindMin( vector<int> input )
     
 int FindMax( vector<int> input )
 {
+    if(input.size()==0){
+        return -1;
+    }
     int max = input[0];
-    for(int i: input){
-        if (i>max) {
-            max = i;
+    for (int i=1; i<input.size()-1; i++){
+        if (input[i] > max){
+            max = input[i];
         }
     }
     
@@ -94,11 +101,14 @@ int FindMax( vector<int> input )
  */
 int Average( vector<int> input )
 {
+    if(input.size()==0){
+        return -1;
+    }
     int sum = 0, avg = 0;
     for (int i : input){
         sum += i;
-        avg = sum / input.size();
     }
+    avg = sum / input.size();
   return avg;
 }
 
@@ -125,6 +135,10 @@ int Average( vector<int> input )
  */
 bool IsSorted( vector<int> input )
 {
+    if(input.size()==0){
+        return false;
+    }
+    
     for (int i=0; i < input.size()-1; i++){
         if (input[i] > input[i+1]){
             return false;
