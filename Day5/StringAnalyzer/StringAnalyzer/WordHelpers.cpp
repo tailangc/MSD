@@ -12,7 +12,7 @@ int NumWords(std::string s){
     int count = 0;
     int i = 0;
     char x;
-    while(i < s.length()){
+    while(i < s.length()){ 
         x = s[i];
         if(x == ' '){
             count += 1;
