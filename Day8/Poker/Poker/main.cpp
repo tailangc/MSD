@@ -10,22 +10,22 @@
 
 int main() {
     
-//    std::vector<card> deck = Deck();
-//    Shuffle(deck);
+    std::vector<Card> deck = Deck();
+    Shuffle(deck);
     
-//    std::vector<card> subdeck = get_subdeck(deck);
+    std::vector<Card> subdeck = get_subdeck(deck);
     
-//    for(card sub : subdeck){
-//        std::cout << sub.suit << sub.rank << " ";
+    for(Card sub : subdeck){
+        std::cout << sub.suit << sub.rank << " ";
+    }
+//    std::vector<card> deck = {{"S","1"},{"S","2"},{"S","3"},{"S","5"},{"S","4"}};
+////
+//    if(isStraight(deck)==false){
+//        std::cout << "false";
 //    }
-    std::vector<card> deck = {{"S","1"},{"S","2"},{"S","3"},{"S","5"},{"S","4"}};
-//
-    if(isStraight(deck)==false){
-        std::cout << "false";
-    }
-    else{
-        std::cout << "true";
-    }
+//    else{
+//        std::cout << "true";
+//    }
     
 //    for(card c : deck){
 //        std::cout << c.suit << c.rank << " ";

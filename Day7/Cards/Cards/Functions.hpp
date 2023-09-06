@@ -12,35 +12,35 @@
 #include<cstdlib>
 #include<string>
 
-struct card{std::string suit; std::string rank;};
+struct Card{std::string suit; std::string rank;};
 
-void printCards(std::vector<card>& Deck);
+void printCards(std::vector<Card>& Deck);
 
-std::vector<card> Deck();
+std::vector<Card> Deck();
 
 void swap(int& a, int& b);
 
-void Shuffle(std::vector<card>& Deck);
+void Shuffle(std::vector<Card>& Deck);
 
-std::vector<card> get_subdeck(std::vector<card> Deck);
+std::vector<Card> get_subdeck(std::vector<Card> Deck);
 
-bool isFlush(std::vector<card> subdeck);
+bool isFlush(std::vector<Card> subdeck);
 
-bool isStraight(std::vector<card> subdeck);
+bool isStraight(std::vector<Card> subdeck);
 
-bool isStraightFlush(std::vector<card> subdeck);
+bool isStraightFlush(std::vector<Card> subdeck);
 
-bool A_Straight(std::vector<card> subdeck);
+bool A_Straight(std::vector<Card> subdeck);
 
-bool Norm_Straight(std::vector<card> subdeck);
+bool Norm_Straight(std::vector<Card> subdeck);
 
-bool isRoyalFlush(std::vector<card> subdeck);
+bool isRoyalFlush(std::vector<Card> subdeck);
 
-bool A_isFullHouse(std::vector<card> subdeck);
+bool A_isFullHouse(std::vector<Card> subdeck);
 
-bool Norm_isFullHouse(std::vector<card> subdeck);
+bool Norm_isFullHouse(std::vector<Card> subdeck);
 
-bool isFullhouse(std::vector<card> subdeck);
+bool isFullhouse(std::vector<Card> subdeck);
 
 
 #endif /* Functions_hpp */
