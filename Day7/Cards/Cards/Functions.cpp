@@ -11,15 +11,15 @@
 #include<string>
 #include <algorithm>
 
-std::vector<card> Deck(){
-    std::vector suit_type = {"H", "S", "C", "D"};
+std::vector<Card> Deck(){
+    std::vector<std::string> suit_type = {"H", "S", "C", "D"};
     std::vector rank = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
     
-    card temp_card;
-    std::vector<card> deck;
+    Card temp_card;
+    std::vector<Card> deck;
     
-    for(std::string i : suit_type){
-        for(std::string j : rank){
+    for(const std::string &i : suit_type){
+        for(const std::string& j : rank){
             temp_card.suit = i;
             temp_card.rank = j;
             deck.push_back(temp_card);
@@ -31,19 +31,19 @@ std::vector<card> Deck(){
     return deck;
 }
 
-void printCards(std::vector<card>& Deck){
-    for(card c : Deck){
+void printCards(const std::vector<Card>& Deck){
+    for(const Card& c : Deck){
         std::cout << c.suit << c.rank << " ";
     }
 }
 
-void swap(card& a, card& b){
-    card temp = a;
+void swap(Card& a, Card& b){
+    Card temp = a;
     a = b;
     b = temp;
 }
 
-void Shuffle(std::vector<card>& Deck){
+void Shuffle(std::vector<Card>& Deck){
 //    int ran_pos,ran_pos2;
     for(int i = 51; i > 0; i--){
         //        std::cout<<i;
@@ -53,15 +53,15 @@ void Shuffle(std::vector<card>& Deck){
     }
 }
 
-std::vector<card> get_subdeck(std::vector<card> Deck){
-    std::vector<card> subdeck;
+std::vector<Card> get_subdeck(std::vector<Card> Deck){
+    std::vector<Card> subdeck;
     for (int i = 0; i<=4; i++){
         subdeck.push_back(Deck[i]);
     }
     return subdeck;
 }
 
-bool isFlush(std::vector<card> subdeck){
+bool isFlush(std::vector<Card> subdeck){
     for(int i = 0; i<4; i++){
         if (subdeck[i].suit != subdeck[i+1].suit){
             return false;
@@ -70,10 +70,10 @@ bool isFlush(std::vector<card> subdeck){
     return true;
 }
 
-bool A_Straight(std::vector<card> subdeck){
+bool A_Straight(std::vector<Card> subdeck){
     std::vector<int> kill_me;
 
-    for(card a:subdeck){
+    for(Card a:subdeck){
         if(a.rank=="A"){
             kill_me.push_back(1);
         }else if (a.rank=="J"){
@@ -95,10 +95,10 @@ bool A_Straight(std::vector<card> subdeck){
     return true;
 }
 
-bool Norm_Straight(std::vector<card> subdeck){
+bool Norm_Straight(std::vector<Card> subdeck){
     std::vector<int> kill_me;
 
-    for(card a:subdeck){
+    for(Card a:subdeck){
         if(a.rank=="A"){
             kill_me.push_back(14);
         }else if (a.rank=="J"){
@@ -121,21 +121,21 @@ bool Norm_Straight(std::vector<card> subdeck){
 }
     
 
-bool isStraight(std::vector<card> subdeck){
+bool isStraight(std::vector<Card> subdeck){
     if(A_Straight(subdeck)||Norm_Straight(subdeck)){
         return true;
     }
     return false;
 }
 
-bool isStraightFlush(std::vector<card> subdeck){
+bool isStraightFlush(std::vector<Card> subdeck){
     if(isFlush(subdeck)&&isStraight(subdeck)){
         return true;
     }
     return false;
 }
 
-bool isRoyalFlush(std::vector<card> subdeck){
+bool isRoyalFlush(std::vector<Card> subdeck){
     if(isStraightFlush(subdeck)){
         for(int i = 0; i < 4; i++ ){
             if(subdeck[i].rank == "A"){
@@ -151,10 +151,10 @@ bool isRoyalFlush(std::vector<card> subdeck){
 }
 
 
-bool A_isFullHouse(std::vector<card> subdeck){
+bool A_isFullHouse(std::vector<Card> subdeck){
     std::vector<int> kill_me;
 
-    for(card a:subdeck){
+    for(Card a:subdeck){
         if(a.rank=="A"){
             kill_me.push_back(1);
         }else if (a.rank=="J"){
@@ -184,10 +184,10 @@ bool A_isFullHouse(std::vector<card> subdeck){
 }
 
 
-bool Norm_isFullHouse(std::vector<card> subdeck){
+bool Norm_isFullHouse(std::vector<Card> subdeck){
     std::vector<int> kill_me;
 
-    for(card a:subdeck){
+    for(Card a:subdeck){
         if(a.rank=="A"){
             kill_me.push_back(14);
         }else if (a.rank=="J"){
@@ -217,7 +217,7 @@ bool Norm_isFullHouse(std::vector<card> subdeck){
 }
 
 
-bool isFullhouse(std::vector<card> subdeck){
+bool isFullhouse(std::vector<Card> subdeck){
     if(A_isFullHouse(subdeck)||Norm_isFullHouse(subdeck)){
         return true;
     }

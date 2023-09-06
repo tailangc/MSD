@@ -10,11 +10,11 @@
 
 int main() {
     
-    std::vector<card> deck = Deck();
+    std::vector<Card> deck = Deck();
     
     
     
-    std::vector<card> subdeck = get_subdeck(deck);
+    std::vector<Card> subdeck = get_subdeck(deck);
     
     int i = 0;
     int numFlush = 0, numStraight = 0, numStraightFlush = 0, numRoyalFlush = 0, numFullHouse = 0;
