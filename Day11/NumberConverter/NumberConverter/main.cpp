@@ -6,9 +6,19 @@
 //
 
 #include <iostream>
+#include "functions.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+//    std::string deciStr = "-ff";
+//    int base = 16;
+//    int deciNum = StringToInt(deciStr, base);
+//    std::cout << deciNum;
+    
+//    int deciInt = -456;
+//
+//    std::cout << intToBinaryString(deciInt);
+    std::cout << StringToInt(intToHexadecimalString(-10), 16);
+    
+    
     return 0;
 }

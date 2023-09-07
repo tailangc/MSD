@@ -1,0 +1,41 @@
+Convert the following decimal numbers to binary and hexadecimal
+
+ decimal.      binary      hexadecimal
+   12           1100            c 
+   63          111111          3F
+  100          1100100         64
+  127          1111111         7F
+  254          11111110        FE
+
+
+Convert the following binary numbers to decimal and hexadecimal
+
+Binary         decimal            hexadecimal
+100              4                    4
+10001            17                   11
+100010           34                   22
+11000000         192                  C0
+11111111         255                  FF
+
+
+Convert the following hexadecimal numbers to binary and decimal
+
+Hexadecimal       binary              decimal
+A                  1010                 10
+C0                 11000000             192
+FF                 11111111             255
+BEEF               1011111011101111     48879
+F00D               1111000000001101     61453
+
+
+What's the biggest number you can write using 8 binary digits? What is its value in decimal, and hexadecimal? What's the significance of this number?
+8 binary digits         decimal     hexadecimal
+  11111111                255          FF
+
+What's the significance of this number?
+It is the largest number that a byte can store in the computer.
+
+
+
+Try counting from 0 to 31 on your fingers using binary. How many fingers do you need?
+5 fingers.
