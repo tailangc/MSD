@@ -18,7 +18,8 @@ int main() {
     
     int i = 0;
     int numFlush = 0, numStraight = 0, numStraightFlush = 0, numRoyalFlush = 0, numFullHouse = 0;
-    while(i <= 100000){
+    double testNum = 1000000;
+    while(i <= testNum){
         if(isFlush(subdeck)){
             numFlush += 1;
         }
@@ -41,11 +42,17 @@ int main() {
         i += 1;
     }
     
-    std::cout << "Number of occurance of flush is: " << numFlush << "\n";
-    std::cout << "Number of occurance of straight is: " << numStraight << "\n";
-    std::cout << "Number of occourance of straight flush: " << numStraightFlush << "\n";
-    std::cout << "Number of occurance of royal flush is: " << numRoyalFlush << "\n";
-    std::cout << "Number of occurance of fullhouse is: " << numFullHouse << "\n";
+    double flushPos, straightPos, straightFlushPos, royalFlushPos, fullHousePos;
+    flushPos = (numFlush*100) / testNum;
+    straightPos = (numStraight*100) / testNum;
+    straightFlushPos = (numStraightFlush*100) / testNum;
+    royalFlushPos = (numRoyalFlush*100) / testNum;
+    fullHousePos = (numFullHouse*100) / testNum;
+    std::cout << "Possibility of flush is: " << flushPos << "%" << "\n";
+    std::cout << "Possibility of straight is: " << straightPos << "%" << "\n";
+    std::cout << "Possibility of straight flush: " << straightFlushPos << "%" << "\n";
+    std::cout << "Possibility of royal flush is: " << royalFlushPos << "%" << "\n";
+    std::cout << "Possibility of fullhouse is: " << fullHousePos << "%" << "\n";
         
     
 

@@ -53,6 +53,7 @@ void Shuffle(std::vector<Card>& Deck){
     }
 }
 
+// Get subdeck by pushing back the first five elements into a new vector;
 std::vector<Card> get_subdeck(std::vector<Card> Deck){
     std::vector<Card> subdeck;
     for (int i = 0; i<=4; i++){
@@ -61,6 +62,7 @@ std::vector<Card> get_subdeck(std::vector<Card> Deck){
     return subdeck;
 }
 
+//Check if the handcard is a flush by checking if all the former suit equals to the next suit
 bool isFlush(std::vector<Card> subdeck){
     for(int i = 0; i<4; i++){
         if (subdeck[i].suit != subdeck[i+1].suit){
@@ -70,7 +72,11 @@ bool isFlush(std::vector<Card> subdeck){
     return true;
 }
 
-bool A_Straight(std::vector<Card> subdeck){
+
+//Check if the handcard is straight
+//Transforming face card and A into numbers to create a vector that is sortable. (A in the condition of 1)
+//Check if all the former card rank in the handcard after sorting is one number smaller than the card rank after it
+bool A_Straight(std::vector<Card>& subdeck){
     std::vector<int> kill_me;
 
     for(Card a:subdeck){
@@ -95,6 +101,9 @@ bool A_Straight(std::vector<Card> subdeck){
     return true;
 }
 
+//Check if the handcard is straight
+//Transforming face card and A into numbers to create a vector that is sortable. (A in the condition of 14)
+//Check if all the former card rank in the handcard after sorting is one number smaller than the card rank after it
 bool Norm_Straight(std::vector<Card> subdeck){
     std::vector<int> kill_me;
 
@@ -128,6 +137,7 @@ bool isStraight(std::vector<Card> subdeck){
     return false;
 }
 
+
 bool isStraightFlush(std::vector<Card> subdeck){
     if(isFlush(subdeck)&&isStraight(subdeck)){
         return true;
@@ -135,13 +145,18 @@ bool isStraightFlush(std::vector<Card> subdeck){
     return false;
 }
 
+
+// Check if the handcard is royal flush under the circumstance of a straight flush.
+// See through the hand card to see if there exist rank 'A'.
+// See through the hand card to see if there exist rank 'K'.
+// If the two both exist and its a straight flush, then its a royal flush.
 bool isRoyalFlush(std::vector<Card> subdeck){
     if(isStraightFlush(subdeck)){
         for(int i = 0; i < 4; i++ ){
             if(subdeck[i].rank == "A"){
                 for(int j = 0; j<4; j++){
                     if(subdeck[j].rank == "K"){
-                        return true;
+                        return true;//change to singlr for loop with sorting function
                     }
                 }
             }
@@ -205,7 +220,7 @@ bool Norm_isFullHouse(std::vector<Card> subdeck){
     if(kill_me[0] != kill_me[1]){
         return false;
     }
-                                if(kill_me[3] != kill_me[4]){
+    if(kill_me[3] != kill_me[4]){
         return false;
     }
     if(kill_me[1]!=kill_me[2] && kill_me[2]!=kill_me[3]){
