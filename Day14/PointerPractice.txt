@@ -46,3 +46,14 @@ int main(int argc, const char * argv[]) {
   vec1.data = nullptr;
 return 0;
 }
+
+
+#ifndef helper_hpp
+#define helper_hpp
+
+#include <stdio.h>
+struct myVector{double* data; int size; int capacity;};
+double arraymodSum(myVector &vec1);
+void growMyVector(myVector& vec1);
+
+#endif /* helper_hpp */
