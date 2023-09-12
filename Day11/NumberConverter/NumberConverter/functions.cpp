@@ -7,6 +7,7 @@
 
 #include "functions.hpp"
 #include <istream>
+#include <iostream>
 
 
 int StringToInt(std::string numStr, int base){
@@ -68,7 +69,12 @@ int ConvertHex (std::string hexStr){
         hexStr = hexStr.substr(1, hexStr.size()-1);
         }
     for (int i = 0; i < hexStr.size(); i++){
-        numericValue = (tolower(hexStr[i]) - 'a' + 10) * pow(16, (hexStr.size()-i-1));
+        if (hexStr[i] > 47 && hexStr[i] < 58){
+            numericValue = (hexStr[i] - '0') * pow(16, (hexStr.size()-i-1));
+        }
+        else{
+            numericValue = (tolower(hexStr[i]) - 'a' + 10) * pow(16, (hexStr.size()-i-1));
+        }
         decNum += numericValue;
     }
     return decNum;

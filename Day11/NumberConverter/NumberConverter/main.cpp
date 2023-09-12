@@ -15,9 +15,13 @@ int main(int argc, const char * argv[]) {
 //    std::cout << deciNum;
     
 //    int deciInt = -456;
-//
 //    std::cout << intToBinaryString(deciInt);
-    std::cout << StringToInt(intToHexadecimalString(-10), 16);
+//    std::cout << intToHexadecimalString(-10);
+//    std::cout << StringToInt(intToHexadecimalString(-17), 16);
+//    std::cout << intToHexadecimalString(-17);
+//    std::cout << StringToInt("-23", 16);
+    std::cout << ConvertHex("-1f");
+    
     
     
     return 0;
