@@ -1,0 +1,3 @@
+/Users/tailangcao/myGithubRepo/FinalProj/xcode/CMakeFiles/testSFML.dir
+/Users/tailangcao/myGithubRepo/FinalProj/xcode/CMakeFiles/ALL_BUILD.dir
+/Users/tailangcao/myGithubRepo/FinalProj/xcode/CMakeFiles/ZERO_CHECK.dir
