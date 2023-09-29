@@ -7,6 +7,7 @@ public class Fraction {
         denominator = 1;
     }
 
+    
     public Fraction(long n, long d){
         numerator = n;
         denominator = d;
