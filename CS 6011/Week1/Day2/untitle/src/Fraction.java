@@ -7,10 +7,15 @@ public class Fraction {
         denominator = 1;
     }
 
-    
+
     public Fraction(long n, long d){
+        if (d == 0) {
+            throw new RuntimeException("denominater cannot be 0");
+        }
+
         numerator = n;
         denominator = d;
+
         reduce();
     }
 
@@ -80,9 +85,8 @@ public class Fraction {
     }
 
     public double toDouble(){
-        double doubleFrac;
-        doubleFrac = numerator / denominator;
-        return doubleFrac;
+
+        return (double) numerator / denominator;
     }
 
 

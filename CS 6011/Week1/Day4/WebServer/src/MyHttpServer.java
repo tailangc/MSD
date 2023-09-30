@@ -37,7 +37,7 @@ public class MyHttpServer {
                 outputStream.flush();
                 outputStream.close();
             } else {
-                FileInputStream fileToRead = new FileInputStream("/Users/yuyaotu/Desktop/cs6011-labs/week1/day4/MyHttpServer/resources/error.html");
+                FileInputStream fileToRead = new FileInputStream("/Users/tailangcao/myGithubRepo/CS 6011/Week1/Day4/WebServer/Resources/error.html");
                 OutputStream outputStream = client.getOutputStream();
                 outputStream.write("HTTP/1.1 404\n".getBytes());
                 outputStream.write("Content-Type: text/html\n".getBytes());
