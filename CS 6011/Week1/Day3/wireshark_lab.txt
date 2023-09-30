@@ -1,0 +1,41 @@
+ what is the source address :10.17.207.91
+the destination address:192.168.0.198
+
+Open the Data section - 
+how do the integer values compare with the ASCII that is displayed in the terminal? 
+they are Two different integer.
+
+Does it match anything that we have seen before? 
+No match.
+
+How long does it take a ping packet to travel to your classmate's machine and back? 
+10MS
+
+Try ping google.com. How long does it take these ping packets to travel?  
+30MS
+
+Try ping www.louvre.fr. How long does this take? What do these numbers tell you?
+150MS, ROUND TRIP TIME
+
+Did you see more than you expected in the output? 
+Yes
+Can you figure out what other data was sent/received?
+No
+
+what is the purpose of the curl program?
+Transfer data with urls
+
+How are your results different / similar?
+Volume of requests, headers, user-agent, rendering different
+Initiate a DNS query to solve, establish a tcp connection, send an HTTP get request to the server are similar.
+
+
+What URL actually show's up when GitHub is loaded? 
+http://github.com
+
+Can you understand the output from Wireshark?
+You'll observe the initial HTTP request and the corresponding redirect. Then you'll see the start of a TLS handshake (the protocol behind HTTPS). This involves the client hello, server hello, key exchange, etc.
+The subsequent HTTPS traffic is encrypted. So, while you can see the packet details in Wireshark, you won't be able to understand the actual content (like the HTTP request details) unless you have the necessary keys to decrypt the traffic.
+
+ Why can you only read the first couple of messages?
+This is due to the encryption of HTTPS. Once the TLS handshake is complete, the actual data exchanged between the client and server (including HTTP requests and responses) is encrypted. You'd see the encrypted packets in Wireshark but won't be able to read the content without decryption.
