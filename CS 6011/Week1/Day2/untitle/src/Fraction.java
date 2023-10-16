@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction implements Comparable<Fraction>{
     long numerator;
     long denominator;
 
@@ -15,9 +15,9 @@ public class Fraction {
 
         numerator = n;
         denominator = d;
-
         reduce();
     }
+
 
     public Fraction plus(Fraction rhs){
         long newNum, newDeno;
@@ -85,9 +85,19 @@ public class Fraction {
     }
 
     public double toDouble(){
-
         return (double) numerator / denominator;
     }
 
+    @Override
+    public int compareTo (Fraction rhs){
+        if(toDouble() < rhs.toDouble()){
+            return -1;
+        } else if (toDouble() > rhs.toDouble()) {
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
 
 }
