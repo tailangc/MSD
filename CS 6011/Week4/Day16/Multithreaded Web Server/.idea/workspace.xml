@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f7397a5-56b5-49e4-a8d9-e5960d8d5da1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidgetBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/MixerWidget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/VolumeAdjusterWidget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day11/Basic DOM Manipulation/Basic DOM Manipulation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day11/HelloWorld/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day11/HelloWorld/HelloWorld.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day11/HelloWorld/helloJS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/NotTheBees/NotTheBees.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/NotTheBees/NotTheBees.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/NotTheBees/NotTheBees.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/NotTheBees/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/TimesTable/TimesTable.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/sorting/.idea/sorting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Week3/Day12/sorting/sorting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.xcent.der" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/Entitlements.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/arm64/CMakeCCompilerId.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/arm64/CMakeCCompilerId.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/arm64/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/arm64/CompilerIdC.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/arm64/CompilerIdC_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/CompilerIdC.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/b71e5fd54ca1432fdbce662a1d0f7fab.xcbuilddata/build-request.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/b71e5fd54ca1432fdbce662a1d0f7fab.xcbuilddata/description.msgpack" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/b71e5fd54ca1432fdbce662a1d0f7fab.xcbuilddata/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/b71e5fd54ca1432fdbce662a1d0f7fab.xcbuilddata/target-graph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/b71e5fd54ca1432fdbce662a1d0f7fab.xcbuilddata/task-store.msgpack" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdC/XCBuildData/build.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.xcent.der" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/Entitlements.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/arm64/CMakeCXXCompilerId.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/arm64/CMakeCXXCompilerId.dia" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/arm64/CMakeCXXCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/arm64/CompilerIdCXX.LinkFileList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/arm64/CompilerIdCXX_dependency_info.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/CompilerIdCXX.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/a5cabc97a74cbed194b62e2fb07099c7.xcbuilddata/build-request.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/a5cabc97a74cbed194b62e2fb07099c7.xcbuilddata/description.msgpack" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/a5cabc97a74cbed194b62e2fb07099c7.xcbuilddata/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/a5cabc97a74cbed194b62e2fb07099c7.xcbuilddata/target-graph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/a5cabc97a74cbed194b62e2fb07099c7.xcbuilddata/task-store.msgpack" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/3.27.5/CompilerIdCXX/XCBuildData/build.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/CMakeScripts/ReRunCMake.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/Debug/testSFML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/testSFML.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/testSFML.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6010/FinalProj/xcode/testSFML.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week2/Day6/Synthesizer/src/main/java/com/example/synthesizer/AudioComponentWidget.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2XDx0Fh26uHeVjzXtsvxOHiDMFK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f7397a5-56b5-49e4-a8d9-e5960d8d5da1" name="Changes" comment="" />
+      <created>1698177231638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698177231638</updated>
+      <workItem from="1698177233537" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

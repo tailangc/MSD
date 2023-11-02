@@ -26,6 +26,7 @@ public class HTTPRequest {
                 fileName = lines[1];
             }
         }
+        System.out.println("filename:"+fileName);
         if(fileName.equals("/")){// if client input "/" just return to the index.html
             fileName = "/index.html";
         }
