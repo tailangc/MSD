@@ -17,10 +17,12 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
 public class AudioComponentWidget extends Pane {
+    private AudioComponent audioComponent_;
     AudioComponent ac_;
     AnchorPane parent_;
     double mouseXPos, mouseYPos, widgetXPos, widgetYPos;
     Line line_;
+
 
     //Constructor
 

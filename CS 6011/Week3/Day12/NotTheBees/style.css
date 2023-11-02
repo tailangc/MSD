@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background-image: url("bar.png");
+}
+
+canvas {
+    cursor: url("tequila.png"),
+    auto;
+}
