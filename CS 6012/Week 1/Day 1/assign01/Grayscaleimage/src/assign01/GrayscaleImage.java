@@ -1,6 +1,5 @@
 package assign01;
 
-
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -110,7 +109,7 @@ public class GrayscaleImage {
 
         GrayscaleImage otherImage = (GrayscaleImage)other;
 
-        if(imageData.length != otherImage.imageData.lengh || imageData[0].length != otherImage.imageData[0].length){
+        if(imageData.length != otherImage.imageData.length || imageData[0].length != otherImage.imageData[0].length){
             return false;
         }
         else{
@@ -249,7 +248,6 @@ public class GrayscaleImage {
         
         return cropped(startRow, startCol, dimension, dimension);
     }
-    }
-
-
 }
+
+
