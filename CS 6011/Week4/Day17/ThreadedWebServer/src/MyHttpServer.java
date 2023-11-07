@@ -23,6 +23,8 @@ public class MyHttpServer {
             Socket client = server.accept();
             Thread thread = new Thread(new MyRunnable(client));
             thread.start();
+
+
 //            thread.run();
         }
 //        catch(IOException e) {
