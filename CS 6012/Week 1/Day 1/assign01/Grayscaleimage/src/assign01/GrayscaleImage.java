@@ -189,7 +189,7 @@ public class GrayscaleImage {
      * @return a new GrayscaleImage that is a mirrored version of the this
      */
     public GrayscaleImage mirrored(){
-        double[][] newImageData = new double[imageData[0].length][imageData.length];
+        double[][] newImageData = new double[imageData.length][imageData[0].length];
         for (int row = 0; row < imageData.length; row++) {
             for (int col = 0; col < imageData[row].length; col++) {
                 newImageData[row][imageData[row].length - col - 1] = imageData[row][col];
@@ -211,11 +211,11 @@ public class GrayscaleImage {
      * @return A new GrayscaleImage containing the sub-image in the specified rectangle
      * @throws IllegalArgumentException if the specified rectangle goes outside the bounds of the original image
      */
-    public GrayscaleImage cropped(int startRow, int startCol, int width, int height){
-        if (startRow < 0 || startCol < 0 || startRow + height > imageData.length || startCol + width > imageData[0].length) {
+    public GrayscaleImage cropped(int startRow, int startCol, int width, int height) {
+        if (startRow < 0 || startRow >  imageData.length || startCol >imageData[0].length ||startCol < 0 ||
+                startRow + height > imageData.length || startCol + width > imageData[0].length||height <=0||width<=0) {
             throw new IllegalArgumentException("Cropped range out of bounds");
         }
-
         double[][] newImageData = new double[height][width];
         for (int row = 0; row < height; row++) {
             for (int col = 0; col < width; col++) {
@@ -225,6 +225,7 @@ public class GrayscaleImage {
         GrayscaleImage newImg = new GrayscaleImage(newImageData);
         return newImg;
     }
+
 
 
     /**

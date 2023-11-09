@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9456afca-00e2-4134-a677-96abcdd4d6be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/lab01/Unit Testing/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/lab01/Unit Testing/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/lab01/Unit Testing/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/lab01/Unit Testing/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 2/lab02/src/lab02/lab02 Questions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week4/Day17/ThreadedWebServer/src/MyHttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week4/Day17/ThreadedWebServer/src/MyHttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Week5/Day 23/AndroidChatClient/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Week5/Day 23/AndroidChatClient/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/assign01/Grayscaleimage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/assign01/Grayscaleimage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/assign01/Grayscaleimage/src/assign01/GrayscaleImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../CS 6012/Week 1/Day 1/assign01/Grayscaleimage/src/assign01/GrayscaleImage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +64,7 @@
       <updated>1698853361919</updated>
       <workItem from="1698853364336" duration="3897000" />
       <workItem from="1698860024135" duration="609000" />
+      <workItem from="1699401197100" duration="25000" />
     </task>
     <servers />
   </component>

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea505ee-523e-41ca-bedb-340056b69e04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GrayscaleImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GrayscaleImageTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="bea505ee-523e-41ca-bedb-340056b69e04" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +45,97 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="GrayscaleImageTest.averageBrightness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrayscaleImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assign01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assign01" />
+      <option name="MAIN_CLASS_NAME" value="assign01.GrayscaleImageTest" />
+      <option name="METHOD_NAME" value="averageBrightness" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrayscaleImageTest.mirrored" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrayscaleImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assign01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assign01" />
+      <option name="MAIN_CLASS_NAME" value="assign01.GrayscaleImageTest" />
+      <option name="METHOD_NAME" value="mirrored" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrayscaleImageTest.normalized" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrayscaleImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assign01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assign01" />
+      <option name="MAIN_CLASS_NAME" value="assign01.GrayscaleImageTest" />
+      <option name="METHOD_NAME" value="normalized" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrayscaleImageTest.normalizedEdgedCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrayscaleImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assign01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assign01" />
+      <option name="MAIN_CLASS_NAME" value="assign01.GrayscaleImageTest" />
+      <option name="METHOD_NAME" value="normalizedEdgedCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GrayscaleImageTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrayscaleImage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assign01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="assign01" />
+      <option name="MAIN_CLASS_NAME" value="assign01.GrayscaleImageTest" />
+      <option name="METHOD_NAME" value="testEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GrayscaleImageTest.normalizedEdgedCase" />
+        <item itemvalue="JUnit.GrayscaleImageTest.normalized" />
+        <item itemvalue="JUnit.GrayscaleImageTest.averageBrightness" />
+        <item itemvalue="JUnit.GrayscaleImageTest.testEquals" />
+        <item itemvalue="JUnit.GrayscaleImageTest.mirrored" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,7 +144,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699377420206</updated>
-      <workItem from="1699377421866" duration="1036000" />
+      <workItem from="1699377421866" duration="6347000" />
     </task>
     <servers />
   </component>
@@ -75,5 +161,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GrayscaleImage$GrayscaleImageTest.ic" NAME="GrayscaleImageTest Coverage Results" MODIFIED="1699383113625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>assign01.*</FILTER>
+    </SUITE>
   </component>
 </project>
