@@ -16,21 +16,17 @@ import com.neovisionaries.ws.client.WebSocketFactory;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
-    EditText usernameInput = findViewById(R.id.userID);
-    EditText roomnameInput = findViewById(R.id.roomID);
-    String username = usernameInput.getText().toString();
-    String roomname = roomnameInput.getText().toString();
     public static final String WS_URL = "ws://10.0.2.2:8080/endpoint";
     WebSocket ws = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_main);
         try {
-            ws = new WebSocketFactory().createSocket(WS_URL);
+            ws = new WebSocketFactory().createSocket(WS_URL, 1000);
             //listen for event and will use this class to implement them
             ws.addListener(new MyWebsocket());
             ws.connectAsynchronously();
-            ws.sendText("{\"type\": \"join\",\"room\":\""+ roomnameInput +"\",\"user\":\""+ usernameInput+"\"}");
+//            ws.sendText("{\"type\": \"join\",\"room\":\""+ roomnameInput +"\",\"user\":\""+ usernameInput+"\"}");
 
         } catch (IOException e) {
             //AlertDialog alert = new AlertDialog("Server failed");
@@ -38,16 +34,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        }
+    }
 
     public void handleEnterBtn(View view){
-
+        EditText usernameInput = findViewById(R.id.userID);
+        EditText roomnameInput = findViewById(R.id.roomID);
+        String username = usernameInput.getText().toString();
+        String roomname = roomnameInput.getText().toString();
         Intent intent = new Intent(MainActivity.this, ChatRoomActivity.class);
         intent.putExtra("username", username);
         intent.putExtra("roomname", roomname);
         startActivity(intent);
     }
-
-
 }
