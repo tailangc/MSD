@@ -1,0 +1,28 @@
+1. Which two binarySearch tests are failing?
+Binary search 2 & 3 is broken.
+
+2. What are the values of arr and goal passed in to binary search?
+The arr is [1,2,3,4,5].
+The goal is 0;
+
+3. For each of the two cases of binarySearch that are failing, which return statements are they executing in error (is it returning true when it should be returning false, or the other way around)?
+The goal 0 == true should be false. The goal 20 false should be true.
+
+4. What is the bug in binarySearch? How do you fix it?
+The bug is that the mid was comparing the iterator vs values rather than
+actually getting the value at that iterator and comparing that value.
+I fixed it by having everywhere that mid is comparing values be arr[mid]
+
+5. Which loops appear to be inifinite?
+loop #2 and loop #4 are infinite.
+
+6. For the loops that you found to be infinite, briefly explain why they are never progressing.
+For loop #2 b will always be 0 and is never getting updated, so the while condition always stays true.
+For loop #4 c is always only -1 or 1 because of the * -1 at at the end of the loop,
+so the equation f -= c will only ever result in 6 or 5 which is always greater than 0.
+
+7. What does the call to password.split(" ") appear to do? Hint: examine the input value of "password", then examine the items in the "tokens" array returned by the call.
+It splits the password by space.
+
+8. What is the correct password?
+"1 4 9 16 25"
