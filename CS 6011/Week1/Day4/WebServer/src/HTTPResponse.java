@@ -21,7 +21,7 @@ public class HTTPResponse {
             clientStream.close();
         } catch (FileNotFoundException fe) {
             System.out.println(fe.getMessage());
-            String errorFilePath = "/Users/tailangcao/myGithubRepo/CS 6011/Week1/Day4/WebServer/Resources/error.html";
+            String errorFilePath = "Resources/error.html";
             sendErrorFile(errorFilePath);
         } catch (IOException io) {
             System.out.println(io.getMessage());

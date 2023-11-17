@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea505ee-523e-41ca-bedb-340056b69e04" name="Changes" comment="" />
+    <list default="true" id="bea505ee-523e-41ca-bedb-340056b69e04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Day 5/assign03/SortedArraySet/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Day 5/assign03/SortedArraySet/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Day 5/assign03/SortedArraySet/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Day 5/assign03/SortedArraySet/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Day 5/assign03/SortedArraySet/SortedArraySet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/ChatRoomActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/ChatRoomActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/MyWebsocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/java/com/example/myapplication/MyWebsocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/res/layout/activity_chat_room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/res/layout/activity_chat_room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../CS 6011/Week5/Day 23/AndroidChatClient/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2XrBexwlemXPOFs2p7GH8kj9Chn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -29,8 +43,10 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/tailangcao/myGithubRepo/CS 6012/Week 1/Day 1/assign01/GrayscaleImage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,7 +61,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GrayscaleImageTest.averageBrightness">
     <configuration name="GrayscaleImageTest.averageBrightness" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GrayscaleImage" />
       <extension name="coverage">
@@ -145,6 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699377420206</updated>
       <workItem from="1699377421866" duration="6347000" />
+      <workItem from="1699635218792" duration="1215000" />
     </task>
     <servers />
   </component>

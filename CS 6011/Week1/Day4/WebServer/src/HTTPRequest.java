@@ -30,7 +30,7 @@ public class HTTPRequest {
         if(fileName.equals("/")){// if client input "/" just return to the index.html
             fileName = "/index.html";
         }
-        String filePath = "/Users/tailangcao/myGithubRepo/CS 6011/Week1/Day4/WebServer/Resources/"+fileName;
+        String filePath = "Resources/"+fileName;
         System.out.println(filePath); //cout the file path we can see how many web page shows,Not important though
         return  filePath;
     }

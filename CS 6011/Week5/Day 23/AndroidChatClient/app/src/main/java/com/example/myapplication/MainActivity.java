@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.neovisionaries.ws.client.WebSocket;
 import com.neovisionaries.ws.client.WebSocketFactory;
@@ -17,12 +19,16 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     public static final String WS_URL = "ws://10.0.2.2:8080/endpoint";
-    WebSocket ws = null;
+    static WebSocket ws;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button buttonLogin = findViewById(R.id.joinButton);
+        EditText editTextName = findViewById(R.id.userID);
+        EditText editTextRoom = findViewById(R.id.roomID);
         try {
-            ws = new WebSocketFactory().createSocket(WS_URL, 1000);
+            ws = new WebSocketFactory().createSocket(WS_URL);
             //listen for event and will use this class to implement them
             ws.addListener(new MyWebsocket());
             ws.connectAsynchronously();
@@ -33,17 +39,21 @@ public class MainActivity extends AppCompatActivity {
             Log.d("chatactivity", "some error");
         }
 
-        super.onCreate(savedInstanceState);
-    }
+        buttonLogin.setOnClickListener((view) -> {
+            Log.d("button", "button clicked");
+            String textname = editTextName.getText().toString();
+            String textroom = editTextRoom.getText().toString();
+            ws.sendText("{\"type\":\"join\",\"room\":\""+ textroom +"\",\"user\":\""+ textname+"\"}");
+            if (!textname.isEmpty() && !textroom.isEmpty()) {
+                Intent intent = new Intent(this, ChatRoomActivity.class);
+                intent.putExtra("username", textname);
+                intent.putExtra("room", textroom);
+                startActivity(intent);
+                Log.d("intent", "intent started");
+            } else {
+                Toast.makeText(MainActivity.this, "Please Enter userName and Room Name", Toast.LENGTH_SHORT).show();
+            }
 
-    public void handleEnterBtn(View view){
-        EditText usernameInput = findViewById(R.id.userID);
-        EditText roomnameInput = findViewById(R.id.roomID);
-        String username = usernameInput.getText().toString();
-        String roomname = roomnameInput.getText().toString();
-        Intent intent = new Intent(MainActivity.this, ChatRoomActivity.class);
-        intent.putExtra("username", username);
-        intent.putExtra("roomname", roomname);
-        startActivity(intent);
+        });
     }
 }

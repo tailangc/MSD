@@ -1,0 +1,23 @@
+1. What activities did you do as the driver? What activities did you do as the navigator?
+As a driver, I translate pseudo code in my mind and typr the  into real code
+As a navigator, I speak out the logic of the code using pseudo code.
+
+2. What are the advantages and disadvantages of serving in each role?
+For driver, the advantage is you get to type yourself and be more familiar with the syntax.
+The disadvantage is you may not participate in the formation of the logic of the code thouroughly.
+For navigator, the advantage is being able to pseudo code all the logic without worring the possible syntax error, allowing non-interrupted logical thinking.
+The disadvantage is the possibility of being unfamiliar of the syntax.
+
+3. How often did you and your partner switch roles? Did you switch often enough?
+We switch rolls when we finish one method and tghe corresponding test. I believe we switch often enough as it allows us to each have the experience of both rolls
+without interupting the continuous thought frequently.
+
+4. Which is your preferred role and why?
+I prefer being the navigator as I am not that familiar with the syntax, so I am often interrupted when coding myself and thus sometime forget the next step.
+
+5. Explain why this is a BAD test case for your method: assertEquals("bird", MedianSolver.median(new String[]{"bird", "cat", "dog", "ant"}))
+This string array has a length of 4, whis is an even number. The median of a string array with length of even number can be either the one befor the middle or the one after the middle.
+The definition is ambiguous and the result can vary with respect to the method. Therefore this is not a comprehensive test case.
+
+6. Explain how you could change the test to make it "valid" and explain how you could change the specification so that this is considered a "good" test
+The tested array can be changed to an array of an odd number of elements. The specification can be changed to: The median element of a string array of even number of elements is the element before the middle.
