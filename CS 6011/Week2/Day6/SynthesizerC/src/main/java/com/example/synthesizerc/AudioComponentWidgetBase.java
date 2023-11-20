@@ -99,7 +99,7 @@ public class AudioComponentWidgetBase extends Pane {
             line_.setStartY(newLineStartY);
         }
         // Update the line's end position(prev)
-        if(prev.line_ != null) {
+        if(prev != null && prev.line_ != null) {
             double newLineEndX = lineEndX + deltaX;
             double newLinkEndY = lineEndY + deltaY;
             this.prev.line_.setEndX(newLineEndX);
@@ -119,9 +119,11 @@ public class AudioComponentWidgetBase extends Pane {
             lineXpos = line_.getStartX();
             lineYPos = line_.getStartY();
         }
-        if(prev.line_ != null){
-            lineEndX = prev.line_.getEndX();
-            lineEndY = prev.line_.getEndY();
+        if(prev != null) {
+            if (prev.line_ != null) {
+                lineEndX = prev.line_.getEndX();
+                lineEndY = prev.line_.getEndY();
+            }
         }
 
 
