@@ -137,6 +137,9 @@ public class AudioComponentWidgetBase extends Pane {
         FinalSynthesizeApplication.Connected_widgets_.remove(this);
         parent_.getChildren().remove(line_);
         System.out.println("remove the line"); // remove that line so that we can create a new connection
+        if (prev != null && prev.line_ != null){
+            parent_.getChildren().remove(prev.line_);
+        }
 
 
 

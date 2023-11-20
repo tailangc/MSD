@@ -170,6 +170,7 @@ public class AudioComponentWidget extends Pane {
         FinalSynthesizeApplication.widgets_.remove(this);
         FinalSynthesizeApplication.Connected_widgets_.remove(this);
         parent_.getChildren().remove(line_);
+
     }
     public AudioComponent getAudioComponent() { return audioComponent_;}
 
