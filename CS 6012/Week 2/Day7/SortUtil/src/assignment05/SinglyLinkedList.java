@@ -8,7 +8,7 @@ public class SinglyLinkedList<T> implements List<T>{
     private Node<T> head;
     private int size;
 
-    private static class Node<T> {
+    public static class Node<T> {
         T data;
         Node<T> next;
 
@@ -48,14 +48,24 @@ public class SinglyLinkedList<T> implements List<T>{
      */
     @Override
     public void insert(int index, T element) throws IndexOutOfBoundsException {
+        if(index < 0 || index > size()){
+            throw new IndexOutOfBoundsException();
+        }
+
+        if (index == 0) {
+            insertFirst(element);
+            return;
+        }
+
         Node<T> target = head;
         for(int i = 0; i < index - 1; i++){
             target = target.next;
         }
 
         Node<T> node = new Node<>(element);
-        node.next = target.next;
+        Node<T> temp = target.next;
         target.next = node;
+        node.next= temp;
         size++;
     }
 
@@ -125,14 +135,19 @@ public class SinglyLinkedList<T> implements List<T>{
         if(index < 0 || index >= size()){
             throw new IndexOutOfBoundsException();
         }
-        Node<T> target = head;
-        for(int i = 0; i < index - 1; i++){
-            target = target.next;
+        if (index ==0){
+            return deleteFirst();
         }
-        T data  = target.next.data;
-        target.next = target.next.next;
-        size--;
-        return data;
+        else {
+            Node<T> target = head;
+            for (int i = 0; i < index - 1; i++) {
+                target = target.next;
+            }
+            T data = target.next.data;
+            target.next = target.next.next;
+            size--;
+            return data;
+        }
     }
 
     /**
@@ -147,10 +162,11 @@ public class SinglyLinkedList<T> implements List<T>{
     public int indexOf(T element) {
         Node<T> node = head;
         for(int i = 0; i < size; i++){
-            node = node.next;
-            if (node.data == element) {
+//            node = node.next;
+            if (node.data.equals(element)) {
                 return i;
             }
+            node = node.next;
         }
         return -1;
     }
@@ -187,6 +203,7 @@ public class SinglyLinkedList<T> implements List<T>{
     @Override
     public void clear() {
         head = null;
+        size = 0;
     }
 
     /**
@@ -201,8 +218,8 @@ public class SinglyLinkedList<T> implements List<T>{
         Node<T> node = head;
         T[] array = (T[]) new Object[size];
         for(int i = 0; i < size; i++){
-            node = node.next;
             array[i] = node.data;
+            node = node.next;
         }
         return array;
     }
@@ -217,9 +234,10 @@ public class SinglyLinkedList<T> implements List<T>{
             Node<T> current = head;
             Node<T> last = null;
             Node<T> previous = null;
+            boolean nextHasRun = false;
             @Override
             public boolean hasNext() {
-                if(current.next != null) {
+                if(current != null) {
                     return true;
                 }
                 else{
@@ -230,18 +248,33 @@ public class SinglyLinkedList<T> implements List<T>{
             @Override
             public T next() {
                 if(!hasNext()) throw new NoSuchElementException();
+                nextHasRun = true;
                 T data = current.data;
-                previous = (last == head) ? null : previous.next;
+                if(current == head.next){
+                    previous = head;
+                }else if (previous != null && current != previous.next){
+                    previous = previous.next;
+                }
+//                previous = current;
                 current = current.next;
-
                 return data;
             }
 
             @Override
             public void remove() {
-                if(last == null){
+                if(!nextHasRun){
                     throw new IllegalStateException();
                 }
+                if(current == head.next){
+                    head = current;
+//                    previous = null;
+                }
+                else{
+                    previous.next = current;
+                }
+                size--;
+                nextHasRun = false;
+
 
 
             }
