@@ -155,14 +155,16 @@ public class AudioComponentWidgetBase extends Pane {
             if(mixerDistance<10){
                 // Handle It is Connected to Mixer
 //                System.out.println("Connected Sine Wave to  Mixer");
+                FinalSynthesizeApplication.Connected_widgets_.add(this);
                 FinalSynthesizeApplication.mix.prev = audioComponentWidgetBase;
             }
             else {
+                parent_.getChildren().remove(line_);
                 System.out.println("mixer distance is "+mixerDistance);
             }
 
         }
-        if(volume != null){
+        else if(volume != null){
             Bounds volumeBounds= volume.localToScene(volume.getBoundsInLocal());
             double volDistance = Math.sqrt(Math.pow(volumeBounds.getCenterX()-e.getSceneX(),2.0) +
                     Math.pow(volumeBounds.getCenterY()-e.getSceneY(),2.0 ));
@@ -173,8 +175,12 @@ public class AudioComponentWidgetBase extends Pane {
                 FinalSynthesizeApplication.vol.prev = audioComponentWidgetBase;
             }
             else {
+                parent_.getChildren().remove(line_);
                 System.out.println("volume distance is "+volDistance);
             }
+        }
+        else {
+            parent_.getChildren().remove(line_);
         }
     }
     void handleMixerLine(MouseEvent e, Circle mixer, Circle volume, AudioComponentWidgetBase audioComponentWidgetBase){
@@ -220,6 +226,7 @@ public class AudioComponentWidgetBase extends Pane {
             System.out.println("Connected From  Volume to Speaker");
         }
         else {
+            parent_.getChildren().remove(line_);
             System.out.println("speaker distance is "+distance);
 
         }
