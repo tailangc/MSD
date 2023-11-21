@@ -129,6 +129,8 @@ public class FinalSynthesizeApplication extends Application {
                if(VolumeWidget.VolumeSliderValue != 0){
                    volume.setVolumeScale(VolumeWidget.VolumeSliderValue);
                }
+               System.out.println("Connected widgets number: " + Connected_widgets_.size());
+
 
 
 
