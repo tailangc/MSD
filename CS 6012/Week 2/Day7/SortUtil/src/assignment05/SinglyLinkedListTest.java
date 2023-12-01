@@ -55,6 +55,9 @@ class SinglyLinkedListTest {
         intList.insertFirst(1);
         intList.insertFirst(2);
         intList.insertFirst(3);
+        for (int n : intList) {
+            System.out.println(n);
+        }
 
 
         Iterator<Integer> iterator = intList.iterator();

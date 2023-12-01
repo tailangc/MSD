@@ -218,17 +218,14 @@ public class BinarySearchSet<E> implements SortedSet<E>, Iterable<E> {
         Iterator<E> iterator = new Iterator<E>() {
             int index = 0;
             boolean callNext = false;
-
             @Override
             public boolean hasNext() {
                 return size > index ;
             }
-
             @Override
             public E next() {
                 if (!hasNext()) {
-                    throw new NoSuchElementException();
-                }
+                    throw new NoSuchElementException();}
                 E result = (E) data[index];
                 index++;
                 callNext = true;
@@ -240,16 +237,11 @@ public class BinarySearchSet<E> implements SortedSet<E>, Iterable<E> {
                     index--;
                     size--;
                     for(int i = index  ; i < size ; i++){
-                        data[i] = data[i+1];
-                    }
+                        data[i] = data[i+1];}
                     callNext = false;
-
-                }
-                else {
-                    throw new IllegalStateException();
-                }
+                } else {
+                    throw new IllegalStateException();}
             }
-
         };
         return iterator;
     }

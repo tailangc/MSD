@@ -52,21 +52,15 @@ public class SortUtil {
     private static <T> void merge(ArrayList<T> array, int start, int middle, int end, Comparator<? super T> comparator) {
         T[] leftArray = (T[]) new Comparable[middle - start + 1];
         T[] rightArray = (T[]) new Comparable[end - middle];
-
         for (int i = 0; i < leftArray.length; i++) {
             leftArray[i] = array.get(start + i);
         }
-
         for (int i = 0; i < rightArray.length; i++) {
             rightArray[i] = array.get(middle + 1 + i);
         }
-
         int leftIndex = 0, rightIndex = 0;
-
         int currentIndex = start;
-
         while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
-
             if (comparator.compare(leftArray[leftIndex], rightArray[rightIndex]) <= 0) {
                 array.set(currentIndex, leftArray[leftIndex]);
                 leftIndex++;
@@ -74,14 +68,11 @@ public class SortUtil {
                 array.set(currentIndex, rightArray[rightIndex]);
                 rightIndex++;
             }
-
             currentIndex++;
         }
-
         while (leftIndex < leftArray.length) {
             array.set(currentIndex++, leftArray[leftIndex++]);
         }
-
         while (rightIndex < rightArray.length) {
             array.set(currentIndex++, rightArray[rightIndex++]);
         }
