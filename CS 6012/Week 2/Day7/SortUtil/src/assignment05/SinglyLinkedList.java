@@ -230,54 +230,57 @@ public class SinglyLinkedList<T> implements List<T>{
      */
     @Override
     public Iterator iterator() {
-        return new Iterator() {
-            Node<T> current = head;
-            Node<T> last = null;
-            Node<T> previous = null;
-            boolean nextHasRun = false;
-            @Override
-            public boolean hasNext() {
-                if(current != null) {
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-
-            @Override
-            public T next() {
-                if(!hasNext()) throw new NoSuchElementException();
-                nextHasRun = true;
-                T data = current.data;
-                if(current == head.next){
-                    previous = head;
-                }else if (previous != null && current != previous.next){
-                    previous = previous.next;
-                }
-//                previous = current;
-                current = current.next;
-                return data;
-            }
-
-            @Override
-            public void remove() {
-                if(!nextHasRun){
-                    throw new IllegalStateException();
-                }
-                if(current == head.next){
-                    head = current;
-//                    previous = null;
-                }
-                else{
-                    previous.next = current;
-                }
-                size--;
-                nextHasRun = false;
-
-
-
-            }
-        };
+        return new MyIterator();
     }
+
+    private class MyIterator implements Iterator<T> {
+        Node<T> current = head;
+        Node<T> last = null;
+        Node<T> previous = null;
+        boolean nextHasRun = false;
+
+        @Override
+        public boolean hasNext() {
+            if(current != null) {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        @Override
+        public T next() {
+            if(!hasNext()) throw new NoSuchElementException();
+            nextHasRun = true;
+            T data = current.data;
+            if(current == head.next){
+                previous = head;
+            }else if (previous != null && current != previous.next){
+                previous = previous.next;
+            }
+//                previous = current;
+            current = current.next;
+            return data;
+        }
+
+        @Override
+        public void remove() {
+            if(!nextHasRun){
+                throw new IllegalStateException();
+            }
+            if(current == head.next){
+                head = current;
+//                    previous = null;
+            }
+            else{
+                previous.next = current;
+            }
+            size--;
+            nextHasRun = false;
+
+
+
+        }
+    };
 }
