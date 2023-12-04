@@ -1,16 +1,32 @@
 package assignment07;
 
+import javax.swing.*;
 import java.util.Collection;
+import java.util.LinkedList;
 
 public class ChainingHashTable implements Set<String>{
 
-    int capacity_;
-    HashFunctor functor_;
+    private LinkedList<String>[] storage;
+    private HashFunctor functor_;
 
     public ChainingHashTable(int capacity, HashFunctor functor){
-        capacity_ = capacity;
+        storage = (LinkedList<String>[]) new LinkedList[capacity];
         functor_ = functor;
+
+        for (int i = 0; i < capacity; i++) {
+            storage[i] = new LinkedList<>();
+        }
+
     }
+
+//    private LinkedList<String> getChain(int index) {
+//        if (storage[index] == null) {
+//            storage[index] = new LinkedList<>();
+//        }
+//        return storage[index];
+//    }
+
+
     /**
      * Ensures that this set contains the specified item.
      *
@@ -18,8 +34,14 @@ public class ChainingHashTable implements Set<String>{
      * @return true if this set changed as a result of this method call (that is, if
      * the input item was actually inserted); otherwise, returns false
      */
+
     @Override
     public boolean add(String item) {
+        int index = Math.abs(functor_.hash(item) % storage.length);
+        if (!storage[index].contains(item)) {
+            storage[index].add(item);
+            return true;
+        }
         return false;
     }
 
@@ -33,7 +55,13 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean addAll(Collection<? extends String> items) {
-        return false;
+        boolean changed = false;
+        for (String item : items) {
+            if (add(item)) {
+                changed = true;
+            }
+        }
+        return changed;
     }
 
     /**
@@ -42,7 +70,9 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public void clear() {
-
+        for (LinkedList<String> list : storage) {
+            list.clear();
+        }
     }
 
     /**
@@ -55,7 +85,8 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean contains(String item) {
-        return false;
+        int index = Math.abs(functor_.hash(item) % storage.length);
+        return storage[index].contains(item);
     }
 
     /**
@@ -68,7 +99,12 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean containsAll(Collection<? extends String> items) {
-        return false;
+        for (String item : items) {
+            if (!contains(item)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -76,7 +112,12 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean isEmpty() {
-        return false;
+        for(LinkedList<String> list : storage){
+            if (!list.isEmpty()){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
@@ -88,7 +129,8 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean remove(String item) {
-        return false;
+        int index = Math.abs(functor_.hash(item) % storage.length);
+        return storage[index].remove(item);
     }
 
     /**
@@ -102,7 +144,13 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public boolean removeAll(Collection<? extends String> items) {
-        return false;
+        boolean changed = false;
+        for (String item : items) {
+            if (remove(item)) {
+                changed = true;
+            }
+        }
+        return changed;
     }
 
     /**
@@ -110,6 +158,10 @@ public class ChainingHashTable implements Set<String>{
      */
     @Override
     public int size() {
-        return 0;
+        int size = 0;
+        for (LinkedList<String> list : storage) {
+            size += list.size();
+        }
+        return size;
     }
 }
