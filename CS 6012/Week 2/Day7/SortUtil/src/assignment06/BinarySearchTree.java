@@ -217,7 +217,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> implements Sorted
             root.left = removeHelper(root.left, item);
         }
         else if(item.compareTo(root.data) > 0){
-            root.right = removeHelper(root.left, item);
+            root.right = removeHelper(root.right, item);
         }
         else{
             //one child
