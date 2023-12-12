@@ -8,10 +8,12 @@ public class ChainingHashTable implements Set<String>{
 
     private LinkedList<String>[] storage;
     private HashFunctor functor_;
+    public int collision_;
 
     public ChainingHashTable(int capacity, HashFunctor functor){
         storage = (LinkedList<String>[]) new LinkedList[capacity];
         functor_ = functor;
+        collision_ = 0;
 
         for (int i = 0; i < capacity; i++) {
             storage[i] = new LinkedList<>();
@@ -27,6 +29,10 @@ public class ChainingHashTable implements Set<String>{
 //    }
 
 
+    public int getCollision(){
+        return collision_;
+    }
+
     /**
      * Ensures that this set contains the specified item.
      *
@@ -35,14 +41,18 @@ public class ChainingHashTable implements Set<String>{
      * the input item was actually inserted); otherwise, returns false
      */
 
+
+
     @Override
     public boolean add(String item) {
         int index = Math.abs(functor_.hash(item) % storage.length);
         if (!storage[index].contains(item)) {
             storage[index].add(item);
             return true;
+        }else{
+            collision_++;
+            return false;
         }
-        return false;
     }
 
     /**

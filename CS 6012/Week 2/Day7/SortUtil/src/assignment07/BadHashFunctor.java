@@ -7,6 +7,7 @@ public class BadHashFunctor implements HashFunctor{
      */
     @Override
     public int hash(String item) {
-        return item.length();
+        // A bad hash function that uses the first character's ASCII value
+        return 40;
     }
 }

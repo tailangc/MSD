@@ -7,16 +7,11 @@ public class GoodHashFunctor implements HashFunctor{
      */
     @Override
     public int hash(String item) {
-        //Jenkins One-at-a-Time hash function
+        // A good hash function that uses a simple polynomial rolling hash algorithm
         int hash = 0;
-        for (char c : item.toCharArray()) {
-            hash += c;
-            hash += (hash << 10);
-            hash ^= (hash >> 6);
+        for (int i = 0; i < item.length(); i++) {
+            hash = (hash * 31) + item.charAt(i);
         }
-        hash += (hash << 3);
-        hash ^= (hash >> 11);
-        hash += (hash << 15);
         return hash;
     }
 }
