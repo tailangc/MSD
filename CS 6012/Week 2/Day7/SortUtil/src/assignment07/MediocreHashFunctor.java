@@ -7,7 +7,7 @@ public class MediocreHashFunctor implements HashFunctor{
      */
     @Override
     public int hash(String item) {
-        //Return the sum of ASCII calue of characters in the string
+        //Return the sum of ASCII value of characters in the string
         int hash = 0;
         for (char c : item.toCharArray()) {
             hash += c;

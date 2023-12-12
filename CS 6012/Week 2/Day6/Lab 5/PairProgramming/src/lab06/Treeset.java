@@ -2,10 +2,9 @@ package lab06;
 
 import java.util.TreeSet;
 
-public class TreeSet <T extends Comparable<T>> implements priorityQueue<T>{
-
+public class Treeset<T extends Comparable<T>> implements priorityQueue<T>{
     private TreeSet<T> treeset;
-    public TreeSet(){
+    public Treeset(){
         treeset=new TreeSet<>();
     }
     /**
@@ -30,6 +29,5 @@ public class TreeSet <T extends Comparable<T>> implements priorityQueue<T>{
     public boolean isEmpty() {
         return treeset.isEmpty();
     }
-
 
 }
