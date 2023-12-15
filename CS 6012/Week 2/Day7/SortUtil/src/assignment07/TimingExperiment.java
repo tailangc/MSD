@@ -20,10 +20,8 @@ public class TimingExperiment {
         try (FileWriter fw = new FileWriter(new File("Collisions_Experiment.tsv"))) { // open up a file writer so we can write
             System.out.println("size\tBadHash\tMedHash\tGoodHash");
 
-            for (int exp = 1; exp <= 9; exp++) { // This is used as the exponent to calculate the size of the set.
-
-                int size = exp * 100;
-
+            for (int exp = 5; exp <= 15; exp++) { // This is used as the exponent to calculate the size of the set.
+                int size = (int) Math.pow(2, exp);
 
                 //Initialize hash functors to test
                 GoodHashFunctor goodFunctor = new GoodHashFunctor();
@@ -31,29 +29,30 @@ public class TimingExperiment {
                 BadHashFunctor badFunctor = new BadHashFunctor();
 
                 //Initialize hash tables with each hash functor with varying capacities
-                ChainingHashTable goodTable = new ChainingHashTable(10000, goodFunctor);
-                ChainingHashTable medTable = new ChainingHashTable(10000, mediocreHashFunctor);
-                ChainingHashTable badTable = new ChainingHashTable(10000, badFunctor);
+                ChainingHashTable goodTable = new ChainingHashTable(size, goodFunctor);
+                ChainingHashTable medTable = new ChainingHashTable(size, mediocreHashFunctor);
+                ChainingHashTable badTable = new ChainingHashTable(size, badFunctor);
 
                 // Do the experiment multiple times, and average out the results
+                int badTotal = 0, medTotal = 0, goodTotal = 0;
                 for ( int iter = 0; iter < ITER_COUNT; iter++) {
-
-
-
-
-                    // TIME IT!
-                    long start = System.nanoTime();
-
                     //Fill hash table with random string for size
                     for (int i = 0; i < size; i++) {
-                        badTable.add(generateRandomString());
-                        medTable.add(generateRandomString());
-                        goodTable.add(generateRandomString());
-
+                        String s = generateRandomString();
+                        badTable.add(s);
+                        medTable.add(s);
+                        goodTable.add(s);
                     }
-                    long stop = System.nanoTime();
+
+                    badTotal += badTable.collision_;
+                    medTotal += medTable.collision_;
+                    goodTotal += goodTable.collision_;
+
+                    badTable.clear();
+                    medTable.clear();
+                    goodTable.clear();
                 }
-                System.out.println(size  + "\t" +  (badTable.collision_ / ITER_COUNT) + "\t" +  (medTable.collision_ / ITER_COUNT) + "\t" +  (goodTable.collision_ / ITER_COUNT)); // print to console
+                System.out.println(size  + "\t" +  (badTotal / ITER_COUNT) + "\t" +  (medTotal / ITER_COUNT) + "\t" +  (goodTotal/ ITER_COUNT)); // print to console
 
             }
         } catch (IOException e) {

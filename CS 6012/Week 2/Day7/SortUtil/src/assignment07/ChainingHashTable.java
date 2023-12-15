@@ -46,13 +46,14 @@ public class ChainingHashTable implements Set<String>{
     @Override
     public boolean add(String item) {
         int index = Math.abs(functor_.hash(item) % storage.length);
+        if(!storage[index].isEmpty()) {
+            collision_++;
+        }
         if (!storage[index].contains(item)) {
             storage[index].add(item);
             return true;
-        }else{
-            collision_++;
-            return false;
         }
+        return false;
     }
 
     /**
@@ -83,6 +84,7 @@ public class ChainingHashTable implements Set<String>{
         for (LinkedList<String> list : storage) {
             list.clear();
         }
+        collision_ = 0;
     }
 
     /**

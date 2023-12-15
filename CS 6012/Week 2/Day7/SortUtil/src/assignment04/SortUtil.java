@@ -28,7 +28,10 @@ public class SortUtil {
      */
     //MERGE-SORT METHOD
     private static <T> void Mergesort(ArrayList<T> array, int start, int end, Comparator<? super T> comparator) {
-        int threshold = 6;
+        int threshold = 100;
+        //change here to find the best switching point
+        //10, 20, 50, 100
+        //best likely to be 20
         if (end - start <= threshold) {
             insertionSort(array,comparator);
         } else {
@@ -143,7 +146,12 @@ public class SortUtil {
      */
     public static  <T>  int partition(ArrayList<T> array, int start, int end,Comparator<? super T> comparator){
 
+        Random random = new Random();
+
         int pivot = (end+start)/2; // middle
+//        int pivot = start; //first
+//        int pivot = random.nextInt((end - start) + 1) + start;
+
         T pValue =  array.get(pivot);
         swap(array,pivot,end);
 
