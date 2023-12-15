@@ -18,14 +18,14 @@ public class TimingExperimentThreshold {
 
         try (FileWriter fw = new FileWriter(new File("threshold_experiment.tsv"))) { // open up a file writer so we can write to file.
             Random random = new Random();
-            for (int exp = 1; exp <= 500; exp++) { // This is used as the exponent to calculate the size of the set.
+            for (int exp = 5; exp <= 15; exp++) { // This is used as the exponent to calculate the size of the set.
                 //int size = (int) Math.pow(2, exp); // or ..
-                int size = exp;
+                int size = (int) Math.pow(2, exp);
 
                 // Do the experiment multiple times, and average out the results
                 long totalTime = 0;
 
-                ArrayList<Integer> testArray = SortUtil.generateBestCase(size);
+                ArrayList<Integer> testArray = SortUtil.generateAverageCase(size);
                 Collections.shuffle(testArray, random);
 
                 for (int iter = 0; iter < ITER_COUNT; iter++) {

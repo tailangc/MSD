@@ -39,16 +39,22 @@ public class TimingExperimentPush {
 
                 for (int iter = 0; iter < ITER_COUNT; iter++) {
 
-
                     // TIME IT!
                     long start = System.nanoTime();
                     listStack.push(0);
                     long stop = System.nanoTime();
                     totalTime += stop - start;
+
+                    long start2 = System.nanoTime();
+                    arrayStack.push(0);
+                    long stop2 = System.nanoTime();
+                    totalTimeArr += stop2 - start2;
+
                 }
 
                 double averageTime = totalTime / (double) ITER_COUNT;
-                System.out.println(size + "\t" + averageTime); // print to console
+                double averageArr = totalTimeArr / (double) ITER_COUNT;
+                System.out.println(size + "\t" + averageTime  + "\t" + averageArr); // print to console
 
                 fw.write(size + "\t" + averageTime + "\n"); // write to file.
             }
