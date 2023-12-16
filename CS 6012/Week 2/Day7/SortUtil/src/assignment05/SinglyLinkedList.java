@@ -36,6 +36,7 @@ public class SinglyLinkedList<T> implements List<T>{
         node.next = head;
         head = node;
         size++;
+        //O(1)
     }
 
     /**
