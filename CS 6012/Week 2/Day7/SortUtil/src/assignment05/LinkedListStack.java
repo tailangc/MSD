@@ -53,6 +53,7 @@ public class LinkedListStack<T> implements Stack<T>{
             throw new NoSuchElementException();
         }
         return list.deleteFirst();
+        //O(1)
     }
 
     /**

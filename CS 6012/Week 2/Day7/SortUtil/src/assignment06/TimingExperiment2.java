@@ -20,7 +20,9 @@ public class TimingExperiment2 {
 
                 int size = (int) Math.pow(2, exp);
 
-                long totalTime = 0;
+                long totalTime_contain = 0;
+                long totalTime_add = 0;
+                long totalTime_remove = 0;
 
 
                 ArrayList<Integer> permutedAL = new ArrayList<>();
@@ -29,45 +31,43 @@ public class TimingExperiment2 {
                     permutedAL.add( i );
                 }
 
-                Collections.shuffle( permutedAL, random );
+//                Collections.shuffle( permutedAL, random );
 
                 TreeSet<Integer> treeset = new TreeSet<>();
                 BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 
+//                bst.addAll(permutedAL);
 
                 for (int iter = 0; iter < ITER_COUNT; iter++) {
 
-                    long start = System.nanoTime();
+                    int ran = random.nextInt();
 
-                    //1.Tree set permuted add
-                    for ( int i = 0 ; i < size ; i++ ) {
-                        treeset.add( permutedAL.get( i ) );
-                    }
+                    // TIME IT!
+                    long start_contain = System.nanoTime();
+                    treeset.contains(ran);
+                    long stop_contain = System.nanoTime();
+                    totalTime_contain += stop_contain - start_contain;
 
-                    //2. Tree set permuted contains
-                    treeset.containsAll( permutedAL );
-                    treeset.addAll( permutedAL );
-                    for ( int i = 0 ; i < size ; i++ ) {
-                        treeset.contains( i );
-                    }
 
-//                  3. BST add permuted
-                    for ( int i = 0 ; i < size ; i++ ) {
-                        bst.add( permutedAL.get( i ) );
-                    }
+                    long start_add = System.nanoTime();
+                    treeset.add(ran);
+                    long stop_add = System.nanoTime();
+                    totalTime_add += stop_add - start_add;
+                    treeset.remove(ran);
 
-//                  4. BST permuted contains
-                    bst.addAll( permutedAL );
-                    bst.containsAll( permutedAL );
-                    for ( int i = 0 ; i < size ; i++ ) {
-                        bst.contains( i );
+                    boolean removeRes;
+                    long start_remove = System.nanoTime();
+                    removeRes= treeset.remove(ran);
+                    long stop_remove = System.nanoTime();
+                    totalTime_remove += stop_remove - start_remove;
+                    if(removeRes){
+                        treeset.add(ran);
                     }
-                    long stop = System.nanoTime();
-                    totalTime += stop - start;
                 }
-                double averageTime = totalTime / (double) ITER_COUNT;
-                System.out.println(size + "\t" + averageTime);
-                fw.write(size + "\t" + averageTime + "\n");
+                double averageTime_contain = totalTime_contain / (double) ITER_COUNT;
+                double averageTime_add = totalTime_add / (double) ITER_COUNT;
+                double averageTime_remove = totalTime_remove / (double) ITER_COUNT;
+                System.out.println(size + "\t" + averageTime_contain + "\t" + averageTime_add + "\t" + averageTime_remove);
             }
         } catch (IOException e) {
             e.printStackTrace();

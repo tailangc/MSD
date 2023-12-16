@@ -36,20 +36,20 @@ public class TimingExperimentSortComparison {
                 ArrayList<Integer> testArray = SortUtil.generateWorstCase(size);
                 //try both best and average case
                 //2 figures 3 plots
-//                Collections.shuffle(testArray, random);
+                Collections.shuffle(testArray, random);
 
                 for (int iter = 0; iter < ITER_COUNT; iter++) {
                     // SET UP!
-                    ArrayList<Integer> copyArray = new ArrayList<>(testArray);
-
+                    ArrayList<Integer> copyArray1 = new ArrayList<>(testArray);
+                    ArrayList<Integer> copyArray2 = new ArrayList<>(testArray);
                     // TIME IT!
                     long start = System.nanoTime();
-                    SortUtil.quicksort(copyArray, Integer::compareTo);
+                    SortUtil.quicksort(copyArray1, Integer::compareTo);
                     long stop = System.nanoTime();
                     totalTimeQuick += stop - start;
 
                     long start_merge = System.nanoTime();
-                    SortUtil.mergesort(copyArray, Integer::compareTo);
+                    SortUtil.mergesort(copyArray2, Integer::compareTo);
                     long stop_merge = System.nanoTime();
                     totalTimeMerge += stop_merge - start_merge;
 
