@@ -1,0 +1,5 @@
+1. Network Congestion
+    High volume of traffic may lead to network congestion that will cause delay in processing and forwarding packets.
+
+2. Packet Loss
+    The high delay might be indicating packet loss, as time is required for the transmission of the lost packets.

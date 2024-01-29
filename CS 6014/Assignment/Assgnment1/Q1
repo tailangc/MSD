@@ -1,0 +1,14 @@
+1. Average queing delay for 1000-byte packets: 3.66 ms
+    Total delay = Queing delay + Propagation delay + Transmission delay,
+    Queing delay = Total delay - propagation delay - Transmission delay,
+    Average queing delay = average total delay - average propagation elay - average transmission delay
+    average total delay = (11 + 10 + 2.8 + 3 + 5.5) / 5 = 6.46 ms
+    average propagation delay + average transmission delay = 2.8 ms
+    (The minimum value of the total delay is likely to present the the case where queing delay is negligible)
+    average queing delay = 6.46 ms - 2.8 ms = 3.66 ms
+
+2. propagation delay is 2 ms, transmission delay is 0.48 ms.
+    500-byte transmission delay = 2.8 ms - 2.4 ms = 0.4 ms
+    (The minimum delays are the case which queing delay is negligible, the diffrence represents the additional transmission delay for extra 500 bytes)
+    propagation delay = minimum delay - 500-byte propagation delay = 2.4 ms - 0.4 ms = 2.0 ms
+    600-byte transmission delay = 600/500 * 500-byte transmission delay = 1.2 * 0.4 = 0.48 ms
