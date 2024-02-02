@@ -1,0 +1,61 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;Author: Tailang CAO
+;;Date:01/29/2024
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+section .rodata  	 ;read only data
+section .text		 ;this says that we're about to write code
+global print_int,main
+
+;;;;;;;;;;;;;;;;;;;
+;Start
+;;	void print_int(long x);
+;;       1234=> '1' '2' '3' '4'
+;;       1234/ 10 = 123 remainder 4
+;;       123 /10 = 12 remainder 3
+;;       12 / 10 = 1 remainder 2
+;;       1/10 = 0 remainder 1
+;;       0<= stop
+
+
+print_int:
+	;;PROLOGUE
+ 	push rbp		 ;store the previous base pointer(that points to main) so we can get back there
+    	mov rbp , rsp		 ;move the stack pointer to base pointer
+    	sub rsp, 20		 ;save 20 bytes (character = byte) on the stack for the upcoming remainder(each digit)
+    	mov rax, rdi		 ;copy the 1 parameter into rax for future process
+    	mov rbx , 0 		 ;bx is the iTh location in digit array(the index)
+    	mov byte[rsp+20] ,10     ;put CR (ascii) into the 1st location of my digits array. move a byte into the register.
+    	mov r10 ,20
+
+dividing:
+	cmp rax, 0 ; compare rax to 0, which is the base case
+    je print ; jump if the former comparison is equal
+    mov rdx, 0 ; if you don't initialize DX to 0, it may crash
+    mov rcx, 10
+    div rcx ; rax <= rax / rcx, remainder is put into DX
+    add rdx, 48 ; turn the number to ASCII value, e.g., 4 should be 52 in ASCII
+    inc rbx; increase
+    dec r10
+    mov byte[rsp + r10], dl ; store the digit (remainder) at the current index dl => 8byte
+    jmp dividing
+print:
+   	mov rax ,1; 1 means OS use to write function
+    mov rdi, 1; 1st param 1 == std out
+    mov rcx , rsp
+    add rcx, r10
+    mov rsi, rcx ; 2nd param address of the 1st character in our array
+    mov rdx ,rbx ; 3nd param rbx holds the # of digits - put in rdx so write will see it
+    syscall
+    mov rsp ,rbp
+    pop rbp
+    ret
+main:
+   	mov rdi ,1234 ;move the number
+    call print_int ;
+    mov rax ,60; sys_exit system call
+    mov rdi ,0; 1st param error code
+    syscall
+

@@ -1,0 +1,1124 @@
+Script started on Thu Jan 25 14:54:43 2024
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging[0m[27m[24m[Jtailangcao@tailangdembp Lab 2_Debugging % [K[?2004h      [7mclang++ *.cpp  -o program[27m[25D[27mc[27ml[27ma[27mn[27mg[27m+[27m+[27m [27m*[27m.[27mc[27mp[27mp[27m [27m [27m-[27mo[27m [27mp[27mr[27mo[27mg[27mr[27ma[27m                   c  ccd buggyCode[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h[7mclang++ *.cpp  -o program[27m[25D[27mc[27ml[27ma[27mn[27mg[27m+[27m+[27m [27m*[27m.[27mc[27mp[27mp[27m [27m [27m-[27mo[27m [27mp[27mr[27mo[27mg[27mr[27ma[27mm[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hlls -l[?2004l
+total 464
+-rwxrwxrwx@ 1 tailangcao  staff    4128 Jan  4 16:52 Department.cpp
+-rwxrwxrwx@ 1 tailangcao  staff    1486 Oct  8  2018 Department.h
+-rwxrwxrwx@ 1 tailangcao  staff    1018 Jan  4 16:59 employeeClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     621 Jan  4 17:00 employeeClass.h
+-rwxrwxrwx@ 1 tailangcao  staff    5085 Jan  4 16:47 main.cpp
+-rwxr-xr-x  1 tailangcao  staff  188596 Jan 25 14:56 program
+-rwxrwxrwx@ 1 tailangcao  staff     955 Mar 15  2018 programmerClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     595 Mar 15  2018 programmerClass.h
+-rwxrwxrwx@ 1 tailangcao  staff    1072 Mar 15  2018 softwarearchitectClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     633 Mar 15  2018 softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h[7mclang++ *.cpp -g -O0  -o program[27m[32D[27mc[27ml[27ma[27mn[27mg[27m+[27m+[27m [27m*[27m.[27mc[27mp[27mp[27m [27m-[27mg[27m [27m-[27mO[27m0[27m [27m [27m-[27mo[27m [27mp[27mr[27mo[27mg[27mr[27ma[27mm[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hlls -l[?2004l
+total 680
+-rwxrwxrwx@ 1 tailangcao  staff    4128 Jan  4 16:52 Department.cpp
+-rwxrwxrwx@ 1 tailangcao  staff    1486 Oct  8  2018 Department.h
+-rwxrwxrwx@ 1 tailangcao  staff    1018 Jan  4 16:59 employeeClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     621 Jan  4 17:00 employeeClass.h
+-rwxrwxrwx@ 1 tailangcao  staff    5085 Jan  4 16:47 main.cpp
+-rwxr-xr-x  1 tailangcao  staff  299908 Jan 25 14:57 program
+drwxr-xr-x  3 tailangcao  staff      96 Jan 25 14:57 program.dSYM
+-rwxrwxrwx@ 1 tailangcao  staff     955 Mar 15  2018 programmerClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     595 Mar 15  2018 programmerClass.h
+-rwxrwxrwx@ 1 tailangcao  staff    1072 Mar 15  2018 softwarearchitectClass.cpp
+-rwxrwxrwx@ 1 tailangcao  staff     633 Mar 15  2018 softwarearchitectClass.h
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h[7mclang++ *.cpp -g -O0  -o program[27m[32D[27mc[27ml[27ma[27mn[27mg[27m+[27m+[27m [27m*[27m.[27mc[27mp[27mp[27m [27m-[27mg[27m [27m-[27mO[27m0[27m [27m [27m-[27mo[27m [27mp[27mr[27mo[27mg[27mr[27ma[27mm [P[11C [13D1  -o program[12D[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h[7mclang++ *.cpp -g -O0  -o program[27m[32D[27mc[27ml[27ma[27mn[27mg[27m+[27m+[27m [27m*[27m.[27mc[27mp[27mp[27m [27m-[27mg[27m [27m-[27mO[27m0[27m [27m [27m-[27mo[27m [27mp[27mr[27mo[27mg[27mr[27ma[27mm[1C [P[11C [13D2  -o program[12D[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D                    [2C          [32D../program[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   0   Technology Specialist   3000.00      2015
+
+   Mary   0         Project Manager   5500.00      2010
+
+   Marc   0    Research Team Leader   8000.00      2007
+
+   Mike   0        Multimedia Prog.   2500.00      2014
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert   0                OS Prog.   2300.00      2015
+
+   John   0    Senior Software Eng.   4899.00      2011
+
+ Connor   0      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy   0           Network Prog.   1900.00      2016
+
+   Jane   0                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Mary   0         Project Manager   5500.00      2010
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013
+
+ Connor   0      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Listing All Project IDs:  5 8
+-------------------------
+The Highest R&D Employee Salary is: 5500.00
+The Highest R&D Programmer Salary is: 2150.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2150
+The Average R&D Software Architect Salary is: 1900
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   0   Technology Specialist   3000.00      2015
+
+   Mary   0         Project Manager   5500.00      2010
+
+   Marc   0    Research Team Leader   8000.00      2007
+
+   Mike   0        Multimedia Prog.   2500.00      2014
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert   0                OS Prog.   2300.00      2015
+
+   John   0    Senior Software Eng.   4899.00      2011
+
+ Connor   0      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy   0           Network Prog.   1900.00      2016
+
+   Jane   0                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Mary   0         Project Manager   5500.00      2010
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013
+
+ Connor   0      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie   0     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Listing All Project IDs:  5 8
+-------------------------
+The Highest R&D Employee Salary is: 5500.00
+The Highest R&D Programmer Salary is: 2150.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2150
+The Average R&D Software Architect Salary is: 1900
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 2666
+The Average R&D Programmer Salary is: 1150
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 2666
+The Average R&D Programmer Salary is: 1150
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+[1msoftwarearchitectClass.cpp:9:20: [0m[0;1;31merror: [0m[1mout-of-line definition of 'SoftwareArchitect' does not match any declaration in 'SoftwareArchitect'[0m
+SoftwareArchitect::SoftwareArchitect(string nme, long id, string jobTtle, int slry, int yr,
+[0;1;32m                   ^~~~~~~~~~~~~~~~~
+[0m1 error generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 2666
+The Average R&D Programmer Salary is: 1150
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 2666
+The Average R&D Programmer Salary is: 1150
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 750
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+In file included from Department.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:18: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+    void print() override;
+[0;1;32m                 ^
+[0m[1m./employeeClass.h:30:18: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+    void print() override;
+[0;1;32m                 ^~~~~~~~
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m3 warnings and 3 errors generated.
+In file included from employeeClass.cpp:1:
+[1m./employeeClass.h:30:18: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+    void print() override;
+[0;1;32m                 ^
+[0m[1m./employeeClass.h:30:18: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+    void print() override;
+[0;1;32m                 ^~~~~~~~
+[0m1 warning and 1 error generated.
+In file included from main.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:18: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+    void print() override;
+[0;1;32m                 ^
+[0m[1m./employeeClass.h:30:18: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+    void print() override;
+[0;1;32m                 ^~~~~~~~
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m3 warnings and 3 errors generated.
+In file included from programmerClass.cpp:1:
+In file included from ./programmerClass.h:4:
+[1m./employeeClass.h:30:18: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+    void print() override;
+[0;1;32m                 ^
+[0m[1m./employeeClass.h:30:18: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+    void print() override;
+[0;1;32m                 ^~~~~~~~
+[0mIn file included from programmerClass.cpp:1:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0m2 warnings and 2 errors generated.
+In file included from softwarearchitectClass.cpp:1:
+In file included from ./softwarearchitectClass.h:4:
+[1m./employeeClass.h:30:18: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+    void print() override;
+[0;1;32m                 ^
+[0m[1m./employeeClass.h:30:18: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+    void print() override;
+[0;1;32m                 ^~~~~~~~
+[0mIn file included from softwarearchitectClass.cpp:1:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m2 warnings and 2 errors generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+In file included from Department.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print()virtual ;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m2 warnings and 3 errors generated.
+In file included from employeeClass.cpp:1:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print()virtual ;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0m1 error generated.
+In file included from main.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print()virtual ;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m2 warnings and 3 errors generated.
+In file included from programmerClass.cpp:1:
+In file included from ./programmerClass.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print()virtual ;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from programmerClass.cpp:1:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0m1 warning and 2 errors generated.
+In file included from softwarearchitectClass.cpp:1:
+In file included from ./softwarearchitectClass.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print()virtual ;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from softwarearchitectClass.cpp:1:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m1 warning and 2 errors generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+In file included from Department.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print() virtual;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m2 warnings and 3 errors generated.
+In file included from employeeClass.cpp:1:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print() virtual;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0m1 error generated.
+In file included from main.cpp:1:
+In file included from ./Department.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print() virtual;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m2 warnings and 3 errors generated.
+In file included from programmerClass.cpp:1:
+In file included from ./programmerClass.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print() virtual;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from programmerClass.cpp:1:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m[1m./programmerClass.h:21:14: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print()override;
+[0;1;32m                    ^~~~~~~~
+[0m1 warning and 2 errors generated.
+In file included from softwarearchitectClass.cpp:1:
+In file included from ./softwarearchitectClass.h:4:
+[1m./employeeClass.h:30:17: [0m[0;1;31merror: [0m[1mexpected ';' at end of declaration list[0m
+    void print() virtual;
+[0;1;32m                ^
+[0m[0;32m                ;
+[0mIn file included from softwarearchitectClass.cpp:1:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m[1m./softwarearchitectClass.h:22:15: [0m[0;1;31merror: [0m[1monly virtual member functions can be marked 'override'[0m
+        void print() override;
+[0;1;32m                     ^~~~~~~~
+[0m1 warning and 2 errors generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[9Dclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016
+
+   Jane  35                  Tester   1500.00      2018
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013
+
+ Albert  13                OS Prog.   2300.00      2015
+
+   John  21    Senior Software Eng.   4899.00      2011
+
+ Connor  24      Software Developer   1900.00      2017
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h./program[9Dclang++ *.cpp -g -O2  -o program[?2004l
+In file included from Department.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0mIn file included from Department.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m2 warnings generated.
+In file included from main.cpp:1:
+In file included from ./Department.h:5:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0mIn file included from main.cpp:1:
+In file included from ./Department.h:6:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m2 warnings generated.
+In file included from programmerClass.cpp:1:
+[1m./programmerClass.h:21:14: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print()override;
+[0;1;32m                    ^
+[0m1 warning generated.
+In file included from softwarearchitectClass.cpp:1:
+[1m./softwarearchitectClass.h:22:15: [0m[0;1;35mwarning: [0m[1m'override' keyword is a C++11 extension [-Wc++11-extensions][0m
+        void print() override;
+[0;1;32m                     ^
+[0m1 warning generated.
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004hclang++ *.cpp -g -O2  -o program[32D./program           [2C          [23D[?2004l
+  Here is the List of all the Staff in the R&D Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+   Mike  11        Multimedia Prog.   2500.00      2014      Mary         5         CSS
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+  Here is the List of all the Staff in the IT Department: 
+  ------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+    Roy  32           Network Prog.   1900.00      2016       N/A         7        JAVA
+
+   Jane  35                  Tester   1500.00      2018       Roy         7        JAVA
+
+ Removing Mike from the company: Succeeded
+ -------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+   Josh   1   Technology Specialist   3000.00      2015
+
+   Mary   2         Project Manager   5500.00      2010
+
+   Marc   3    Research Team Leader   8000.00      2007
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+   John  21    Senior Software Eng.   4899.00      2011      Marc         6                    7
+
+ Connor  24      Software Developer   1900.00      2017      John         8                    0
+
+  Here is the List of all the Programmers who know C++ in the R&D Department: 
+  ---------------------------------------------------------------------------
+   Name  ID          Title            Salary   Year Hired  Supervisor  ProjectID Prog.Lang. #Exp Years
+
+  Julie  12     Mainframe Sys.Prog.   2150.00      2013      Mary         5         C++
+
+ Albert  13                OS Prog.   2300.00      2015      Mary         9         C++
+
+ Listing All Project IDs:  5 9 6 8
+-------------------------
+The Highest R&D Employee Salary is: 8000.00
+The Highest R&D Programmer Salary is: 2300.00
+The Highest R&D Software Architect Salary is: 1900.00
+
+The Average R&D Employee Salary is: 5500
+The Average R&D Programmer Salary is: 2225
+The Average R&D Software Architect Salary is: 3399
+
+The Average IT Employee Salary is: 0
+The Average IT Programmer Salary is: 1700
+The Average IT Software Architect Salary is: 0
+
+[1m[7m%[27m[1m[0m                                                                                ]7;file://tailangdembp.uconnect.utah.edu/Users/tailangcao/Desktop/CS6015/Lab/Lab%202_Debugging/buggyCode[0m[27m[24m[Jtailangcao@tailangdembp buggyCode % [K[?2004h
