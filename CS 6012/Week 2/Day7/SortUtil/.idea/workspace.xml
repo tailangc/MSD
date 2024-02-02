@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3665be8e-a7d6-4279-95c1-d40ffc112445" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assignment04/Analysis Document on Assignment 04.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment05/Analysis Document on Assignment05.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayStackPeek3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayStackPeek3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedListStackPop3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedListStackPop3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrayStackPush3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/arrayStackPush3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contains_experiment.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/contains_experiment.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment04/Analysis Document on Assignment 04.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment04/Analysis Document on Assignment 04.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment04/TimingExperimentSortComparison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment04/TimingExperimentSortComparison.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment04/~$alysis Document on Assignment 04.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/Analysis Document on Assignment05.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment05/Analysis Document on Assignment05.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/LinkedListStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment05/LinkedListStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment05/SinglyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/TimingExperimentPeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment05/TimingExperimentPeek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/TimingExperimentPop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assignment05/TimingExperimentPop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/TimingExperimentPush.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment05/~$alysis Document on Assignment05.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment06/TimingExperiment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assignment06/TimingExperiment2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threshold_experiment.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/threshold_experiment.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +69,7 @@
       <recent name="Assignment04" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BuildTreeTimingExperiment">
     <configuration name="BuildTreeTimingExperiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assignment09.BuildTreeTimingExperiment" />
       <module name="SortUtil" />
@@ -180,6 +161,7 @@
       <updated>1700009467414</updated>
       <workItem from="1700009468839" duration="132432000" />
       <workItem from="1701983450730" duration="54738000" />
+      <workItem from="1702761962400" duration="590000" />
     </task>
     <servers />
   </component>
