@@ -15,3 +15,7 @@ msdscript: $(OBJECTS)
 .PHONY: clean
 clean:
 	rm -f *.o msdscript
+
+
+doc: msdscript
+		cd documentation && doxygen
