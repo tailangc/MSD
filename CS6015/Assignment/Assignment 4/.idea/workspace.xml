@@ -21,45 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79eb6e0-c226-4c32-bad4-6edad8ab433c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/DNS Resolver.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSQuestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/DNSServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/DNS Resolver/src/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment3/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/Expr.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/Expr.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/catch.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/cmdline.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/cmdline.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment 2/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/Expr.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/Expr.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/catch.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/cache-v2-8a178af8b6756633e9bd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8d2da5eab589e4367e30.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-beeb4d36eab4e09306d1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/index-2024-01-31T06-18-59-0667.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/target-untitled-Debug-a4b04dd4f6c6f0088668.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ccbe19dcd09cbd5fdb00.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmdline.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/cmdline.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmdline.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmdline.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub.zip" beforeDir="false" afterPath="$PROJECT_DIR$/hw4_sub.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/Expr.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/Expr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/catch.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/cmdline.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/cmdline.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msdscript" beforeDir="false" afterPath="$PROJECT_DIR$/msdscript" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +60,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Makefile Target.%.o.executor": "Run",
+    "Makefile Target.all.executor": "Run",
+    "Makefile Target.clean.executor": "Run",
+    "Makefile Target.doc.executor": "Run",
+    "Makefile Target.msdscript.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -103,7 +80,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Makefile Target.doc">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -114,6 +91,53 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="%.o" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="%.o" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="all" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="clean" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="doc" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="doc" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="msdscript" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/makefile" target="msdscript" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Assignment_4" />
+      <item itemvalue="Makefile Target.%.o" />
+      <item itemvalue="Makefile Target.all" />
+      <item itemvalue="Makefile Target.clean" />
+      <item itemvalue="Makefile Target.doc" />
+      <item itemvalue="Makefile Target.msdscript" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Makefile Target.doc" />
+        <item itemvalue="Makefile Target.all" />
+        <item itemvalue="Makefile Target.clean" />
+        <item itemvalue="Makefile Target.msdscript" />
+        <item itemvalue="Makefile Target.%.o" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -123,7 +147,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707200515947</updated>
-      <workItem from="1707200517214" duration="662000" />
+      <workItem from="1707200517214" duration="11694000" />
     </task>
     <servers />
   </component>
