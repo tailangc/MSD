@@ -1,0 +1,401 @@
+\begin{theindex}
+
+  \item {Add}, \hyperpage{13}
+    \subitem {Add}, \hyperpage{13}
+    \subitem {equals}, \hyperpage{14}
+    \subitem {has\_variable}, \hyperpage{14}
+    \subitem {interp}, \hyperpage{14}
+    \subitem {pretty\_print}, \hyperpage{14}
+    \subitem {pretty\_print\_dr}, \hyperpage{14}
+    \subitem {print}, \hyperpage{14}
+    \subitem {subst}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Catch::always\_false$<$ T $>$}, \hyperpage{15}
+  \item {Catch::AssertionHandler}, \hyperpage{18}
+  \item {Catch::AssertionInfo}, \hyperpage{18}
+  \item {Catch::AssertionReaction}, \hyperpage{18}
+  \item {Catch::AutoReg}, \hyperpage{19}
+  \item {Catch::BinaryExpr$<$ LhsT, RhsT $>$}, \hyperpage{19}
+  \item {Catch::Capturer}, \hyperpage{20}
+  \item {Catch::CaseSensitive}, \hyperpage{21}
+  \item {Catch::Counts}, \hyperpage{26}
+  \item {Catch::Decomposer}, \hyperpage{26}
+  \item {Catch::Detail::Approx}, \hyperpage{15}
+  \item {Catch::Detail::EnumInfo}, \hyperpage{28}
+  \item {Catch::detail::is\_range\_impl$<$ T, typename $>$}, 
+		\hyperpage{43}
+  \item {Catch::detail::is\_range\_impl$<$ T, typename void\_type$<$ decltype(begin(std::declval$<$ T $>$()))$>$::type $>$}, 
+		\hyperpage{44}
+  \item {Catch::Detail::IsStreamInsertable$<$ T $>$}, \hyperpage{44}
+  \item {Catch::detail::void\_type$<$... $>$}, \hyperpage{94}
+  \item {Catch::ExceptionTranslatorRegistrar}, \hyperpage{31}
+  \item {Catch::ExprLhs$<$ LhsT $>$}, \hyperpage{32}
+  \item {Catch::GeneratorException}, \hyperpage{35}
+  \item {Catch::Generators::as$<$ T $>$}, \hyperpage{17}
+  \item {Catch::Generators::ChunkGenerator$<$ T $>$}, \hyperpage{21}
+    \subitem {get}, \hyperpage{22}
+    \subitem {next}, \hyperpage{22}
+  \item {Catch::Generators::FilterGenerator$<$ T, Predicate $>$}, 
+		\hyperpage{33}
+    \subitem {get}, \hyperpage{33}
+    \subitem {next}, \hyperpage{33}
+  \item {Catch::Generators::FixedValuesGenerator$<$ T $>$}, 
+		\hyperpage{34}
+    \subitem {get}, \hyperpage{34}
+    \subitem {next}, \hyperpage{34}
+  \item {Catch::Generators::Generators$<$ T $>$}, \hyperpage{35}
+    \subitem {get}, \hyperpage{36}
+    \subitem {next}, \hyperpage{36}
+  \item {Catch::Generators::GeneratorUntypedBase}, \hyperpage{36}
+  \item {Catch::Generators::GeneratorWrapper$<$ T $>$}, \hyperpage{37}
+  \item {Catch::Generators::IGenerator$<$ T $>$}, \hyperpage{39}
+  \item {Catch::Generators::IteratorGenerator$<$ T $>$}, \hyperpage{44}
+    \subitem {get}, \hyperpage{45}
+    \subitem {next}, \hyperpage{45}
+  \item {Catch::Generators::MapGenerator$<$ T, U, Func $>$}, 
+		\hyperpage{47}
+    \subitem {get}, \hyperpage{48}
+    \subitem {next}, \hyperpage{48}
+  \item {Catch::Generators::RandomFloatingGenerator$<$ Float $>$}, 
+		\hyperpage{64}
+    \subitem {get}, \hyperpage{65}
+    \subitem {next}, \hyperpage{65}
+  \item {Catch::Generators::RandomIntegerGenerator$<$ Integer $>$}, 
+		\hyperpage{65}
+    \subitem {get}, \hyperpage{66}
+    \subitem {next}, \hyperpage{66}
+  \item {Catch::Generators::RangeGenerator$<$ T $>$}, \hyperpage{66}
+    \subitem {get}, \hyperpage{67}
+    \subitem {next}, \hyperpage{67}
+  \item {Catch::Generators::RepeatGenerator$<$ T $>$}, \hyperpage{68}
+    \subitem {get}, \hyperpage{69}
+    \subitem {next}, \hyperpage{69}
+  \item {Catch::Generators::SingleValueGenerator$<$ T $>$}, 
+		\hyperpage{73}
+    \subitem {get}, \hyperpage{73}
+    \subitem {next}, \hyperpage{73}
+  \item {Catch::Generators::TakeGenerator$<$ T $>$}, \hyperpage{85}
+    \subitem {get}, \hyperpage{85}
+    \subitem {next}, \hyperpage{85}
+  \item {Catch::IConfig}, \hyperpage{37}
+  \item {Catch::IContext}, \hyperpage{38}
+  \item {Catch::IExceptionTranslator}, \hyperpage{38}
+  \item {Catch::IExceptionTranslatorRegistry}, \hyperpage{38}
+  \item {Catch::IGeneratorTracker}, \hyperpage{39}
+  \item {Catch::IMutableContext}, \hyperpage{40}
+  \item {Catch::IMutableEnumValuesRegistry}, \hyperpage{40}
+  \item {Catch::IMutableRegistryHub}, \hyperpage{41}
+  \item {Catch::IRegistryHub}, \hyperpage{41}
+  \item {Catch::IResultCapture}, \hyperpage{41}
+  \item {Catch::IRunner}, \hyperpage{42}
+  \item {Catch::is\_callable$<$ Fun(Args...)$>$}, \hyperpage{42}
+  \item {Catch::is\_callable$<$ T $>$}, \hyperpage{42}
+  \item {Catch::is\_callable\_tester}, \hyperpage{43}
+  \item {Catch::is\_range$<$ T $>$}, \hyperpage{43}
+  \item {Catch::IStream}, \hyperpage{44}
+  \item {Catch::ITestCaseRegistry}, \hyperpage{45}
+  \item {Catch::ITestInvoker}, \hyperpage{46}
+  \item {Catch::ITransientExpression}, \hyperpage{46}
+  \item {Catch::LazyExpression}, \hyperpage{47}
+  \item {Catch::Matchers::Exception::ExceptionMessageMatcher}, 
+		\hyperpage{30}
+    \subitem {describe}, \hyperpage{31}
+  \item {Catch::Matchers::Floating::WithinAbsMatcher}, \hyperpage{95}
+    \subitem {describe}, \hyperpage{95}
+  \item {Catch::Matchers::Floating::WithinRelMatcher}, \hyperpage{96}
+    \subitem {describe}, \hyperpage{96}
+  \item {Catch::Matchers::Floating::WithinUlpsMatcher}, \hyperpage{97}
+    \subitem {describe}, \hyperpage{97}
+  \item {Catch::Matchers::Generic::PredicateMatcher$<$ T $>$}, 
+		\hyperpage{63}
+    \subitem {describe}, \hyperpage{64}
+    \subitem {match}, \hyperpage{64}
+  \item {Catch::Matchers::Impl::MatchAllOf$<$ ArgT $>$}, \hyperpage{48}
+    \subitem {describe}, \hyperpage{49}
+  \item {Catch::Matchers::Impl::MatchAnyOf$<$ ArgT $>$}, \hyperpage{49}
+    \subitem {describe}, \hyperpage{50}
+  \item {Catch::Matchers::Impl::MatcherBase$<$ T $>$}, \hyperpage{51}
+  \item {Catch::Matchers::Impl::MatcherMethod$<$ ObjectT $>$}, 
+		\hyperpage{52}
+  \item {Catch::Matchers::Impl::MatcherUntypedBase}, \hyperpage{52}
+  \item {Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}, \hyperpage{54}
+    \subitem {describe}, \hyperpage{55}
+  \item {Catch::Matchers::StdString::CasedString}, \hyperpage{20}
+  \item {Catch::Matchers::StdString::ContainsMatcher}, \hyperpage{23}
+  \item {Catch::Matchers::StdString::EndsWithMatcher}, \hyperpage{27}
+  \item {Catch::Matchers::StdString::EqualsMatcher}, \hyperpage{28}
+  \item {Catch::Matchers::StdString::RegexMatcher}, \hyperpage{67}
+    \subitem {describe}, \hyperpage{68}
+  \item {Catch::Matchers::StdString::StartsWithMatcher}, \hyperpage{74}
+  \item {Catch::Matchers::StdString::StringMatcherBase}, \hyperpage{83}
+    \subitem {describe}, \hyperpage{84}
+  \item {Catch::Matchers::Vector::ApproxMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{16}
+    \subitem {describe}, \hyperpage{17}
+  \item {Catch::Matchers::Vector::ContainsElementMatcher$<$ T, Alloc $>$}, 
+		\hyperpage{22}
+    \subitem {describe}, \hyperpage{23}
+  \item {Catch::Matchers::Vector::ContainsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{25}
+    \subitem {describe}, \hyperpage{26}
+  \item {Catch::Matchers::Vector::EqualsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{29}
+    \subitem {describe}, \hyperpage{30}
+  \item {Catch::Matchers::Vector::UnorderedEqualsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{90}
+    \subitem {describe}, \hyperpage{91}
+  \item {Catch::MatchExpr$<$ ArgT, MatcherT $>$}, \hyperpage{53}
+    \subitem {streamReconstructedExpression}, \hyperpage{53}
+  \item {Catch::MessageBuilder}, \hyperpage{55}
+  \item {Catch::MessageInfo}, \hyperpage{56}
+  \item {Catch::MessageStream}, \hyperpage{56}
+  \item {Catch::NameAndTags}, \hyperpage{59}
+  \item {Catch::NonCopyable}, \hyperpage{59}
+  \item {Catch::Option$<$ T $>$}, \hyperpage{62}
+  \item {Catch::pluralise}, \hyperpage{62}
+  \item {Catch::RegistrarForTagAliases}, \hyperpage{68}
+  \item {Catch::ResultDisposition}, \hyperpage{69}
+  \item {Catch::ResultWas}, \hyperpage{70}
+  \item {Catch::ReusableStringStream}, \hyperpage{70}
+  \item {Catch::RunTests}, \hyperpage{70}
+  \item {Catch::ScopedMessage}, \hyperpage{71}
+  \item {Catch::Section}, \hyperpage{71}
+  \item {Catch::SectionEndInfo}, \hyperpage{71}
+  \item {Catch::SectionInfo}, \hyperpage{72}
+  \item {Catch::ShowDurations}, \hyperpage{72}
+  \item {Catch::SimplePcg32}, \hyperpage{72}
+  \item {Catch::SourceLineInfo}, \hyperpage{74}
+  \item {Catch::StreamEndStop}, \hyperpage{76}
+  \item {Catch::StringMaker$<$ bool $>$}, \hyperpage{76}
+  \item {Catch::StringMaker$<$ Catch::Detail::Approx $>$}, 
+		\hyperpage{76}
+  \item {Catch::StringMaker$<$ char $>$}, \hyperpage{77}
+  \item {Catch::StringMaker$<$ char \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{77}
+  \item {Catch::StringMaker$<$ char const \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{77}
+  \item {Catch::StringMaker$<$ char[SZ]$>$}, \hyperpage{77}
+  \item {Catch::StringMaker$<$ double $>$}, \hyperpage{78}
+  \item {Catch::StringMaker$<$ float $>$}, \hyperpage{78}
+  \item {Catch::StringMaker$<$ int $>$}, \hyperpage{78}
+  \item {Catch::StringMaker$<$ long $>$}, \hyperpage{78}
+  \item {Catch::StringMaker$<$ long long $>$}, \hyperpage{79}
+  \item {Catch::StringMaker$<$ R C::\texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{79}
+  \item {Catch::StringMaker$<$ R, typename std::enable\_if$<$ is\_range$<$ R $>$::value \&\&!::Catch::Detail::IsStreamInsertable$<$ R $>$::value $>$::type $>$}, 
+		\hyperpage{79}
+  \item {Catch::StringMaker$<$ signed char $>$}, \hyperpage{79}
+  \item {Catch::StringMaker$<$ signed char[SZ]$>$}, \hyperpage{80}
+  \item {Catch::StringMaker$<$ std::nullptr\_t $>$}, \hyperpage{80}
+  \item {Catch::StringMaker$<$ std::string $>$}, \hyperpage{80}
+  \item {Catch::StringMaker$<$ std::wstring $>$}, \hyperpage{80}
+  \item {Catch::StringMaker$<$ T \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{81}
+  \item {Catch::StringMaker$<$ T, typename $>$}, \hyperpage{76}
+  \item {Catch::StringMaker$<$ T[SZ]$>$}, \hyperpage{81}
+  \item {Catch::StringMaker$<$ unsigned char $>$}, \hyperpage{81}
+  \item {Catch::StringMaker$<$ unsigned char[SZ]$>$}, \hyperpage{81}
+  \item {Catch::StringMaker$<$ unsigned int $>$}, \hyperpage{82}
+  \item {Catch::StringMaker$<$ unsigned long $>$}, \hyperpage{82}
+  \item {Catch::StringMaker$<$ unsigned long long $>$}, \hyperpage{82}
+  \item {Catch::StringMaker$<$ wchar\_t \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{82}
+  \item {Catch::StringMaker$<$ wchar\_t const \texorpdfstring{$\ast$}{*} $>$}, 
+		\hyperpage{83}
+  \item {Catch::StringRef}, \hyperpage{84}
+  \item {Catch::TestCase}, \hyperpage{86}
+  \item {Catch::TestCaseInfo}, \hyperpage{87}
+  \item {Catch::TestFailureException}, \hyperpage{88}
+  \item {Catch::TestInvokerAsMethod$<$ C $>$}, \hyperpage{88}
+    \subitem {invoke}, \hyperpage{88}
+  \item {Catch::Timer}, \hyperpage{89}
+  \item {Catch::Totals}, \hyperpage{89}
+  \item {Catch::true\_given$<$ typename $>$}, \hyperpage{89}
+  \item {Catch::UnaryExpr$<$ LhsT $>$}, \hyperpage{90}
+  \item {Catch::UseColour}, \hyperpage{91}
+  \item {Catch::WaitForKeypress}, \hyperpage{94}
+  \item {Catch::WarnAbout}, \hyperpage{94}
+  \item {Catch\_global\_namespace\_dummy}, \hyperpage{21}
+
+  \indexspace
+
+  \item {describe}
+    \subitem {Catch::Matchers::Exception::ExceptionMessageMatcher}, 
+		\hyperpage{31}
+    \subitem {Catch::Matchers::Floating::WithinAbsMatcher}, 
+		\hyperpage{95}
+    \subitem {Catch::Matchers::Floating::WithinRelMatcher}, 
+		\hyperpage{96}
+    \subitem {Catch::Matchers::Floating::WithinUlpsMatcher}, 
+		\hyperpage{97}
+    \subitem {Catch::Matchers::Generic::PredicateMatcher$<$ T $>$}, 
+		\hyperpage{64}
+    \subitem {Catch::Matchers::Impl::MatchAllOf$<$ ArgT $>$}, 
+		\hyperpage{49}
+    \subitem {Catch::Matchers::Impl::MatchAnyOf$<$ ArgT $>$}, 
+		\hyperpage{50}
+    \subitem {Catch::Matchers::Impl::MatchNotOf$<$ ArgT $>$}, 
+		\hyperpage{55}
+    \subitem {Catch::Matchers::StdString::RegexMatcher}, \hyperpage{68}
+    \subitem {Catch::Matchers::StdString::StringMatcherBase}, 
+		\hyperpage{84}
+    \subitem {Catch::Matchers::Vector::ApproxMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{17}
+    \subitem {Catch::Matchers::Vector::ContainsElementMatcher$<$ T, Alloc $>$}, 
+		\hyperpage{23}
+    \subitem {Catch::Matchers::Vector::ContainsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{26}
+    \subitem {Catch::Matchers::Vector::EqualsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{30}
+    \subitem {Catch::Matchers::Vector::UnorderedEqualsMatcher$<$ T, AllocComp, AllocMatch $>$}, 
+		\hyperpage{91}
+
+  \indexspace
+
+  \item {equals}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+  \item {Expr}, \hyperpage{32}
+
+  \indexspace
+
+  \item {get}
+    \subitem {Catch::Generators::ChunkGenerator$<$ T $>$}, 
+		\hyperpage{22}
+    \subitem {Catch::Generators::FilterGenerator$<$ T, Predicate $>$}, 
+		\hyperpage{33}
+    \subitem {Catch::Generators::FixedValuesGenerator$<$ T $>$}, 
+		\hyperpage{34}
+    \subitem {Catch::Generators::Generators$<$ T $>$}, \hyperpage{36}
+    \subitem {Catch::Generators::IteratorGenerator$<$ T $>$}, 
+		\hyperpage{45}
+    \subitem {Catch::Generators::MapGenerator$<$ T, U, Func $>$}, 
+		\hyperpage{48}
+    \subitem {Catch::Generators::RandomFloatingGenerator$<$ Float $>$}, 
+		\hyperpage{65}
+    \subitem {Catch::Generators::RandomIntegerGenerator$<$ Integer $>$}, 
+		\hyperpage{66}
+    \subitem {Catch::Generators::RangeGenerator$<$ T $>$}, 
+		\hyperpage{67}
+    \subitem {Catch::Generators::RepeatGenerator$<$ T $>$}, 
+		\hyperpage{69}
+    \subitem {Catch::Generators::SingleValueGenerator$<$ T $>$}, 
+		\hyperpage{73}
+    \subitem {Catch::Generators::TakeGenerator$<$ T $>$}, 
+		\hyperpage{85}
+
+  \indexspace
+
+  \item {has\_variable}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+
+  \indexspace
+
+  \item {interp}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+  \item {invoke}
+    \subitem {Catch::TestInvokerAsMethod$<$ C $>$}, \hyperpage{88}
+
+  \indexspace
+
+  \item {match}
+    \subitem {Catch::Matchers::Generic::PredicateMatcher$<$ T $>$}, 
+		\hyperpage{64}
+  \item {MSDScript}, \hyperpage{1}
+  \item {Mult}, \hyperpage{57}
+    \subitem {equals}, \hyperpage{58}
+    \subitem {has\_variable}, \hyperpage{58}
+    \subitem {interp}, \hyperpage{58}
+    \subitem {Mult}, \hyperpage{57}
+    \subitem {pretty\_print}, \hyperpage{58}
+    \subitem {pretty\_print\_dr}, \hyperpage{58}
+    \subitem {print}, \hyperpage{58}
+    \subitem {subst}, \hyperpage{58}
+
+  \indexspace
+
+  \item {next}
+    \subitem {Catch::Generators::ChunkGenerator$<$ T $>$}, 
+		\hyperpage{22}
+    \subitem {Catch::Generators::FilterGenerator$<$ T, Predicate $>$}, 
+		\hyperpage{33}
+    \subitem {Catch::Generators::FixedValuesGenerator$<$ T $>$}, 
+		\hyperpage{34}
+    \subitem {Catch::Generators::Generators$<$ T $>$}, \hyperpage{36}
+    \subitem {Catch::Generators::IteratorGenerator$<$ T $>$}, 
+		\hyperpage{45}
+    \subitem {Catch::Generators::MapGenerator$<$ T, U, Func $>$}, 
+		\hyperpage{48}
+    \subitem {Catch::Generators::RandomFloatingGenerator$<$ Float $>$}, 
+		\hyperpage{65}
+    \subitem {Catch::Generators::RandomIntegerGenerator$<$ Integer $>$}, 
+		\hyperpage{66}
+    \subitem {Catch::Generators::RangeGenerator$<$ T $>$}, 
+		\hyperpage{67}
+    \subitem {Catch::Generators::RepeatGenerator$<$ T $>$}, 
+		\hyperpage{69}
+    \subitem {Catch::Generators::SingleValueGenerator$<$ T $>$}, 
+		\hyperpage{73}
+    \subitem {Catch::Generators::TakeGenerator$<$ T $>$}, 
+		\hyperpage{85}
+  \item {Num}, \hyperpage{60}
+    \subitem {equals}, \hyperpage{61}
+    \subitem {has\_variable}, \hyperpage{61}
+    \subitem {interp}, \hyperpage{61}
+    \subitem {Num}, \hyperpage{60}
+    \subitem {pretty\_print}, \hyperpage{61}
+    \subitem {pretty\_print\_dr}, \hyperpage{61}
+    \subitem {print}, \hyperpage{61}
+    \subitem {subst}, \hyperpage{61}
+
+  \indexspace
+
+  \item {pretty\_print}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+  \item {pretty\_print\_dr}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+  \item {print}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+
+  \indexspace
+
+  \item {streamReconstructedExpression}
+    \subitem {Catch::MatchExpr$<$ ArgT, MatcherT $>$}, \hyperpage{53}
+  \item {subst}
+    \subitem {Add}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{58}
+    \subitem {Num}, \hyperpage{61}
+    \subitem {Var}, \hyperpage{93}
+
+  \indexspace
+
+  \item {Var}, \hyperpage{92}
+    \subitem {equals}, \hyperpage{93}
+    \subitem {has\_variable}, \hyperpage{93}
+    \subitem {interp}, \hyperpage{93}
+    \subitem {pretty\_print}, \hyperpage{93}
+    \subitem {pretty\_print\_dr}, \hyperpage{93}
+    \subitem {print}, \hyperpage{93}
+    \subitem {subst}, \hyperpage{93}
+    \subitem {Var}, \hyperpage{92}
+
+\end{theindex}
