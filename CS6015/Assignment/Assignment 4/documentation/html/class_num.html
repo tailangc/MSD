@@ -102,14 +102,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7e6ceeb8ca9267a04da3a2b3af8accf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6828afaaade5eb724b7350f5ac5b0b8" id="r_aa6828afaaade5eb724b7350f5ac5b0b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6828afaaade5eb724b7350f5ac5b0b8">print</a> (std::ostream &amp;ot)</td></tr>
 <tr class="separator:aa6828afaaade5eb724b7350f5ac5b0b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71d07939e008e8f3e2294c1d5c745c66" id="r_a71d07939e008e8f3e2294c1d5c745c66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71d07939e008e8f3e2294c1d5c745c66">pretty_print_dr</a> (std::ostream &amp;ot)</td></tr>
+<tr class="memitem:a71d07939e008e8f3e2294c1d5c745c66" id="r_a71d07939e008e8f3e2294c1d5c745c66"><td class="memItemLeft" align="right" valign="top"><a id="a71d07939e008e8f3e2294c1d5c745c66" name="a71d07939e008e8f3e2294c1d5c745c66"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print_dr</b> (std::ostream &amp;ot)</td></tr>
 <tr class="separator:a71d07939e008e8f3e2294c1d5c745c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9312823e5d1ebefc247e76e93d51169" id="r_ae9312823e5d1ebefc247e76e93d51169"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9312823e5d1ebefc247e76e93d51169">pretty_print</a> (std::ostream &amp;ot, precedence_t prec)</td></tr>
-<tr class="separator:ae9312823e5d1ebefc247e76e93d51169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7958391b59341215e1bc643a3adcead7" id="r_a7958391b59341215e1bc643a3adcead7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7958391b59341215e1bc643a3adcead7">pretty_print</a> (std::ostream &amp;ot, precedence_t prec, int)</td></tr>
+<tr class="separator:a7958391b59341215e1bc643a3adcead7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_expr"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_expr')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_expr.html">Expr</a></td></tr>
 <tr class="memitem:abe130f37bd185ec13c5113de16fc7bf7 inherit pub_methods_class_expr" id="r_abe130f37bd185ec13c5113de16fc7bf7"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()</td></tr>
 <tr class="separator:abe130f37bd185ec13c5113de16fc7bf7 inherit pub_methods_class_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef347f31a26ab35c6bb95d5e79b0a9b6 inherit pub_methods_class_expr" id="r_aef347f31a26ab35c6bb95d5e79b0a9b6"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print_dr</b> (std::ostream &amp;ot)</td></tr>
+<tr class="separator:aef347f31a26ab35c6bb95d5e79b0a9b6 inherit pub_methods_class_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad7c18234f22d96d6917089b5bd7caa inherit pub_methods_class_expr" id="r_a6ad7c18234f22d96d6917089b5bd7caa"><td class="memItemLeft" align="right" valign="top">
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_pretty_string</b> ()</td></tr>
 <tr class="separator:a6ad7c18234f22d96d6917089b5bd7caa inherit pub_methods_class_expr"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,8 +230,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
 
 </div>
 </div>
-<a id="ae9312823e5d1ebefc247e76e93d51169" name="ae9312823e5d1ebefc247e76e93d51169"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9312823e5d1ebefc247e76e93d51169">&#9670;&#160;</a></span>pretty_print()</h2>
+<a id="a7958391b59341215e1bc643a3adcead7" name="a7958391b59341215e1bc643a3adcead7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7958391b59341215e1bc643a3adcead7">&#9670;&#160;</a></span>pretty_print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,34 +247,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">precedence_t</td>          <td class="paramname"><span class="paramname"><em>prec</em></span>&#160;)</td>
+          <td class="paramtype">precedence_t</td>          <td class="paramname"><span class="paramname"><em>prec</em>, </span></td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="class_expr.html">Expr</a>.</p>
-
-</div>
-</div>
-<a id="a71d07939e008e8f3e2294c1d5c745c66" name="a71d07939e008e8f3e2294c1d5c745c66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71d07939e008e8f3e2294c1d5c745c66">&#9670;&#160;</a></span>pretty_print_dr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">void Num::pretty_print_dr </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>ot</em></span></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pos_ini</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

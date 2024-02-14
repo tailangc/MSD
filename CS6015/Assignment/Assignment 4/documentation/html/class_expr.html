@@ -83,10 +83,11 @@ Inheritance diagram for Expr:</div>
  <div class="center">
   <img src="class_expr.png" usemap="#Expr_map" alt=""/>
   <map id="Expr_map" name="Expr_map">
-<area href="class_add.html" alt="Add" shape="rect" coords="0,56,38,80"/>
-<area href="class_mult.html" alt="Mult" shape="rect" coords="48,56,86,80"/>
-<area href="class_num.html" alt="Num" shape="rect" coords="96,56,134,80"/>
-<area href="class_var.html" alt="Var" shape="rect" coords="144,56,182,80"/>
+<area href="class_add.html" alt="Add" shape="rect" coords="0,56,51,80"/>
+<area href="class_mult.html" alt="Mult" shape="rect" coords="61,56,112,80"/>
+<area href="class_num.html" alt="Num" shape="rect" coords="122,56,173,80"/>
+<area href="class_var.html" alt="Var" shape="rect" coords="183,56,234,80"/>
+<area href="classlet_expr.html" alt="letExpr" shape="rect" coords="244,56,295,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -107,15 +108,15 @@ virtual <a class="el" href="class_expr.html">Expr</a> *&#160;</td><td class="mem
 <tr class="memitem:ae5e0b4d0ddc57bab1c33bf271f49ff4c" id="r_ae5e0b4d0ddc57bab1c33bf271f49ff4c"><td class="memItemLeft" align="right" valign="top"><a id="ae5e0b4d0ddc57bab1c33bf271f49ff4c" name="ae5e0b4d0ddc57bab1c33bf271f49ff4c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> (std::ostream &amp;ot)=0</td></tr>
 <tr class="separator:ae5e0b4d0ddc57bab1c33bf271f49ff4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a3a4230ed4972345fbbb60381af8cd" id="r_a02a3a4230ed4972345fbbb60381af8cd"><td class="memItemLeft" align="right" valign="top"><a id="a02a3a4230ed4972345fbbb60381af8cd" name="a02a3a4230ed4972345fbbb60381af8cd"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print</b> (std::ostream &amp;ot, precedence_t prec)=0</td></tr>
-<tr class="separator:a02a3a4230ed4972345fbbb60381af8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba55fbcba040fdb17f3fab2598b2519f" id="r_aba55fbcba040fdb17f3fab2598b2519f"><td class="memItemLeft" align="right" valign="top"><a id="aba55fbcba040fdb17f3fab2598b2519f" name="aba55fbcba040fdb17f3fab2598b2519f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print</b> (std::ostream &amp;ot, precedence_t prec, int)=0</td></tr>
+<tr class="separator:aba55fbcba040fdb17f3fab2598b2519f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe130f37bd185ec13c5113de16fc7bf7" id="r_abe130f37bd185ec13c5113de16fc7bf7"><td class="memItemLeft" align="right" valign="top"><a id="abe130f37bd185ec13c5113de16fc7bf7" name="abe130f37bd185ec13c5113de16fc7bf7"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> ()</td></tr>
 <tr class="separator:abe130f37bd185ec13c5113de16fc7bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0db2d5371398b0b9a68ef757190dc3" id="r_a1e0db2d5371398b0b9a68ef757190dc3"><td class="memItemLeft" align="right" valign="top"><a id="a1e0db2d5371398b0b9a68ef757190dc3" name="a1e0db2d5371398b0b9a68ef757190dc3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print_dr</b> (std::ostream &amp;ot)=0</td></tr>
-<tr class="separator:a1e0db2d5371398b0b9a68ef757190dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef347f31a26ab35c6bb95d5e79b0a9b6" id="r_aef347f31a26ab35c6bb95d5e79b0a9b6"><td class="memItemLeft" align="right" valign="top"><a id="aef347f31a26ab35c6bb95d5e79b0a9b6" name="aef347f31a26ab35c6bb95d5e79b0a9b6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pretty_print_dr</b> (std::ostream &amp;ot)</td></tr>
+<tr class="separator:aef347f31a26ab35c6bb95d5e79b0a9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ad7c18234f22d96d6917089b5bd7caa" id="r_a6ad7c18234f22d96d6917089b5bd7caa"><td class="memItemLeft" align="right" valign="top"><a id="a6ad7c18234f22d96d6917089b5bd7caa" name="a6ad7c18234f22d96d6917089b5bd7caa"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_pretty_string</b> ()</td></tr>
 <tr class="separator:a6ad7c18234f22d96d6917089b5bd7caa"><td class="memSeparator" colspan="2">&#160;</td></tr>

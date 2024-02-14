@@ -21,14 +21,17 @@ bool \mbox{\hyperlink{class_add_a882db0df18673599f4d1248e17fb24cb}{has\+\_\+vari
 \item 
 void \mbox{\hyperlink{class_add_a0df7b7d2ede79dd2e0a9781bf5fb5104}{print}} (std\+::ostream \&ot)
 \item 
-void \mbox{\hyperlink{class_add_a147591a3df3919b97f681d3417158761}{pretty\+\_\+print\+\_\+dr}} (std\+::ostream \&ot)
+\Hypertarget{class_add_a147591a3df3919b97f681d3417158761}\label{class_add_a147591a3df3919b97f681d3417158761} 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
 \item 
-void \mbox{\hyperlink{class_add_a60b90295759af71ebef437580180b81f}{pretty\+\_\+print}} (std\+::ostream \&ot, precedence\+\_\+t prec)
+void \mbox{\hyperlink{class_add_ac7304c180d48574c0d02a3b4e57bb2ca}{pretty\+\_\+print}} (std\+::ostream \&ot, precedence\+\_\+t pre, int)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_expr}{Expr}}}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string {\bfseries to\+\_\+string} ()
+\item 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
 \item 
 std\+::string {\bfseries to\+\_\+pretty\+\_\+string} ()
 \end{DoxyCompactItemize}
@@ -90,21 +93,11 @@ Implements \mbox{\hyperlink{class_expr}{Expr}}.
 
 Implements \mbox{\hyperlink{class_expr}{Expr}}.
 
-\Hypertarget{class_add_a60b90295759af71ebef437580180b81f}\label{class_add_a60b90295759af71ebef437580180b81f} 
+\Hypertarget{class_add_ac7304c180d48574c0d02a3b4e57bb2ca}\label{class_add_ac7304c180d48574c0d02a3b4e57bb2ca} 
 \index{Add@{Add}!pretty\_print@{pretty\_print}}
 \index{pretty\_print@{pretty\_print}!Add@{Add}}
 \doxysubsubsection{\texorpdfstring{pretty\_print()}{pretty\_print()}}
-{\footnotesize\ttfamily void Add\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot,  }\item[{precedence\+\_\+t}]{prec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{class_expr}{Expr}}.
-
-\Hypertarget{class_add_a147591a3df3919b97f681d3417158761}\label{class_add_a147591a3df3919b97f681d3417158761} 
-\index{Add@{Add}!pretty\_print\_dr@{pretty\_print\_dr}}
-\index{pretty\_print\_dr@{pretty\_print\_dr}!Add@{Add}}
-\doxysubsubsection{\texorpdfstring{pretty\_print\_dr()}{pretty\_print\_dr()}}
-{\footnotesize\ttfamily void Add\+::pretty\+\_\+print\+\_\+dr (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Add\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot,  }\item[{precedence\+\_\+t}]{pre,  }\item[{int}]{pos\+\_\+ini }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
