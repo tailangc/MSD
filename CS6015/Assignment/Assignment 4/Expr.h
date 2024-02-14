@@ -10,7 +10,7 @@
 typedef enum {
     prec_none,  // = 0
     prec_add,   // = 1
-    prec_mult   // = 2
+    prec_mult,   // = 2
 } precedence_t;
 
 
@@ -21,16 +21,19 @@ public:
     virtual bool has_variable() = 0;
     virtual Expr *subst(std::string,Expr *s) = 0;
     virtual void print(std::ostream &ot) = 0;
-    virtual void pretty_print(std::ostream &ot, precedence_t prec) = 0;
+    virtual void pretty_print(std::ostream &ot, precedence_t prec, int) = 0;
     std::string to_string(){
         std::stringstream st("");
         this ->print(st);
         return st.str();
     }
-    virtual void pretty_print_dr(std::ostream &ot) = 0;
+//    virtual void pretty_print_dr(std::ostream &ot) = 0;
+    void pretty_print_dr(std::ostream &ot){
+        pretty_print(ot,prec_none,0);
+    }
     std::string to_pretty_string(){
         std::stringstream st("");
-        this ->pretty_print(st, prec_none);
+        this ->pretty_print(st, prec_none, 0);
         return st.str();
     }
 
@@ -46,7 +49,7 @@ public:
     Expr *subst(std::string,Expr *s)  ;
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec);
+    void pretty_print(std::ostream &ot, precedence_t prec, int);
 };
 
 class Num:public Expr{
@@ -59,7 +62,7 @@ public:
     Expr *subst(std::string,Expr *s);
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec);
+    void pretty_print(std::ostream &ot, precedence_t prec, int);
 };
 
 class  Add:public Expr{
@@ -73,7 +76,7 @@ public:
     Expr *subst(std::string,Expr *s);
     void print(std::ostream &ot);
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec);
+    void pretty_print(std::ostream &ot, precedence_t pre, int);
 };
 
 class Mult:public Expr{
@@ -87,7 +90,22 @@ public:
     Expr *subst(std::string,Expr *s) ;
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec);
+    void pretty_print(std::ostream &ot, precedence_t prec, int);
+};
+
+class letExpr:public Expr{
+public:
+    std::string variable;
+    Expr *valueExpr;
+    Expr *bodyExpr;
+    letExpr(std::string variable, Expr *valueExpr, Expr *bodyExpr);
+    bool equals(Expr *e) ;
+    int interp () ;
+    bool has_variable();
+    Expr *subst(std::string,Expr *s)  ;
+    void print(std::ostream &ot) ;
+    void pretty_print_dr(std::ostream &ot);
+    void pretty_print(std::ostream &ot, precedence_t prec, int);
 };
 
 

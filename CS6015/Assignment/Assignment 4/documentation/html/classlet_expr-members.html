@@ -71,23 +71,25 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Var Member List</div></div>
+  <div class="headertitle"><div class="title">letExpr Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_var.html">Var</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classlet_expr.html">letExpr</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>equals</b>(Expr *e) (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>has_variable</b>() (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>interp</b>() (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>pretty_print</b>(std::ostream &amp;ot, precedence_t prec, int) (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>pretty_print_dr</b>(std::ostream &amp;ot) (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>print</b>(std::ostream &amp;ot) (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>subst</b>(std::string, Expr *s) (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bodyExpr</b> (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>equals</b>(Expr *e) (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>has_variable</b>() (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>interp</b>() (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classlet_expr.html#a579d2ecc807cb6682db47846aac76788">letExpr</a>(std::string variable, Expr *valueExpr, Expr *bodyExpr)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>pretty_print</b>(std::ostream &amp;ot, precedence_t prec, int) (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>pretty_print_dr</b>(std::ostream &amp;ot) (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>print</b>(std::ostream &amp;ot) (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>subst</b>(std::string, Expr *s) (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>to_pretty_string</b>() (defined in <a class="el" href="class_expr.html">Expr</a>)</td><td class="entry"><a class="el" href="class_expr.html">Expr</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>to_string</b>() (defined in <a class="el" href="class_expr.html">Expr</a>)</td><td class="entry"><a class="el" href="class_expr.html">Expr</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>val</b> (defined in <a class="el" href="class_var.html">Var</a>)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_var.html#a55074bc8893872aee61cc3123c1931c9">Var</a>(std::string val)</td><td class="entry"><a class="el" href="class_var.html">Var</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>valueExpr</b> (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>variable</b> (defined in <a class="el" href="classlet_expr.html">letExpr</a>)</td><td class="entry"><a class="el" href="classlet_expr.html">letExpr</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

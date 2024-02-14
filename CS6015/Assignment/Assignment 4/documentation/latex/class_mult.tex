@@ -21,14 +21,17 @@ bool \mbox{\hyperlink{class_mult_ab53cc8634d4ebad5aaa2dc818c0de598}{has\+\_\+var
 \item 
 void \mbox{\hyperlink{class_mult_aa2c0f8638969d2caae4c583f36901259}{print}} (std\+::ostream \&ot)
 \item 
-void \mbox{\hyperlink{class_mult_a888f3426c7e04a3942bd898c31115cae}{pretty\+\_\+print\+\_\+dr}} (std\+::ostream \&ot)
+\Hypertarget{class_mult_a888f3426c7e04a3942bd898c31115cae}\label{class_mult_a888f3426c7e04a3942bd898c31115cae} 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
 \item 
-void \mbox{\hyperlink{class_mult_a039414c2378f9dde08b8164f5fdabf7c}{pretty\+\_\+print}} (std\+::ostream \&ot, precedence\+\_\+t prec)
+void \mbox{\hyperlink{class_mult_ad26a45c7056421ecf7bd9749c72a90a8}{pretty\+\_\+print}} (std\+::ostream \&ot, precedence\+\_\+t prec, int)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_expr}{Expr}}}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string {\bfseries to\+\_\+string} ()
+\item 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
 \item 
 std\+::string {\bfseries to\+\_\+pretty\+\_\+string} ()
 \end{DoxyCompactItemize}
@@ -90,21 +93,11 @@ Implements \mbox{\hyperlink{class_expr}{Expr}}.
 
 Implements \mbox{\hyperlink{class_expr}{Expr}}.
 
-\Hypertarget{class_mult_a039414c2378f9dde08b8164f5fdabf7c}\label{class_mult_a039414c2378f9dde08b8164f5fdabf7c} 
+\Hypertarget{class_mult_ad26a45c7056421ecf7bd9749c72a90a8}\label{class_mult_ad26a45c7056421ecf7bd9749c72a90a8} 
 \index{Mult@{Mult}!pretty\_print@{pretty\_print}}
 \index{pretty\_print@{pretty\_print}!Mult@{Mult}}
 \doxysubsubsection{\texorpdfstring{pretty\_print()}{pretty\_print()}}
-{\footnotesize\ttfamily void Mult\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot,  }\item[{precedence\+\_\+t}]{prec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{class_expr}{Expr}}.
-
-\Hypertarget{class_mult_a888f3426c7e04a3942bd898c31115cae}\label{class_mult_a888f3426c7e04a3942bd898c31115cae} 
-\index{Mult@{Mult}!pretty\_print\_dr@{pretty\_print\_dr}}
-\index{pretty\_print\_dr@{pretty\_print\_dr}!Mult@{Mult}}
-\doxysubsubsection{\texorpdfstring{pretty\_print\_dr()}{pretty\_print\_dr()}}
-{\footnotesize\ttfamily void Mult\+::pretty\+\_\+print\+\_\+dr (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Mult\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot,  }\item[{precedence\+\_\+t}]{prec,  }\item[{int}]{pos\+\_\+ini }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
