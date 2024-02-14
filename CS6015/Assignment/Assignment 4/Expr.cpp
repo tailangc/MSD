@@ -43,7 +43,7 @@ void Var::print(std::ostream &ot) {
 void Var::pretty_print_dr(std::ostream &ot){}
 
 
-void Var::pretty_print(std::ostream &ot,precedence_t p, int pos_ini){
+void Var::pretty_print(std::ostream &ot,precedence_t p, int pos_ini, bool let_Para){
     ot << val;
 }
 
@@ -84,7 +84,7 @@ void Num::print(std::ostream &ot)  {
 void Num::pretty_print_dr(std::ostream &ot){}
 
 
-void Num::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini) {
+void Num::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini, bool let_Para) {
     ot << val;
 }
 
@@ -129,18 +129,18 @@ void Add::print(std::ostream &ot) {
 
 //void Add::pretty_print_dr(std::ostream &ot){}
 
-void Add::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini)  {
-    if(prec > prec_add){
-        ot<<"(";
-        lhs->pretty_print(ot,prec_add, pos_ini);
-        ot <<" + ";
-        rhs->pretty_print(ot,prec_add, pos_ini);
-        ot<<")";
+void Add::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini, bool let_Para)  {
+    if(prec > prec_add) {
+        ot << "(";
     }
-    else {
-        lhs->pretty_print(ot,prec_add, pos_ini);
-        ot << " + ";
-        rhs->pretty_print(ot,prec_add, pos_ini);
+
+    lhs->pretty_print(ot,prec_add, pos_ini, true);
+    ot <<" + ";
+    rhs->pretty_print(ot,prec_add, pos_ini, let_Para);
+
+
+    if(prec > prec_add) {
+        ot << ")";
     }
 }
 
@@ -188,13 +188,17 @@ void Mult::print(std::ostream &ot)  {
     ot<<")";
 }
 
-void Mult::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini)  {
+void Mult::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini, bool let_Para)  {
+    bool let_print = let_Para;
     if ( prec > prec_mult ){
         ot << "(";
+        let_print = false;
     }
-    lhs->pretty_print(ot, static_cast<precedence_t>(prec_mult + 1), pos_ini);
+
+    lhs->pretty_print(ot, static_cast<precedence_t>(prec_mult + 1), pos_ini, true);
     ot << " * ";
-    rhs->pretty_print(ot, prec_mult,  pos_ini);
+    rhs->pretty_print(ot, prec_mult,  pos_ini, let_print);
+
     if ( prec > prec_mult ){
         ot << ")";
     }
@@ -257,35 +261,37 @@ void letExpr::print(std::ostream &ot) {
     ot << ")";
 }
 
-void letExpr::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini) {
-    // Pretty print the let expression with appropriate parentheses
+void letExpr::pretty_print_dr(std::ostream &ot) {
     int pos = ot.tellp();
-    if (prec > prec_none){
+    pretty_print(ot, prec_none, pos, false);
+}
+
+void letExpr::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini, bool let_Para) {
+    // Pretty print the let expression with appropriate parentheses
+    if (prec > prec_none && let_Para){
         ot << "(";
     }
-    ot << "_let " << variable << "=";
-    valueExpr ->pretty_print(ot, prec_none,pos_ini);
+
+    int curr = ot.tellp();
+    curr = curr - pos_ini;
+
+    ot << "_let " << variable << " = ";
+    valueExpr ->pretty_print(ot, prec_none,pos_ini, let_Para);
     ot << "\n";
-    int space = pos - pos_ini;
+    int before_in = ot.tellp();
 //    ot<< std::string(space,  " ");
-    while (space > 0){
+    while (curr > 0){
         ot << " ";
-        space -= 1;
+        curr -= 1;
     }
+
     ot << "_in  ";
-    int pos_updated = ot.tellp();
-    bodyExpr ->pretty_print(ot, prec_none, pos_updated);
-    if (prec > prec_none){
+//    int pos_updated = ot.tellp();
+    bodyExpr ->pretty_print(ot, prec_none, before_in, let_Para);
+    if (prec > prec_none && let_Para){
         ot << ")";
     }
 
-//    bool needsParentheses = prec > prec_none;
-//    if (needsParentheses) ot << "(";
-//    ot << "_let " << variable << "=";
-//    valueExpr->pretty_print(ot, prec_none);
-//    ot << " _in\n";
-//    bodyExpr->pretty_print(ot, prec_none);
-//    if (needsParentheses) ot << ")";
 }
 
 
@@ -352,7 +358,48 @@ TEST_CASE( "Tests") {
     }
 
     SECTION("HW5") {
-        CHECK((new letExpr("x", new Num(5), new Add(new Var("x"), new Num(3))))->to_pretty_string() ==  "(_let x=5\n_in  (x + 3))");
-        CHECK((new Add(new letExpr("x", new Num(5), new letExpr("y", new Num(3),new Add(new Var("y"),new Num(2)))),new Var("x")))->to_pretty_string() ==  "_let x = 5\n_in  (_let y = 3\n      _in  y + 2) + x" );
+        CHECK((new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))->equals(new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x")))) == true);
+        CHECK((new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))->equals(new Num(7)) == false);
+        CHECK((new letExpr("x", new Num(5), new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))),new Var("x"))))->has_variable() == true);
+        // print
+        CHECK((new letExpr("x", new Num(5), new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))),new Var("x"))))->to_string() ==
+              "(_let x=5 _in ((_let y=3 _in (y+2))+x))");
+        CHECK((new letExpr("x", new Num(5), new letExpr("x", new Num(6), new Add(new Var("x"), new Num(1)))))->to_string() ==
+              "(_let x=5 _in (_let x=6 _in (x+1)))");
+        // interp()
+        CHECK((new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))->interp() ==10);
+
+
+        // subst
+        CHECK((new letExpr("x", new Num(5), new letExpr("y", new Num(6), new Add(new Var("x"), new Num(1)))))->interp() == 6);
+        CHECK((new letExpr("x", new Add(new Num(5), new Num(2)), new Add(new Var("x"), new Num(1))))->interp() == 8);
+        CHECK((new letExpr("x", new Num(5), new Add(new Var("x"), new Num(3))))->to_pretty_string() ==
+              "_let x = 5\n_in  x + 3");
+        //        /Let nested as right argument of parenthesized multiplication expression
+
+        //Let nested as right argument of parenthesized multiplication expression
+        CHECK ((new Mult(new Mult(new Num(2), new letExpr("x", new Num(5), new Add(new Var("x"), new Num(1)))),new Num(3)))->to_pretty_string() == "(2 * _let x = 5\n"
+                                                             "     _in  x + 1) * 3");
+        //Let nested to the left in add expression which is nested to the right within a multiplication expression
+        CHECK((new Mult(new Num(5), new Add(new letExpr("x", new Num(5), new Var("x")), new Num(1))))->to_pretty_string() ==
+              "5 * ((_let x = 5\n"
+              "      _in  x) + 1)");
+
+        //Let in lhs of add
+        CHECK ( (new Add(new letExpr("x", new Num(2), new Add(new Var("x"), new Num(9))), new Num(4)))->to_pretty_string() == "(_let x = 2\n"" _in  x + 9) + 4");
+        //Let in lhs of multiplication expression
+        CHECK((new Mult(new letExpr("x", new Num(5), new Add(new Var("x"), new Num(8))), new Num(3)))->to_pretty_string() == "(_let x = 5\n"" _in  x + 8) * 3");
+        //Let nest as right argument of un-parenthesized multiplication expression
+        CHECK((new Add (new Mult(new Num(4), new letExpr("x", new Num(5), new Add(new Var("x"), new Num(1)))), new Num(9)))->to_pretty_string() == "4 * (_let x = 5\n"
+                                                                                                                                               "     _in  x + 1) + 9");
+        //Let nested in lhs of Add expression nested within body of let expression
+        CHECK((new letExpr("x", new Num(5), new Add(new letExpr("y" , new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))
+                      ->to_pretty_string() == "_let x = 5\n"
+                                              "_in  (_let y = 3\n"
+                                              "      _in  y + 2) + x");
+
+
+        CHECK ((new Add(new letExpr("x", new Num(3), new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))) ), new Var("x")))->to_pretty_string() == "(_let x = 3\n"
+                                                                                                                                                      " _in  _let y = 3\n""      _in  y + 2) + x");
     }
 }
