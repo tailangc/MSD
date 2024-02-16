@@ -1,4 +1,4 @@
-#include "shelpers.hpp"
+#include "shelpers.h"
 
 //////////////////////////////////////////////////////////////////////////////////
 //
@@ -102,7 +102,8 @@ vector<string> tokenize( const string& s )
     }
 
     for( int i = 0; i < ret.size(); ++i ) {
-        for( char c : {'&', '<', '>', '|'} ) {
+        char ch[] = {'&', '<', '>', '|'};
+        for( char c : ch) {
             if( splitOnSymbol( ret, i, c ) ){
                 --i;
                 break;
@@ -178,12 +179,38 @@ vector<Command> getCommands( const vector<string> & tokens )
 
             if( tokens[j] == ">" || tokens[j] == "<" ) {
                 // Handle I/O redirection tokens
-                //
-                // Note, that only the FIRST command can take input redirection
-                // (all others get input from a pipe)
-                // Only the LAST command can have output redirection!
 
-                assert( false );
+                // Only the FIRST command can take input redirection
+                // (all others get input from a pipe)
+                if (j == first) {
+                    if (tokens[j] == "<") {
+                        // Open the file for reading
+                        int inputFile = open(tokens[j + 1].c_str(), O_RDONLY);
+                        if (inputFile == -1) {
+                            perror("Error opening input file");
+                            exit(EXIT_FAILURE);
+                        }
+                        // Redirect stdin to the file
+                        if (dup2(inputFile, STDIN_FILENO) == -1) {
+                            perror("Error redirecting input");
+                            exit(EXIT_FAILURE);
+                        }
+                    } else if (tokens[j] == ">") {
+                        // Open the file for writing
+                        int outputFile = open(tokens[j + 1].c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0666);
+                        if (outputFile == -1) {
+                            perror("Error opening output file");
+                            exit(EXIT_FAILURE);
+                        }
+                        // Redirect stdout to the file
+                        if (dup2(outputFile, STDOUT_FILENO) == -1) {
+                            perror("Error redirecting output");
+                            exit(EXIT_FAILURE);
+                        }
+                    }
+                } else {
+                    assert(false); // Only the FIRST command can take input redirection
+                }
             }
             else if( tokens[j] == "&" ){
                 // Fill this in if you choose to do the optional "background command" part.

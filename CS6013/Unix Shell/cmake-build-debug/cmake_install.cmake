@@ -1,4 +1,4 @@
-# Install script for directory: /Users/tailangcao/myGithubRepo/CS6013/Assignment2
+# Install script for directory: /Users/tailangcao/myGithubRepo/CS6013/Unix Shell
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/tailangcao/myGithubRepo/CS6013/Assignment2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/tailangcao/myGithubRepo/CS6013/Unix Shell/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
