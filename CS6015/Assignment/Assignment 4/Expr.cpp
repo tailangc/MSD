@@ -279,7 +279,7 @@ void letExpr::pretty_print(std::ostream &ot, precedence_t prec, int pos_ini, boo
     valueExpr ->pretty_print(ot, prec_none,pos_ini, let_Para);
     ot << "\n";
     int before_in = ot.tellp();
-//    ot<< std::string(space,  " ");
+//    ot<< std::string(curr,  " ");
     while (curr > 0){
         ot << " ";
         curr -= 1;

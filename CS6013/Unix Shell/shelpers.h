@@ -18,6 +18,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 
 //////////////////////////////////////////////////////////////////////////////////
 // A struct to contain a command line program information.
