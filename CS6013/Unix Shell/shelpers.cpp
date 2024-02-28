@@ -175,8 +175,6 @@ vector<Command> getCommands( const vector<string> & tokens )
 
         command.background = false;
 
-        Command currentCommand;
-
         for( int j = first + 1; j < last; ++j ) {
 
             if( tokens[j] == ">" || tokens[j] == "<" ) {
@@ -185,7 +183,6 @@ vector<Command> getCommands( const vector<string> & tokens )
                 // Only the FIRST command can take input redirection
                 // (all others get input from a pipe)
                 if (j == first) {
-
                     if (tokens[j] == "<") {
                         // Open the file for reading
                         int inputFile = open(tokens[j + 1].c_str(), O_RDONLY);
@@ -193,24 +190,27 @@ vector<Command> getCommands( const vector<string> & tokens )
                             perror("Error opening input file");
                             exit(EXIT_FAILURE);
                         }
-                        currentCommand.inputFd = inputFile;
+                        // Redirect stdin to the file
+                        if (dup2(inputFile, STDIN_FILENO) == -1) {
+                            perror("Error redirecting input");
+                            exit(EXIT_FAILURE);
+                        }
+                    } else if (tokens[j] == ">") {
+                        // Open the file for writing
+                        int outputFile = open(tokens[j + 1].c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0666);
+                        if (outputFile == -1) {
+                            perror("Error opening output file");
+                            exit(EXIT_FAILURE);
+                        }
+                        // Redirect stdout to the file
+                        if (dup2(outputFile, STDOUT_FILENO) == -1) {
+                            perror("Error redirecting output");
+                            exit(EXIT_FAILURE);
+                        }
                     }
-                } else if (tokens[j] == ">") {
-                    // Open the file for writing
-                    int outputFile = open(tokens[j + 1].c_str(), O_WRONLY | O_CREAT | O_TRUNC, 0666);
-                    if (outputFile == -1) {
-                        perror("Error opening output file");
-                        exit(EXIT_FAILURE);
-                    }
-                    currentCommand.outputFd = outputFile;
+                } else {
+                    assert(false); // Only the FIRST command can take input redirection
                 }
-                j++;
-            } else if (tokens[j] == "|"){
-                if (!currentCommand.execName.empty()){
-                    currentCommand.argv.push_back(nullptr);
-                    commands.push_back(currentCommand);
-                }
-                currentCommand = Command();
             }
             else if( tokens[j] == "&" ){
                 // Fill this in if you choose to do the optional "background command" part.

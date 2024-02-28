@@ -21,14 +21,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79eb6e0-c226-4c32-bad4-6edad8ab433c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/bellmanFord/src/msd/benjones/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/bellmanFord/src/msd/benjones/Neighbor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/bellmanFord/src/msd/benjones/Network.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/bellmanFord/src/msd/benjones/Router.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_msdscript.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_msdscript.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-5f14ba54b04497711638.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.cmake/api/v1/reply/index-2024-02-15T23-07-34-0132.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Assignment2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Assignment2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/Assignment2.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/Assignment2.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/Assignment2.dir/shelpers.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/Assignment2.dir/shelpers.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/shelpers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/shelpers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/shelpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/shelpers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Expr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Expr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmdline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmdline.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmdline.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmdline.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmdline.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw4_sub.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msdscript" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,29 +83,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Makefile Target.%.o.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.all.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.clean.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.doc.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.msdscript.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.test_msdscript.cpp.executor": "Run",
+    "Makefile Target.%.o.executor": "Run",
+    "Makefile Target.all.executor": "Run",
+    "Makefile Target.clean.executor": "Run",
+    "Makefile Target.doc.executor": "Run",
+    "Makefile Target.msdscript.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Makefile Target.all">
+}]]></component>
+  <component name="RunManager" selected="C/C++ File.test_msdscript.cpp">
     <configuration name="Assignment_4" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment_4" TARGET_NAME="Assignment_4" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Assignment_4" RUN_TARGET_NAME="Assignment_4">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -88,6 +117,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test_msdscript.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment 4" TARGET_NAME="test_msdscript.cpp" CONFIG_NAME="test_msdscript.cpp">
+      <option name="sourceFile" value="test_msdscript.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="%.o" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/makefile" target="%.o" workingDirectory="" arguments="">
         <envs />
@@ -96,12 +131,6 @@
     </configuration>
     <configuration name="all" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
       <makefile filename="$PROJECT_DIR$/makefile" target="all" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration name="clean" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/makefile" target="clean" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
@@ -119,20 +148,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="C/C++ File.test_msdscript.cpp" />
       <item itemvalue="CMake Application.Assignment_4" />
       <item itemvalue="Makefile Target.%.o" />
       <item itemvalue="Makefile Target.all" />
-      <item itemvalue="Makefile Target.clean" />
       <item itemvalue="Makefile Target.doc" />
       <item itemvalue="Makefile Target.msdscript" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.test_msdscript.cpp" />
         <item itemvalue="Makefile Target.all" />
         <item itemvalue="Makefile Target.%.o" />
         <item itemvalue="Makefile Target.msdscript" />
         <item itemvalue="Makefile Target.doc" />
-        <item itemvalue="Makefile Target.clean" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707200515947</updated>
       <workItem from="1707200517214" duration="11694000" />
-      <workItem from="1707375333818" duration="28666000" />
+      <workItem from="1707375333818" duration="71072000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>
+#include <stdlib.h>
 #include "exec.h"
 
 static std::string random_expr_string();

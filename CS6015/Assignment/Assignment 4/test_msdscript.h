@@ -6,11 +6,9 @@
 #define ASSIGNMENT_4_TEST_MSDSCRIPT_H
 
 
-
 class test_msdscript {
 
 };
-
 
 
 #endif //ASSIGNMENT_4_TEST_MSDSCRIPT_H

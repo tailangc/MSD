@@ -8,4 +8,7 @@ add_executable(Assignment_4 main.cpp
         cmdline.cpp
         cmdline.h
         catch.hpp
-        Expr.h)
+        Expr.h
+        test_msdscript.cpp
+        parse.cpp
+        parse.h)
