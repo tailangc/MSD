@@ -1,6 +1,15 @@
 #ifndef CMDLINE_H
 #define CMDLINE_H
 
-void use_arguments(int argc, char* argv[]);
+typedef enum {
+    do_nothing,
+    do_test,
+    do_interp,
+    do_print,
+    do_pretty_print
+} run_mode_t;
 
-#endif //UNTITLED_CMDLINE_H
+// Declare the use_arguments function.
+run_mode_t use_arguments(int argc, char* argv[]);
+
+#endif

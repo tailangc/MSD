@@ -246,6 +246,9 @@ bool letExpr::has_variable() {
 
 Expr *letExpr::subst(std::string var, Expr *s){
     // Substitute the variable `var` with the expression `s` in the value expression and body expression
+    if(var == variable){
+        return new letExpr(variable, valueExpr->subst(var,s), bodyExpr);
+    }
     Expr *substitutedValue = valueExpr->subst(var, s);
     Expr *substitutedBody = bodyExpr->subst(var, s);
     return new letExpr(variable, substitutedValue, substitutedBody);
@@ -358,6 +361,7 @@ TEST_CASE( "Tests") {
     }
 
     SECTION("HW5") {
+        CHECK( (new letExpr("x", new Num(5), new Add(new Var("x"), new Num(3))))->to_pretty_string() == "(_let x = 5\n_in x + 3)" );
         CHECK((new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))->equals(new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x")))) == true);
         CHECK((new letExpr("x", new Num(5),new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))), new Var("x"))))->equals(new Num(7)) == false);
         CHECK((new letExpr("x", new Num(5), new Add(new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))),new Var("x"))))->has_variable() == true);
@@ -400,6 +404,8 @@ TEST_CASE( "Tests") {
 
 
         CHECK ((new Add(new letExpr("x", new Num(3), new letExpr("y", new Num(3), new Add(new Var("y"), new Num(2))) ), new Var("x")))->to_pretty_string() == "(_let x = 3\n"
-                                                                                                                                                      " _in  _let y = 3\n""      _in  y + 2) + x");
+                                                                                                                                                              " _in  _let y = 3\n""      _in  y + 2) + x");
+        CHECK_THROWS_WITH( (new Var("x"))->interp(), "unbound variable: x" );
+        CHECK( (new letExpr("x", new Num(1), new letExpr("x", new Num(2), new Var("x")))) ->interp() == 2 );
     }
 }

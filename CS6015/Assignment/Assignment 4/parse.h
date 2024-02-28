@@ -1,16 +1,19 @@
-//
-// Created by Tailang  Cao on 2/20/24.
-//
+#ifndef parse_hpp
 
-#ifndef ASSIGNMENT_4_PARSE_H
-#define ASSIGNMENT_4_PARSE_H
+#define parse_hpp
 
-
-
-class parse {
-
-};
+#include "Expr.h"
+#include <stdio.h>
+#include <set>
 
 
 
-#endif //ASSIGNMENT_4_PARSE_H
+Expr *parse_expr(std::istream &in);
+Expr *parse_num(std::istream &in);
+Expr *parse_addend(std::istream &in);
+Expr* parse_multicand(std::istream& in);
+Expr* parse_var(std::istream& in);
+// test
+Expr* parse_str(std::string s);
+
+#endif
