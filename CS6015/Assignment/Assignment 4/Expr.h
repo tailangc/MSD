@@ -39,6 +39,10 @@ public:
 
 };
 
+class Val{
+
+};
+
 class Var:public Expr{
 public:
     std::string val;
@@ -107,6 +111,8 @@ public:
     void pretty_print_dr(std::ostream &ot);
     void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para);
 };
+
+
 
 
 #endif //EXPR_EXPR_H
