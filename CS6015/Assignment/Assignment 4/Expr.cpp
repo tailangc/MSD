@@ -66,8 +66,7 @@ bool Num::equals(Expr *e) {
 }
 
 int Num::interp(){
-    return this->val;
-}
+ }
 
 bool Num::has_variable(){
     return false;
