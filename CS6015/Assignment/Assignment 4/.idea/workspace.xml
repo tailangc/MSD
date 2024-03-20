@@ -21,11 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79eb6e0-c226-4c32-bad4-6edad8ab433c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS6013/Unix Shell/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Val.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Val.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Expr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Expr.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Expr.h" beforeDir="false" afterPath="$PROJECT_DIR$/Expr.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$ 7 Report.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,7 @@
       <updated>1707200515947</updated>
       <workItem from="1707200517214" duration="11694000" />
       <workItem from="1707375333818" duration="74453000" />
-      <workItem from="1710270982234" duration="4679000" />
+      <workItem from="1710270982234" duration="7633000" />
     </task>
     <servers />
   </component>
