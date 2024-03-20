@@ -23,22 +23,38 @@
 #		cd documentation && doxygen
 
 
+CC=c++
+CFLAGS=-std=c++14
+#SRC=$(wildcard *.cpp)
+#OBJ=$(patsubst %.cpp, %.o, $(SRC))
+MSD_OBJ=main.o Expr.o parse.o cmdline.o Val.o
+TEST_OBJ=test_msdscript.o exec.o Expr.o Val.o
+GEN_OBJ= ExprGen.o ExprGenTest.o Expr.o
 
-CXX = g++
-CXXFLAGS = -std=c++11
-
-msdscript: main.o cmdline.o exec.o Expr.o parse.o
-	$(CXX) $(CXXFLAGS) -o msdscript $^
-
-test_msdscript: test_msdscript.o exec.o
-	$(CXX) $(CXXFLAGS) -o test_msdscript $^
-
-
+.PHONY: clean test interp print pretty-print doc open_doc run fuzz_test
+msdscript: $(MSD_OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+test_msdscript:$(TEST_OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+test_generator:$(GEN_OBJ)
+	$(CC) $(CFLAGS) $^ -o $@
+%.o: %.h
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
+	$(CC) $(CFLAGS) -c $<
+run:
+	./msdscript
+test:
+	./msdscript --test
+interp:
+	./msdscript --interp
+print:
+	./msdscript --print
+pretty-print:
+	./msdscript --pretty-print
 clean:
-	rm -f *.o msdscript test_msdscript
-
-.PHONY: clean
+	rm -rf *.o msdscript test_msdscript test_generator
+doc:
+	cd documentation && doxygen
+open_doc:
+	open documentation/html/index.html
 

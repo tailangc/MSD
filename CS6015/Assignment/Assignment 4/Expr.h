@@ -8,29 +8,34 @@
 
 
 typedef enum {
-    prec_none,  // = 0
-    prec_add,   // = 1
-    prec_mult,   // = 2
+    prec_none,
+    prec_equal,
+    prec_add,
+    prec_mult
 } precedence_t;
+
+
+class Val;
 
 
 class Expr {
 public:
     virtual bool equals(Expr *e) = 0;
-    virtual int interp() = 0;
+    virtual Val* interp() = 0;
     virtual bool has_variable() = 0;
-    virtual Expr *subst(std::string,Expr *s) = 0;
+    virtual Expr *subst(std::string name,Expr *replacement) = 0;
     virtual void print(std::ostream &ot) = 0;
-    virtual void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para) = 0;
+    virtual void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet) = 0;
+    void pretty_print_dr(std::ostream &ot){
+        std::streampos pos = ot.tellp();
+        pretty_print(ot, prec_none, pos, false);
+    };
     std::string to_string(){
         std::stringstream st("");
         this ->print(st);
         return st.str();
     }
 //    virtual void pretty_print_dr(std::ostream &ot) = 0;
-    void pretty_print_dr(std::ostream &ot){
-        pretty_print(ot,prec_none,0, false);
-    }
     std::string to_pretty_string(){
         std::stringstream st("");
         this ->pretty_print_dr(st);
@@ -39,63 +44,65 @@ public:
 
 };
 
-class Val{
 
-};
 
-class Var:public Expr{
+class VarExpr:public Expr{
 public:
     std::string val;
-    Var(std::string val);
+    VarExpr(std::string val);
     bool equals(Expr *e) ;
-    int interp () ;
+    Val * interp () ;
     bool has_variable();
-    Expr *subst(std::string,Expr *s)  ;
+    Expr *subst(std::string string,Expr *s)  ;
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
 };
 
-class Num:public Expr{
+
+
+class NumExpr:public Expr{
 public:
     int val;
-    Num(int val);
+    NumExpr(int val);
     bool equals(Expr *e);
-    int interp ();
+    Val *interp ();
     bool has_variable();
-    Expr *subst(std::string,Expr *s);
+    Expr *subst(std::string name,Expr *replacement);
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
 };
 
-class  Add:public Expr{
+class  AddExpr:public Expr{
 public:
     Expr *lhs;
     Expr *rhs;
-    Add(Expr *lhs,Expr *rhs);
+    AddExpr(Expr *lhs,Expr *rhs);
     bool equals(Expr *e);
-    int interp () ;
+    Val* interp () ;
     bool has_variable() ;
-    Expr *subst(std::string,Expr *s);
+    Expr *subst(std::string name,Expr *replacement);
     void print(std::ostream &ot);
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t pre, int, bool let_Para);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
 };
 
-class Mult:public Expr{
+class MultExpr:public Expr{
 public:
     Expr *lhs;
     Expr *rhs;
-    Mult(Expr *lhs, Expr *rhs);
+    MultExpr(Expr *lhs, Expr *rhs);
     bool equals(Expr *e) ;
-    int interp () ;
+    Val *interp () ;
     bool has_variable() ;
-    Expr *subst(std::string,Expr *s) ;
+    Expr *subst(std::string name,Expr *replacement) ;
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
 };
+
+
 
 class letExpr:public Expr{
 public:
@@ -104,15 +111,59 @@ public:
     Expr *bodyExpr;
     letExpr(std::string variable, Expr *valueExpr, Expr *bodyExpr);
     bool equals(Expr *e) ;
-    int interp () ;
+    Val *interp () ;
     bool has_variable();
-    Expr *subst(std::string,Expr *s)  ;
+    Expr *subst(std::string name,Expr *replacement)  ;
     void print(std::ostream &ot) ;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream &ot, precedence_t prec, int, bool let_Para);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
 };
 
 
+class BoolExpr: public Expr{
+public:
+    bool val;
 
+    BoolExpr(bool val);
+    bool equals(Expr *other);
+    Val* interp();
+    bool has_variable();
+    Expr* subst(std::string name, Expr *replacement);
+    void print(std::ostream& output);
+    void pretty_print_dr(std::ostream& output);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
+};
+
+class IfExpr : public Expr{
+public:
+    Expr *test_part;
+    Expr *then_part;
+    Expr *else_part;
+
+    IfExpr(Expr *test_part, Expr *then_part, Expr *else_part);
+    bool equals(Expr *other);
+    Val* interp();
+    bool has_variable();
+    Expr* subst(std::string name, Expr *replacement);
+    void print(std::ostream& output);
+    void pretty_print_dr(std::ostream& output);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
+};
+
+class EqExpr : public Expr {
+public:
+    Expr *lhs;
+    Expr *rhs;
+
+    EqExpr(Expr *lhs, Expr *rhs);
+    EqExpr(int left, int right);
+    bool equals(Expr *other);
+    Val *interp();
+    bool has_variable();
+    Expr *subst(std::string name, Expr *replacement);
+    void print(std::ostream &output);
+    void pretty_print_dr(std::ostream &output);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
+};
 
 #endif //EXPR_EXPR_H

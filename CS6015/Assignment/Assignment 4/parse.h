@@ -15,5 +15,7 @@ Expr* parse_multicand(std::istream& in);
 Expr* parse_var(std::istream& in);
 // test
 Expr* parse_str(std::string s);
+Expr* parse_comparg(std::istream &in);
+Expr* parse_if(std::istream &in);
 
 #endif
