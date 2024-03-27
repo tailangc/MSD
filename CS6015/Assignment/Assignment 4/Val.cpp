@@ -26,23 +26,26 @@ Expr* NumVal::to_expr(){
 Val *NumVal::add_to(Val *other){
     NumVal *other_num = dynamic_cast<NumVal*>(other);
     if (other_num == NULL) throw std::runtime_error("add of non-number");
-    return new NumVal(this->val + other_num->val);
+    return new NumVal((unsigned) val + (unsigned) other_num->val);
 }
 
 Val *NumVal::mult_to(Val *other){
     NumVal *other_num = dynamic_cast<NumVal*>(other);
     if (other_num == NULL) throw std::runtime_error("multiplication of non-number");
-    return new NumVal(this->val * other_num->val);
+    return new NumVal((unsigned) val * (unsigned) other_num->val);
 }
 
-void NumVal::print(std::ostream& outstream){
-    outstream << this->val;
+std::string NumVal::to_string() {
+    return std::to_string(val);
 }
 
 bool NumVal::is_true(){
     throw std::runtime_error("Test expression is not a boolean");
 }
 
+Val* NumVal::call(Val *actual_arg) {
+    throw std::runtime_error("no function to call!"); // TODO
+}
 
 BoolVal::BoolVal(bool val){
     this->val = val;
@@ -69,10 +72,60 @@ Val* BoolVal::mult_to(Val* rhs){
     throw std::runtime_error("multiplication of non-number");
 }
 
-void BoolVal::print (std::ostream& outstream){
-    outstream << this->val;
+std::string BoolVal::to_string() {
+    if (val) {
+        return "_true";
+    } else {
+        return "_false";
+    }
 }
 
 bool BoolVal::is_true(){
     return this->val;
 }
+
+Val* BoolVal::call(Val *actual_arg) {
+    throw std::runtime_error("no function to call!"); // TODO
+}
+
+/**
+* This is the FUnVal function
+ *
+*/
+FunVal::FunVal(std::string arg, Expr* expr) {
+    formal_arg = arg;
+    body = expr;
+}
+
+Expr* FunVal::to_expr() {
+    return new FunExpr(formal_arg, body);
+}
+
+bool FunVal::equals(Val* rhs) {
+    FunVal* other = dynamic_cast<FunVal*>(rhs);
+    if (other == nullptr) {
+        return false;
+    }
+    return formal_arg == other->formal_arg && body->equals(other->body);
+}
+
+Val* FunVal::add_to(Val* rhs) {
+    throw std::runtime_error("add of non-number");
+}
+
+Val* FunVal::mult_to(Val* rhs) {
+    throw std::runtime_error("multiply with non-number");
+}
+
+std::string FunVal::to_string() {
+    return to_expr()->to_pretty_string();
+}
+
+bool FunVal::is_true() { // TODO should I interp the function before I check if it's true?
+    throw std::runtime_error("a function value can not be evaluated to a boolean");
+}
+
+Val* FunVal::call(Val *actual_arg) {
+    return body->subst(formal_arg, actual_arg->to_expr())->interp(); // TODO
+}
+
