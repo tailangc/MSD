@@ -2,6 +2,7 @@
 #define exec_hpp
 
 #include <string>
+#include "pointer.h"
 
 class ExecResult {
 public:

@@ -8,6 +8,7 @@
 #include <errno.h>
 
 #include "exec.h"
+#include "pointer.h"
 
 static const int READ_END  = 0;
 static const int WRITE_END = 1;

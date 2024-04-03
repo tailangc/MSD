@@ -5,17 +5,18 @@
 #include "Expr.h"
 #include <stdio.h>
 #include <set>
+#include "pointer.h"
 
 
 
-Expr *parse_expr(std::istream &in);
-Expr *parse_num(std::istream &in);
-Expr *parse_addend(std::istream &in);
-Expr* parse_multicand(std::istream& in);
-Expr* parse_var(std::istream& in);
+PTR(Expr) parse_expr(std::istream &in);
+PTR(Expr) parse_num(std::istream &in);
+PTR(Expr) parse_addend(std::istream &in);
+PTR(Expr) parse_multicand(std::istream& in);
+PTR(Expr) parse_var(std::istream& in);
 // test
-Expr* parse_str(std::string s);
-Expr* parse_comparg(std::istream &in);
-Expr* parse_if(std::istream &in);
+PTR(Expr) parse_str(std::string s);
+PTR(Expr) parse_comparg(std::istream &in);
+PTR(Expr) parse_if(std::istream &in);
 
 #endif

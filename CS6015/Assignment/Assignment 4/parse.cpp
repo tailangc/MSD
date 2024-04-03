@@ -1,36 +1,37 @@
 #include <iostream>
 #include "parse.h"
 #include "Expr.h"
+#include "pointer.h"
 
 static void consume(std::istream &in, int expect);
 void skip_whitespace(std::istream &in);
-Expr *parse_num(std::istream &in);
-Expr* parse_addend(std::istream &in);
-Expr* parse_multicand(std::istream& in);
-Expr* parse_var(std::istream& in);
-Expr* parse_let(std::istream& in);
-Expr* parse_str(std::string s);
+PTR(Expr) parse_num(std::istream &in);
+PTR(Expr) parse_addend(std::istream &in);
+PTR(Expr) parse_multicand(std::istream& in);
+PTR(Expr) parse_var(std::istream& in);
+PTR(Expr) parse_let(std::istream& in);
+PTR(Expr) parse_str(std::string s);
 
 
 
 
-Expr* parse_comparg(std::istream &in){
-    Expr *e;
+PTR(Expr) parse_comparg(std::istream &in){
+    PTR(Expr) e;
     e = parse_addend(in);
     skip_whitespace(in);
     int c = in.peek();
     if (c=='+'){
         consume(in, '+');
-        Expr *rhs = parse_comparg(in);
-        return new AddExpr(e,rhs);
+        PTR(Expr) rhs = parse_comparg(in);
+        return NEW (AddExpr)(e,rhs);
     }else{
         return e;
     }
 }
 
 
-Expr *parse_expr(std::istream &in) {
-    Expr *e;
+PTR(Expr) parse_expr(std::istream &in) {
+    PTR(Expr) e;
     e = parse_comparg(in);
     skip_whitespace(in);
     int c = in.peek();
@@ -39,8 +40,8 @@ Expr *parse_expr(std::istream &in) {
         c=in.peek();
         if (c=='='){
             consume(in, '=');
-            Expr *rhs = parse_expr(in);
-            return new EqExpr(e,rhs);
+            PTR(Expr) rhs = parse_expr(in);
+            return NEW (EqExpr)(e,rhs);
         } else{
             throw std::runtime_error("2nd equal sign expected");
         }
@@ -50,7 +51,7 @@ Expr *parse_expr(std::istream &in) {
 }
 
 
-Expr *parse_num(std::istream &in) {
+PTR(Expr) parse_num(std::istream &in) {
     bool tracker = false;
     bool negative = false;
     int n = 0;
@@ -79,13 +80,13 @@ Expr *parse_num(std::istream &in) {
     if (negative){
         n = -n;
 }
-    return new NumExpr(n);
+    return NEW (NumExpr)(n);
 }
 
 
 
 
-Expr* parse_var(std::istream& in) {
+PTR(Expr) parse_var(std::istream& in) {
     skip_whitespace(in);
     std::vector<char> s;
     int c;
@@ -98,7 +99,7 @@ Expr* parse_var(std::istream& in) {
     if (c != -1 and !isspace(c) and operators.find(c) == operators.end()) {
         throw std::runtime_error("invalid input");
     }
-    return new VarExpr(std::string(s.begin(), s.end()));
+    return NEW (VarExpr)(std::string(s.begin(), s.end()));
 }
 
 
@@ -119,50 +120,50 @@ std::string parse_keyword(std::istream &in){
 }
 
 
-Expr* parse_addend(std::istream &in){
+PTR(Expr) parse_addend(std::istream &in){
     skip_whitespace(in);
-    Expr* e = parse_multicand(in);
+    PTR(Expr) e = parse_multicand(in);
     skip_whitespace(in);
 
     int c = in.peek();
     if(c == '*'){
         consume(in, '*');
-        Expr* rhs = parse_addend(in);
-        return new MultExpr(e,rhs);
+        PTR(Expr) rhs = parse_addend(in);
+        return NEW (MultExpr)(e,rhs);
     }
     else
         return e;
 }
 
 
-Expr* parse_if(std::istream &in){
+PTR(Expr) parse_if(std::istream &in){
     skip_whitespace(in);
-    Expr* test_part = parse_expr(in);
+    PTR(Expr) test_part = parse_expr(in);
     skip_whitespace(in);
     int c = in.peek();
     if(parse_keyword(in) != "_then"){
         throw std::runtime_error("then expected");
     }
     skip_whitespace(in);
-    Expr* then_part = parse_expr(in);
+    PTR(Expr) then_part = parse_expr(in);
     skip_whitespace(in);
     c = in.peek();
     if(parse_keyword(in) != "_else"){
         throw std::runtime_error("else expected");
     }
-    Expr* else_part = parse_expr(in);
-    return new IfExpr(test_part, then_part, else_part);
+    PTR(Expr) else_part = parse_expr(in);
+    return NEW (IfExpr)(test_part, then_part, else_part);
 }
 
 
-Expr* parse_multicand(std::istream& in){
+PTR(Expr) parse_multicand(std::istream& in){
     skip_whitespace(in);
     int c = in.peek();
     if((c=='-') || isdigit(c)){
         return parse_num(in);
     } else if (c == '('){
         consume(in, '(');
-        Expr *e = parse_expr(in); //recursive function
+        PTR(Expr) e = parse_expr(in); //recursive function
         skip_whitespace(in);
         c = in.get();
         if (c!= ')'){
@@ -176,9 +177,9 @@ Expr* parse_multicand(std::istream& in){
         if(kw == "_let"){
             return parse_let(in);
         } else if (kw == "_false"){
-            return new BoolExpr(false);
+            return NEW  (BoolExpr)(false);
         } else if (kw == "_true"){
-            return new BoolExpr(true);
+            return NEW (BoolExpr)(true);
         } else if (kw == "_if"){
             return parse_if(in);
         } else {
@@ -191,7 +192,7 @@ Expr* parse_multicand(std::istream& in){
 
 
 
-Expr* parse_let(std::istream& in) {
+PTR(Expr) parse_let(std::istream& in) {
     skip_whitespace(in);
     std::string lhs = parse_var(in)->to_pretty_string();
     skip_whitespace(in);
@@ -202,14 +203,14 @@ Expr* parse_let(std::istream& in) {
         throw std::runtime_error("equal expected");
     }
     skip_whitespace(in);
-    Expr* rhs = parse_expr(in);
+    PTR(Expr) rhs = parse_expr(in);
     skip_whitespace(in);
     if(parse_keyword(in) != "_in"){
         throw std::runtime_error("in expected");
     }
     skip_whitespace(in);
-    Expr* body = parse_expr(in);
-    return new letExpr(lhs, rhs, body);
+    PTR(Expr) body = parse_expr(in);
+    return NEW (letExpr)(lhs, rhs, body);
 }
 
 
@@ -232,7 +233,7 @@ void skip_whitespace(std::istream &in) {
     }
 }
 
-Expr* parse_str(std::string s) {
+PTR(Expr) parse_str(std::string s) {
     std::istringstream in(s);
     return parse_expr(in);
 }
@@ -240,15 +241,15 @@ Expr* parse_str(std::string s) {
 
 TEST_CASE("parse") {
 
-    CHECK( parse_str("(1)")->equals(new NumExpr(1)) );
-    CHECK( parse_str("(((1)))")->equals(new NumExpr(1)) );
+    CHECK( parse_str("(1)")->equals(NEW (NumExpr)(1)) );
+    CHECK( parse_str("(((1)))")->equals(NEW (NumExpr)(1)) );
 
     CHECK_THROWS_WITH( parse_str("(1"), "missing close parenthesis" );
 
-    CHECK( parse_str("1")->equals(new NumExpr(1)) );
-    CHECK( parse_str("10")->equals(new NumExpr(10)) );
-    CHECK( parse_str("-3")->equals(new NumExpr(-3)) );
-    CHECK( parse_str("  \n 5  ")->equals(new NumExpr(5)) );
+    CHECK( parse_str("1")->equals(NEW (NumExpr)(1)) );
+    CHECK( parse_str("10")->equals(NEW (NumExpr)(10)) );
+    CHECK( parse_str("-3")->equals(NEW (NumExpr)(-3)) );
+    CHECK( parse_str("  \n 5  ")->equals(NEW (NumExpr)(5)) );
     CHECK_THROWS_WITH( parse_str("-"), "invalid input" );
 
 
@@ -257,24 +258,24 @@ TEST_CASE("parse") {
     //  parse_num(in)->print(std::cout); std::cout << "\n";
 
     //  CHECK_THROWS_WITH( parse_str(" -   5  "), "invalid input" );
-    CHECK( parse_str("     -      5  ")->equals(new NumExpr(-5)) );
-    CHECK( parse_str("x")->equals(new VarExpr("x")) );
-    CHECK( parse_str("xyz")->equals(new VarExpr("xyz")) );
-    CHECK( parse_str("xYz")->equals(new VarExpr("xYz")) );
+    CHECK( parse_str("     -      5  ")->equals(NEW (NumExpr)(-5)) );
+    CHECK( parse_str("x")->equals(NEW (VarExpr)("x")) );
+    CHECK( parse_str("xyz")->equals(NEW (VarExpr)("xyz")) );
+    CHECK( parse_str("xYz")->equals(NEW (VarExpr)("xYz")) );
     CHECK_THROWS_WITH( parse_str("x_z"), "invalid input" );
 
-    CHECK( parse_str("x + y")->equals(new AddExpr(new VarExpr("x"), new VarExpr("y"))) );
+    CHECK( parse_str("x + y")->equals(NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
 
-    CHECK( parse_str("x")->equals(new VarExpr("x"))) ;
+    CHECK( parse_str("x")->equals(NEW (VarExpr)("x"))) ;
 
-    CHECK( parse_str("x * y")->equals(new MultExpr(new VarExpr("x"), new VarExpr("y"))) );
+    CHECK( parse_str("x * y")->equals(NEW (MultExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
 
     CHECK( parse_str("z * x + y")
-                   ->equals(new AddExpr(new MultExpr(new VarExpr("z"), new VarExpr("x")),
-                                    new VarExpr("y"))) );
+                   ->equals(NEW (AddExpr)(NEW (MultExpr)(NEW (VarExpr)("z"), NEW (VarExpr)("x")),
+                                    NEW (VarExpr)("y"))) );
 
     CHECK( parse_str("z * (x + y)")
-                   ->equals(new MultExpr(new VarExpr("z"),
-                                     new AddExpr(new VarExpr("x"), new VarExpr("y"))) ));
+                   ->equals(NEW (MultExpr)(NEW (VarExpr)("z"),
+                                     NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) ));
 
 };

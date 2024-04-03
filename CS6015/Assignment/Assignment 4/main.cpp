@@ -13,6 +13,7 @@
 #include "Expr.h"
 #include "parse.h"
 #include <iostream>
+#include "pointer.h"
 #include <sstream>
 
 int main(int argc, char **argv) {
