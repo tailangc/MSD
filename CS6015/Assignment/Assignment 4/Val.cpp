@@ -4,14 +4,15 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "pointer.h"
 
 
 NumVal::NumVal(int val){
     this->val = val;
 }
 
-bool NumVal::equals(Val *other){
-    NumVal *other_num = dynamic_cast<NumVal*>(other);
+bool NumVal::equals(PTR(Val) other){
+    PTR(NumVal) other_num = CAST(NumVal)(other);
     if (other_num == NULL){
         return false;
     } else {
@@ -19,20 +20,20 @@ bool NumVal::equals(Val *other){
     }
 }
 
-Expr* NumVal::to_expr(){
-    return new NumExpr(this->val);
+PTR(Expr) NumVal::to_expr(){
+    return NEW (NumExpr)(this->val);
 }
 
-Val *NumVal::add_to(Val *other){
-    NumVal *other_num = dynamic_cast<NumVal*>(other);
+PTR(Val) NumVal::add_to(PTR(Val) other){
+    PTR(NumVal) other_num = CAST(NumVal)(other);
     if (other_num == NULL) throw std::runtime_error("add of non-number");
-    return new NumVal((unsigned) val + (unsigned) other_num->val);
+    return NEW (NumVal)((unsigned) val + (unsigned) other_num->val);
 }
 
-Val *NumVal::mult_to(Val *other){
-    NumVal *other_num = dynamic_cast<NumVal*>(other);
+PTR(Val) NumVal::mult_to(PTR(Val) other){
+    PTR(NumVal) other_num = CAST(NumVal)(other);
     if (other_num == NULL) throw std::runtime_error("multiplication of non-number");
-    return new NumVal((unsigned) val * (unsigned) other_num->val);
+    return NEW ( NumVal)((unsigned) val * (unsigned) other_num->val);
 }
 
 std::string NumVal::to_string() {
@@ -43,7 +44,7 @@ bool NumVal::is_true(){
     throw std::runtime_error("Test expression is not a boolean");
 }
 
-Val* NumVal::call(Val *actual_arg) {
+PTR(Val) NumVal::call(PTR(Val) actual_arg) {
     throw std::runtime_error("no function to call!"); // TODO
 }
 
@@ -51,12 +52,12 @@ BoolVal::BoolVal(bool val){
     this->val = val;
 }
 
-Expr* BoolVal::to_expr(){
-    return new BoolExpr(this->val);
+PTR(Expr) BoolVal::to_expr(){
+    return NEW (BoolExpr)(this->val);
 }
 
-bool BoolVal::equals(Val* other){
-    BoolVal *other_val = dynamic_cast<BoolVal*>(other);
+bool BoolVal::equals(PTR(Val) other){
+    PTR(BoolVal) other_val = CAST (BoolVal)(other);
     if (other == NULL){
         return false;
     } else {
@@ -64,11 +65,11 @@ bool BoolVal::equals(Val* other){
     }
 }
 
-Val* BoolVal::add_to(Val* rhs){
+PTR(Val) BoolVal::add_to(PTR(Val) rhs){
     throw std::runtime_error("addition of non-number");
 }
 
-Val* BoolVal::mult_to(Val* rhs){
+PTR(Val) BoolVal::mult_to(PTR(Val) rhs){
     throw std::runtime_error("multiplication of non-number");
 }
 
@@ -84,7 +85,7 @@ bool BoolVal::is_true(){
     return this->val;
 }
 
-Val* BoolVal::call(Val *actual_arg) {
+PTR(Val) BoolVal::call(PTR(Val) actual_arg) {
     throw std::runtime_error("no function to call!"); // TODO
 }
 
@@ -92,28 +93,28 @@ Val* BoolVal::call(Val *actual_arg) {
 * This is the FUnVal function
  *
 */
-FunVal::FunVal(std::string arg, Expr* expr) {
+FunVal::FunVal(std::string arg, PTR(Expr) expr) {
     formal_arg = arg;
     body = expr;
 }
 
-Expr* FunVal::to_expr() {
-    return new FunExpr(formal_arg, body);
+PTR(Expr) FunVal::to_expr() {
+    return NEW (FunExpr)(formal_arg, body);
 }
 
-bool FunVal::equals(Val* rhs) {
-    FunVal* other = dynamic_cast<FunVal*>(rhs);
+bool FunVal::equals(PTR(Val) rhs) {
+    PTR(FunVal) other = CAST(FunVal)(rhs);
     if (other == nullptr) {
         return false;
     }
     return formal_arg == other->formal_arg && body->equals(other->body);
 }
 
-Val* FunVal::add_to(Val* rhs) {
+PTR(Val) FunVal::add_to(PTR(Val) rhs) {
     throw std::runtime_error("add of non-number");
 }
 
-Val* FunVal::mult_to(Val* rhs) {
+PTR(Val) FunVal::mult_to(PTR(Val) rhs) {
     throw std::runtime_error("multiply with non-number");
 }
 
@@ -125,7 +126,7 @@ bool FunVal::is_true() { // TODO should I interp the function before I check if 
     throw std::runtime_error("a function value can not be evaluated to a boolean");
 }
 
-Val* FunVal::call(Val *actual_arg) {
+PTR(Val) FunVal::call(PTR(Val) actual_arg) {
     return body->subst(formal_arg, actual_arg->to_expr())->interp(); // TODO
 }
 

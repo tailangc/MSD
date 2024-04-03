@@ -2,6 +2,7 @@
 #include "cmdline.h"
 #include <iostream>
 #include <cstdlib> // for exit()
+#include "pointer.h"
 
 
 run_mode_t use_arguments(int argc, char* argv[]) {

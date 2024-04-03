@@ -1,5 +1,6 @@
 #ifndef CMDLINE_H
 #define CMDLINE_H
+#include "pointer.h"
 
 typedef enum {
     do_nothing,
