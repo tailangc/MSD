@@ -26,16 +26,16 @@
 CC=c++
 CFLAGS=-std=c++14
 #SRC=$(wildcard *.cpp)
-#OBJ=$(patsubst %.cpp, %.o, $(SRC))
+OBJ=$(patsubst %.cpp, %.o, $(SRC))
 MSD_OBJ=main.o Expr.o parse.o cmdline.o Val.o
-TEST_OBJ= exec.o Expr.o Val.o
+TEST_OBJ= exec.o Expr.o Val.o test_msdscript.o
 GEN_OBJ=  Expr.o
 
 .PHONY: clean test interp print pretty-print doc open_doc run fuzz_test
 msdscript: $(MSD_OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
-test_msdscript:$(TEST_OBJ)
-	$(CC) $(CFLAGS) $^ -o $@
+test_msdscript:test_msdscript.o exec.o
+	$(CC) $(CFLAGS)  -o test_msdscript $^
 test_generator:$(GEN_OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 %.o: %.h

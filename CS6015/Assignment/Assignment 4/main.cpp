@@ -17,54 +17,48 @@
 #include <sstream>
 
 int main(int argc, char **argv) {
-    try{
-    run_mode_t mode = use_arguments(argc, argv);
+    try {
+        run_mode_t mode = use_arguments(argc, argv);
 
-    switch (mode) {
-        case do_test:
-            if (Catch::Session().run() != 0) {
-                exit(1);
-            };
-            break;
-        case do_interp:
-        {
-            std::string input;
-            std::getline(std::cin, input);
-            try {
-                Expr* expr = parse_str(input);
-                std::cout << expr->interp() << std::endl;
-                delete expr;
-            } catch (const std::exception& e) {
-                std::cerr << "Error: " << e.what() << std::endl;
-                exit(1);
+        switch (mode) {
+            case do_test:
+                if (Catch::Session().run() != 0) {
+                    exit(1);
+                };
+                break;
+            case do_interp: {
+                std::string input;
+                std::getline(std::cin, input);
+                try {
+                    PTR(Expr) expr = parse_str(input);
+                    std::cout << expr->interp() << std::endl;
+                } catch (const std::exception &e) {
+                    std::cerr << "Error: " << e.what() << std::endl;
+                    exit(1);
+                }
             }
+                break;
+            case do_print: {
+                std::string input;
+                std::getline(std::cin, input);
+                PTR(Expr) expr = parse_str(input);
+                expr->print(std::cout);
+                std::cout << std::endl;
+            }
+                break;
+            case do_pretty_print: {
+                std::string input;
+                std::getline(std::cin, input);
+                PTR(Expr) expr = parse_str(input);
+                expr->pretty_print_dr(std::cout);
+                std::cout << std::endl;
+            }
+                break;
+            default:
+                break;
         }
-            break;
-        case do_print:
-        {
-            std::string input;
-            std::getline(std::cin, input);
-            Expr* expr = parse_str(input);
-            expr->print(std::cout);
-            std::cout << std::endl;
-            delete expr;
-        }
-            break;
-        case do_pretty_print:
-        {
-            std::string input;
-            std::getline(std::cin, input);
-            Expr* expr = parse_str(input);
-            expr->pretty_print_dr(std::cout);
-            std::cout << std::endl;
-            delete expr;
-        }
-            break;
-        default:
-            break;
+        return 0;
     }
-    return 0;
-}
 
     catch (std::runtime_error exn) {
         std::cerr << exn.what() << "\n";
