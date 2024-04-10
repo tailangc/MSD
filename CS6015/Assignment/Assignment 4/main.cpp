@@ -15,6 +15,7 @@
 #include <iostream>
 #include "pointer.h"
 #include <sstream>
+#include "env.h"
 
 int main(int argc, char **argv) {
     try {
@@ -31,7 +32,7 @@ int main(int argc, char **argv) {
                 std::getline(std::cin, input);
                 try {
                     PTR(Expr) expr = parse_str(input);
-                    std::cout << expr->interp() << std::endl;
+                    std::cout << expr->interp(Env::empty) << std::endl;
                 } catch (const std::exception &e) {
                     std::cerr << "Error: " << e.what() << std::endl;
                     exit(1);

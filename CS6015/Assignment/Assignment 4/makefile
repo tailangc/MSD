@@ -27,8 +27,8 @@ CC=c++
 CFLAGS=-std=c++14
 #SRC=$(wildcard *.cpp)
 OBJ=$(patsubst %.cpp, %.o, $(SRC))
-MSD_OBJ=main.o Expr.o parse.o cmdline.o Val.o
-TEST_OBJ= exec.o Expr.o Val.o test_msdscript.o
+MSD_OBJ=main.o Expr.o parse.o cmdline.o Val.o env.o
+TEST_OBJ= exec.o Expr.o Val.o test_msdscript.o env.o
 GEN_OBJ=  Expr.o
 
 .PHONY: clean test interp print pretty-print doc open_doc run fuzz_test

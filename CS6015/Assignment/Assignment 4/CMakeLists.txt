@@ -12,4 +12,6 @@ add_executable(Assignment_4 main.cpp
         test_msdscript.cpp
         parse.cpp
         parse.h
-        pointer.h)
+        pointer.h
+        env.cpp
+        env.h)
