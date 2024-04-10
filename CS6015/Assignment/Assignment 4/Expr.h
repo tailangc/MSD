@@ -17,12 +17,13 @@ typedef enum {
 
 
 class Val;
+class Env;
 
 
 CLASS (Expr) {
 public:
     virtual bool equals(PTR(Expr) e) = 0;
-    virtual PTR(Val) interp() = 0;
+    virtual PTR(Val) interp(PTR(Env)env) = 0;
 //    virtual bool has_variable() = 0;
     virtual PTR(Expr) subst(std::string name,PTR(Expr) replacement) = 0;
     virtual void print(std::ostream &ot) = 0;
@@ -52,7 +53,7 @@ public:
     std::string val;
     VarExpr(std::string val);
     bool equals(PTR(Expr) e) override;
-    PTR(Val)  interp () override;
+    PTR(Val)  interp (PTR(Env)env) override;
 //    bool has_variable();
     PTR(Expr) subst(std::string string,PTR(Expr) s)  override;
     void print(std::ostream &ot) override;
@@ -67,7 +68,7 @@ public:
     int val;
     NumExpr(int val);
     bool equals(PTR(Expr) e);
-    PTR(Val) interp ();
+    PTR(Val) interp (PTR(Env)env) override;
 //    bool has_variable();
     PTR(Expr) subst(std::string name,PTR(Expr) replacement) override;
     void print(std::ostream &ot) ;
@@ -89,7 +90,7 @@ public:
     AddExpr(std::string left, PTR(Expr) right);
     AddExpr(PTR(Expr) left, std::string right);
     bool equals(PTR(Expr) expr) override;
-    PTR(Val) interp() override;
+    PTR(Val) interp(PTR(Env)env) override;
     PTR(Expr) subst(std::string s, PTR(Expr) expr) override;
     void print(std::ostream &ot) override;
     void pretty_print_dr(std::ostream &ot);
@@ -110,7 +111,7 @@ public:
     MultExpr(std::string left, PTR(Expr) right);
     MultExpr(PTR(Expr) left, std::string right);
     bool equals(PTR(Expr) e) override;
-    PTR(Val) interp () override;
+    PTR(Val) interp (PTR(Env)env) override;
 //    bool has_variable() ;
     PTR(Expr) subst(std::string name,PTR(Expr) replacement) override;
     void print(std::ostream &ot) override;
@@ -126,13 +127,13 @@ public:
     PTR(Expr) valueExpr;
     PTR(Expr) bodyExpr;
     letExpr(std::string variable, PTR(Expr) valueExpr, PTR(Expr) bodyExpr);
-    bool equals(PTR(Expr) e) ;
-    PTR(Val) interp () ;
+    bool equals(PTR(Expr) e) override;
+    PTR(Val) interp (PTR(Env)env) override;
 //    bool has_variable();
-    PTR(Expr) subst(std::string name,PTR(Expr) replacement)  ;
-    void print(std::ostream &ot) ;
+    PTR(Expr) subst(std::string name,PTR(Expr) replacement)  override;
+    void print(std::ostream &ot) override;
     void pretty_print_dr(std::ostream &ot);
-    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet);
+    void pretty_print(std::ostream& out, precedence_t prec, std::streampos& newLinePrevPos, bool addParenthesesToLet) override;
 };
 
 
@@ -142,7 +143,7 @@ public:
 
     BoolExpr(bool val);
     bool equals(PTR(Expr) other);
-    PTR(Val) interp();
+    PTR(Val) interp(PTR(Env)env);
 //    bool has_variable();
     PTR(Expr) subst(std::string name, PTR(Expr) replacement);
     void print(std::ostream& output);
@@ -159,7 +160,7 @@ public:
     IfExpr(PTR(Expr) test_part, PTR(Expr) then_part, PTR(Expr) else_part);
     IfExpr(bool test, PTR(Expr) then, PTR(Expr) else_);
     bool equals(PTR(Expr) other);
-    PTR(Val) interp();
+    PTR(Val) interp(PTR(Env)env);
 //    bool has_variable();
     PTR(Expr) subst(std::string name, PTR(Expr) replacement);
     void print(std::ostream& output);
@@ -176,7 +177,7 @@ public:
     EqExpr(int left, int right);
     EqExpr(std::string left, int right);
     bool equals(PTR(Expr) other);
-    PTR(Val) interp();
+    PTR(Val) interp(PTR(Env)env);
 //    bool has_variable();
     PTR(Expr) subst(std::string name, PTR(Expr) replacement) override;
     void print(std::ostream &output);
@@ -191,7 +192,7 @@ private:
 public:
     FunExpr(std::string arg, PTR(Expr) expr);
     bool equals(PTR(Expr) rhs) override;
-    PTR(Val) interp() override;
+    PTR(Val) interp(PTR(Env)env) override;
     PTR(Expr) subst(std::string s, PTR(Expr) expr) override;
     void print(std::ostream& out) override;
     void pretty_print_dr(std::ostream& output);
@@ -209,7 +210,7 @@ public:
     CallExpr(std::string funcName, PTR(Expr) arg);
     CallExpr(std::string funcName1, std::string funcName2);
     bool equals(PTR(Expr) rhs) override;
-    PTR(Val) interp() override;
+    PTR(Val) interp(PTR(Env)env) override;
     PTR(Expr) subst(std::string s, PTR(Expr) expr) override;
     void print(std::ostream& out) override;
     void pretty_print_dr(std::ostream& output);
