@@ -1,0 +1,126 @@
+\doxysection{Var Class Reference}
+\hypertarget{class_var}{}\label{class_var}\index{Var@{Var}}
+Inheritance diagram for Var\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_var}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_var_a55074bc8893872aee61cc3123c1931c9}{Var}} (std\+::string val)
+\item 
+bool \mbox{\hyperlink{class_var_a36314fbf7736f619da64b854f4437949}{equals}} (\mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*}e)
+\item 
+int \mbox{\hyperlink{class_var_ac6df55db7c2447d3090dd99ae247ae80}{interp}} ()
+\item 
+bool \mbox{\hyperlink{class_var_a6083356e4955e1edfb76b8432672c93e}{has\+\_\+variable}} ()
+\item 
+\mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_var_a610e7d0199d1707a8a1fc3039c777a33}{subst}} (std\+::string, \mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*}s)
+\item 
+void \mbox{\hyperlink{class_var_a6aa91802a4b58f33e18d17131c0ff8bf}{print}} (std\+::ostream \&ot)
+\item 
+\Hypertarget{class_var_a6bad059137570990012e2259347850f7}\label{class_var_a6bad059137570990012e2259347850f7} 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
+\item 
+void \mbox{\hyperlink{class_var_a7149d2e6ec512143adf346c7d1b226e8}{pretty\+\_\+print}} (std\+::ostream \&ot, precedence\+\_\+t prec, int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_expr}{Expr}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries to\+\_\+string} ()
+\item 
+void {\bfseries pretty\+\_\+print\+\_\+dr} (std\+::ostream \&ot)
+\item 
+std\+::string {\bfseries to\+\_\+pretty\+\_\+string} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_var_a0b09f789fa31afb29bb81635acb4a0dd}\label{class_var_a0b09f789fa31afb29bb81635acb4a0dd} 
+std\+::string {\bfseries val}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_var_a55074bc8893872aee61cc3123c1931c9}\label{class_var_a55074bc8893872aee61cc3123c1931c9} 
+\index{Var@{Var}!Var@{Var}}
+\index{Var@{Var}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{Var()}{Var()}}
+{\footnotesize\ttfamily Var\+::\+Var (\begin{DoxyParamCaption}\item[{std\+::string}]{val }\end{DoxyParamCaption})}
+
+this is the value function 
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_var_a36314fbf7736f619da64b854f4437949}\label{class_var_a36314fbf7736f619da64b854f4437949} 
+\index{Var@{Var}!equals@{equals}}
+\index{equals@{equals}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool Var\+::equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\Hypertarget{class_var_a6083356e4955e1edfb76b8432672c93e}\label{class_var_a6083356e4955e1edfb76b8432672c93e} 
+\index{Var@{Var}!has\_variable@{has\_variable}}
+\index{has\_variable@{has\_variable}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{has\_variable()}{has\_variable()}}
+{\footnotesize\ttfamily bool Var\+::has\+\_\+variable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\Hypertarget{class_var_ac6df55db7c2447d3090dd99ae247ae80}\label{class_var_ac6df55db7c2447d3090dd99ae247ae80} 
+\index{Var@{Var}!interp@{interp}}
+\index{interp@{interp}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{interp()}{interp()}}
+{\footnotesize\ttfamily int Var\+::interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\Hypertarget{class_var_a7149d2e6ec512143adf346c7d1b226e8}\label{class_var_a7149d2e6ec512143adf346c7d1b226e8} 
+\index{Var@{Var}!pretty\_print@{pretty\_print}}
+\index{pretty\_print@{pretty\_print}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{pretty\_print()}{pretty\_print()}}
+{\footnotesize\ttfamily void Var\+::pretty\+\_\+print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot,  }\item[{precedence\+\_\+t}]{prec,  }\item[{int}]{pos\+\_\+ini }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\Hypertarget{class_var_a6aa91802a4b58f33e18d17131c0ff8bf}\label{class_var_a6aa91802a4b58f33e18d17131c0ff8bf} 
+\index{Var@{Var}!print@{print}}
+\index{print@{print}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Var\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+\Hypertarget{class_var_a610e7d0199d1707a8a1fc3039c777a33}\label{class_var_a610e7d0199d1707a8a1fc3039c777a33} 
+\index{Var@{Var}!subst@{subst}}
+\index{subst@{subst}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{subst()}{subst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*} Var\+::subst (\begin{DoxyParamCaption}\item[{std\+::string}]{replace,  }\item[{\mbox{\hyperlink{class_expr}{Expr}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_expr}{Expr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/tailangcao/my\+Github\+Repo/\+CS6015/\+Assignment/\+Assignment 4/Expr.\+h\item 
+/\+Users/tailangcao/my\+Github\+Repo/\+CS6015/\+Assignment/\+Assignment 4/Expr.\+cpp\end{DoxyCompactItemize}
