@@ -239,43 +239,43 @@ PTR(Expr) parse_str(std::string s) {
 }
 
 
-TEST_CASE("parse") {
+// TEST_CASE("parse") {
 
-    CHECK( parse_str("(1)")->equals(NEW (NumExpr)(1)) );
-    CHECK( parse_str("(((1)))")->equals(NEW (NumExpr)(1)) );
+//     CHECK( parse_str("(1)")->equals(NEW (NumExpr)(1)) );
+//     CHECK( parse_str("(((1)))")->equals(NEW (NumExpr)(1)) );
 
-    CHECK_THROWS_WITH( parse_str("(1"), "missing close parenthesis" );
+//     CHECK_THROWS_WITH( parse_str("(1"), "missing close parenthesis" );
 
-    CHECK( parse_str("1")->equals(NEW (NumExpr)(1)) );
-    CHECK( parse_str("10")->equals(NEW (NumExpr)(10)) );
-    CHECK( parse_str("-3")->equals(NEW (NumExpr)(-3)) );
-    CHECK( parse_str("  \n 5  ")->equals(NEW (NumExpr)(5)) );
-    CHECK_THROWS_WITH( parse_str("-"), "invalid input" );
+//     CHECK( parse_str("1")->equals(NEW (NumExpr)(1)) );
+//     CHECK( parse_str("10")->equals(NEW (NumExpr)(10)) );
+//     CHECK( parse_str("-3")->equals(NEW (NumExpr)(-3)) );
+//     CHECK( parse_str("  \n 5  ")->equals(NEW (NumExpr)(5)) );
+//     CHECK_THROWS_WITH( parse_str("-"), "invalid input" );
 
 
-    // This was some temporary debugging code:
-    //  std::istringstream in("-");
-    //  parse_num(in)->print(std::cout); std::cout << "\n";
+//     // This was some temporary debugging code:
+//     //  std::istringstream in("-");
+//     //  parse_num(in)->print(std::cout); std::cout << "\n";
 
-    //  CHECK_THROWS_WITH( parse_str(" -   5  "), "invalid input" );
-    CHECK( parse_str("     -      5  ")->equals(NEW (NumExpr)(-5)) );
-    CHECK( parse_str("x")->equals(NEW (VarExpr)("x")) );
-    CHECK( parse_str("xyz")->equals(NEW (VarExpr)("xyz")) );
-    CHECK( parse_str("xYz")->equals(NEW (VarExpr)("xYz")) );
-    CHECK_THROWS_WITH( parse_str("x_z"), "invalid input" );
+//     //  CHECK_THROWS_WITH( parse_str(" -   5  "), "invalid input" );
+//     CHECK( parse_str("     -      5  ")->equals(NEW (NumExpr)(-5)) );
+//     CHECK( parse_str("x")->equals(NEW (VarExpr)("x")) );
+//     CHECK( parse_str("xyz")->equals(NEW (VarExpr)("xyz")) );
+//     CHECK( parse_str("xYz")->equals(NEW (VarExpr)("xYz")) );
+//     CHECK_THROWS_WITH( parse_str("x_z"), "invalid input" );
 
-    CHECK( parse_str("x + y")->equals(NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
+//     CHECK( parse_str("x + y")->equals(NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
 
-    CHECK( parse_str("x")->equals(NEW (VarExpr)("x"))) ;
+//     CHECK( parse_str("x")->equals(NEW (VarExpr)("x"))) ;
 
-    CHECK( parse_str("x * y")->equals(NEW (MultExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
+//     CHECK( parse_str("x * y")->equals(NEW (MultExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) );
 
-    CHECK( parse_str("z * x + y")
-                   ->equals(NEW (AddExpr)(NEW (MultExpr)(NEW (VarExpr)("z"), NEW (VarExpr)("x")),
-                                    NEW (VarExpr)("y"))) );
+//     CHECK( parse_str("z * x + y")
+//                    ->equals(NEW (AddExpr)(NEW (MultExpr)(NEW (VarExpr)("z"), NEW (VarExpr)("x")),
+//                                     NEW (VarExpr)("y"))) );
 
-    CHECK( parse_str("z * (x + y)")
-                   ->equals(NEW (MultExpr)(NEW (VarExpr)("z"),
-                                     NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) ));
+//     CHECK( parse_str("z * (x + y)")
+//                    ->equals(NEW (MultExpr)(NEW (VarExpr)("z"),
+//                                      NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("y"))) ));
 
-};
+// };

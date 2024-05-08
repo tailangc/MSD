@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70a53049-b928-4067-bdd1-1896ce33129b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW2/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW2/images/background.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW3/HALLELUJAHH.m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW3/MissingEffect.m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW3/RaningMen.m4a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW3/rainingMen.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 6011/Week4/Day16/Multithreaded Web Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 6011/Week4/Day16/Multithreaded Web Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 6014/Assignment/tls/tsl/src/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 6014/Assignment/tls/tsl/src/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 6014/Assignment/tls/tsl/src/functions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/.idea/Assignment3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/Conclusion.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/HashTable.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/HashTable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/MyMalloc.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/MyMalloc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/cache-v2-adb2e5f139dd5786f6b8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-bfec04ca677ba9d62a13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5ed6cc69eacd832d6bd8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-05T17-04-35-0626.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/target-Assignment3-Debug-643b6dccded3fde26412.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ccbe19dcd09cbd5fdb00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/Assignment3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/Assignment3.dir/HashTable.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/Assignment3.dir/MyMalloc.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/Assignment3.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS6015/Assignment/Assignment 4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Assignment 4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/Expr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/Expr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/Part2.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/Part2.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/parse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/parse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS6015/Assignment/Qt_HW1/Part2/parse.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2fx6gVPNG2QyVB0cZ0gLvnWYiDt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.main.cpp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/tailangcao/myGithubRepo/CS6013/Assignment6",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment6" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
+      <option name="sourceFile" value="main.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70a53049-b928-4067-bdd1-1896ce33129b" name="Changes" comment="" />
+      <created>1714730492329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714730492329</updated>
+      <workItem from="1714730493384" duration="12888000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

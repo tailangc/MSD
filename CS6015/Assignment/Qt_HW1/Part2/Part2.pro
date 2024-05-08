@@ -12,9 +12,11 @@ SOURCES += \
 HEADERS += \
     Env.h \
     Expr.h \
+    catch.hpp \
     parse.h \
     Val.h \
-    mainwidget.h
+    mainwidget.h \
+    pointer.h
 
 
 QT += widgets

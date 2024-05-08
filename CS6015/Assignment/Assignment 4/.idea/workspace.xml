@@ -21,20 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79eb6e0-c226-4c32-bad4-6edad8ab433c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/Cryptography/.idea/Cryptography.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Qt_HW2/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Qt_HW2/images/background.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CS 6011/Week4/Day16/Multithreaded Web Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS 6011/Week4/Day16/Multithreaded Web Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS 6014/Assignment/tls/tsl/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/tls/tsl/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CS 6014/Assignment/tls/tsl/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CS 6014/Assignment/tls/tsl/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expr.o" beforeDir="false" afterPath="$PROJECT_DIR$/Expr.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Val.o" beforeDir="false" afterPath="$PROJECT_DIR$/Val.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmdline.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msdscript" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_msdscript2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/run_msdscript2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_msdscript.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test_msdscript.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Qt_HW1/Part2/Expr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Qt_HW1/Part2/Expr.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Qt_HW1/Part2/Part2.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../Qt_HW1/Part2/Part2.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Qt_HW1/Part2/parse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Qt_HW1/Part2/parse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Qt_HW1/Part2/parse.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Qt_HW1/Part2/parse.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +150,7 @@
       <workItem from="1712352818799" duration="365000" />
       <workItem from="1712353207720" duration="7000" />
       <workItem from="1712353224929" duration="3948000" />
+      <workItem from="1713296852840" duration="1814000" />
     </task>
     <servers />
   </component>

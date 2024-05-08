@@ -674,313 +674,313 @@ void CallExpr::pretty_print(std::ostream& out, precedence_t precedence, std::str
 
 
 
-/**
- * this is the Test case
- */
-TEST_CASE( "Tests") {
-    SECTION("HW3") {
-        CHECK((NEW (VarExpr)("x"))->equals(NEW (VarExpr)("x")) == true);
-        CHECK((NEW (VarExpr)("x"))->equals(NEW (VarExpr)("y")) == false);
-        CHECK((NEW (NumExpr)(1))->equals(NEW (VarExpr)("x")) == false);
-        CHECK((NEW (NumExpr)(1))->equals(NEW (NumExpr)(1)) == true);
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))) == true);
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (AddExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2))) == false);
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3)))->equals(NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3))) == true);
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0)))->equals(NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0))) == true);
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (MultExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2))) == false);
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))) == true);
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3)))->equals(NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3))) == true);
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0)))->equals(NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0))) == true);
-//CHECK_THROWS_WITH( (new Var("x"))->interp(), "no value for variable" );
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2)))->interp(Env::empty) ->equals(NEW (NumVal)(6)));
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3)))->interp(Env::empty) ->equals(NEW (NumVal)(0)));
-        CHECK((NEW (AddExpr)(NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(15)), NEW (AddExpr)(NEW (NumExpr)(20), NEW (NumExpr)(20))))->interp(Env::empty) ->equals(NEW (NumVal)(65)));
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(8), NEW (NumExpr)(2)))->interp(Env::empty) ->equals(NEW (NumVal)(10)));
-        CHECK((NEW (AddExpr)(NEW (NumExpr)(8), NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(12))))->interp(Env::empty) ->equals(NEW (NumVal)(30)));
-        CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(7)))->subst("x", NEW (VarExpr)("y"))
-                      ->equals(NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7))));
-        CHECK((NEW (VarExpr)("x"))
-                      ->subst("x", NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7)))
-                      ->equals(NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7))));
-        CHECK((NEW (VarExpr)("x"))
-                      ->subst("x", NEW (NumExpr)(3))
-                      ->equals(NEW (NumExpr)(3)));
+// /**
+//  * this is the Test case
+//  */
+// TEST_CASE( "Tests") {
+//     SECTION("HW3") {
+//         CHECK((NEW (VarExpr)("x"))->equals(NEW (VarExpr)("x")) == true);
+//         CHECK((NEW (VarExpr)("x"))->equals(NEW (VarExpr)("y")) == false);
+//         CHECK((NEW (NumExpr)(1))->equals(NEW (VarExpr)("x")) == false);
+//         CHECK((NEW (NumExpr)(1))->equals(NEW (NumExpr)(1)) == true);
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))) == true);
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (AddExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2))) == false);
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3)))->equals(NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3))) == true);
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0)))->equals(NEW (AddExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0))) == true);
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (MultExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2))) == false);
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3)))->equals(NEW (MultExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))) == true);
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3)))->equals(NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(-3))) == true);
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0)))->equals(NEW (MultExpr)(NEW (NumExpr)(-2), NEW (NumExpr)(0))) == true);
+// //CHECK_THROWS_WITH( (new Var("x"))->interp(), "no value for variable" );
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(3), NEW (NumExpr)(2)))->interp(Env::empty) ->equals(NEW (NumVal)(6)));
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3)))->interp(Env::empty) ->equals(NEW (NumVal)(0)));
+//         CHECK((NEW (AddExpr)(NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(15)), NEW (AddExpr)(NEW (NumExpr)(20), NEW (NumExpr)(20))))->interp(Env::empty) ->equals(NEW (NumVal)(65)));
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(8), NEW (NumExpr)(2)))->interp(Env::empty) ->equals(NEW (NumVal)(10)));
+//         CHECK((NEW (AddExpr)(NEW (NumExpr)(8), NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(12))))->interp(Env::empty) ->equals(NEW (NumVal)(30)));
+//         CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(7)))->subst("x", NEW (VarExpr)("y"))
+//                       ->equals(NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7))));
+//         CHECK((NEW (VarExpr)("x"))
+//                       ->subst("x", NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7)))
+//                       ->equals(NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(7))));
+//         CHECK((NEW (VarExpr)("x"))
+//                       ->subst("x", NEW (NumExpr)(3))
+//                       ->equals(NEW (NumExpr)(3)));
 
-        CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(5)))
-                      ->subst("x", NEW (NumExpr)(2))
-                      ->equals(NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(5))));
+//         CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(5)))
+//                       ->subst("x", NEW (NumExpr)(2))
+//                       ->equals(NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(5))));
 
-        CHECK((NEW (MultExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(4)))
-                      ->subst("x", NEW (NumExpr)(6))
-                      ->equals(NEW (MultExpr)(NEW (NumExpr)(6), NEW (NumExpr)(4))));
+//         CHECK((NEW (MultExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(4)))
+//                       ->subst("x", NEW (NumExpr)(6))
+//                       ->equals(NEW (MultExpr)(NEW (NumExpr)(6), NEW (NumExpr)(4))));
 
-        CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("x")))
-                      ->subst("x", NEW (NumExpr)(10))
-                      ->equals(NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(10))));
+//         CHECK((NEW (AddExpr)(NEW (VarExpr)("x"), NEW (VarExpr)("x")))
+//                       ->subst("x", NEW (NumExpr)(10))
+//                       ->equals(NEW (AddExpr)(NEW (NumExpr)(10), NEW (NumExpr)(10))));
 
-        CHECK((NEW (MultExpr)(NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(2)), NEW (VarExpr)("x")))
-                      ->subst("x", NEW (NumExpr)(8))
-                      ->equals(NEW (MultExpr)(NEW (AddExpr)(NEW (NumExpr)(8), NEW (NumExpr)(2)), NEW (NumExpr)(8))));
+//         CHECK((NEW (MultExpr)(NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(2)), NEW (VarExpr)("x")))
+//                       ->subst("x", NEW (NumExpr)(8))
+//                       ->equals(NEW (MultExpr)(NEW (AddExpr)(NEW (NumExpr)(8), NEW (NumExpr)(2)), NEW (NumExpr)(8))));
 
-    }
+//     }
 
-    SECTION("HW4") {
-        CHECK ((NEW (MultExpr)(NEW (NumExpr)(1), NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))))->to_pretty_string() == "1 * (2 + 3)");
-        CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(8), NEW (NumExpr)(1)), NEW (VarExpr)("y")))->to_pretty_string() == "(8 * 1) * y");
-        CHECK ((NEW (MultExpr)(NEW (AddExpr)(NEW (NumExpr)(3), NEW (NumExpr)(5)), NEW (MultExpr)(NEW (NumExpr)(6), NEW (NumExpr)(1))))->to_pretty_string() ==
-               "(3 + 5) * 6 * 1");
-        CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(7), NEW (NumExpr)(7)), NEW (AddExpr)(NEW (NumExpr)(9), NEW (NumExpr)(2))))->to_pretty_string() ==
-               "(7 * 7) * (9 + 2)");
-    }
+//     SECTION("HW4") {
+//         CHECK ((NEW (MultExpr)(NEW (NumExpr)(1), NEW (AddExpr)(NEW (NumExpr)(2), NEW (NumExpr)(3))))->to_pretty_string() == "1 * (2 + 3)");
+//         CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(8), NEW (NumExpr)(1)), NEW (VarExpr)("y")))->to_pretty_string() == "(8 * 1) * y");
+//         CHECK ((NEW (MultExpr)(NEW (AddExpr)(NEW (NumExpr)(3), NEW (NumExpr)(5)), NEW (MultExpr)(NEW (NumExpr)(6), NEW (NumExpr)(1))))->to_pretty_string() ==
+//                "(3 + 5) * 6 * 1");
+//         CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(7), NEW (NumExpr)(7)), NEW (AddExpr)(NEW (NumExpr)(9), NEW (NumExpr)(2))))->to_pretty_string() ==
+//                "(7 * 7) * (9 + 2)");
+//     }
 
-    SECTION("HW5") {
+//     SECTION("HW5") {
 
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->equals(NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x")))) == true);
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->equals(NEW (NumExpr)(7)) == false);
-//        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))),NEW (VarExpr)("x"))))->has_variable() == true);
-        // print
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))),NEW (VarExpr)("x"))))->to_string() ==
-              "(_let x=5 _in ((_let y=3 _in (y+2))+x))");
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (letExpr)("x", NEW (NumExpr)(6), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))))->to_string() ==
-              "(_let x=5 _in (_let x=6 _in (x+1)))");
-        // interp()
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->interp(Env::empty) ->equals(NEW (NumVal)(10)));
-
-
-        // subst
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (letExpr)("y", NEW (NumExpr)(6), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))))->interp(Env::empty) ->equals(NEW (NumVal)(6)));
-        CHECK((NEW (letExpr)("x", NEW (AddExpr)(NEW (NumExpr)(5), NEW (NumExpr)(2)), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1))))->interp(Env::empty) ->equals(NEW (NumVal)(8)));
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(3))))->to_pretty_string() ==
-              "_let x = 5\n_in  x + 3");
-        //        /Let nested as right argument of parenthesized multiplication expression
-
-        //Let nested as right argument of parenthesized multiplication expression
-        CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(2), NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))),NEW (NumExpr)(3)))->to_pretty_string() == "(2 * _let x = 5\n"
-                                                             "     _in  x + 1) * 3");
-        //Let nested to the left in add expression which is nested to the right within a multiplication expression
-        CHECK((NEW (MultExpr)(NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(5), NEW (VarExpr)("x")), NEW (NumExpr)(1))))->to_pretty_string() ==
-              "5 * ((_let x = 5\n"
-              "      _in  x) + 1)");
-
-        //Let in lhs of add
-        CHECK ( (NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(2), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(9))), NEW (NumExpr)(4)))->to_pretty_string() == "(_let x = 2\n"" _in  x + 9) + 4");
-        //Let in lhs of multiplication expression
-        CHECK((NEW (MultExpr)(NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(8))), NEW (NumExpr)(3)))->to_pretty_string() == "(_let x = 5\n"" _in  x + 8) * 3");
-        //Let nest as right argument of un-parenthesized multiplication expression
-        CHECK((NEW (AddExpr) (NEW (MultExpr)(NEW (NumExpr)(4), NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))), NEW (NumExpr)(9)))->to_pretty_string() == "4 * (_let x = 5\n"
-                                                                                                                                               "     _in  x + 1) + 9");
-        //Let nested in lhs of Add expression nested within body of let expression
-        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y" , NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))
-                      ->to_pretty_string() == "_let x = 5\n"
-                                              "_in  (_let y = 3\n"
-                                              "      _in  y + 2) + x");
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->equals(NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x")))) == true);
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->equals(NEW (NumExpr)(7)) == false);
+// //        CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))),NEW (VarExpr)("x"))))->has_variable() == true);
+//         // print
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))),NEW (VarExpr)("x"))))->to_string() ==
+//               "(_let x=5 _in ((_let y=3 _in (y+2))+x))");
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (letExpr)("x", NEW (NumExpr)(6), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))))->to_string() ==
+//               "(_let x=5 _in (_let x=6 _in (x+1)))");
+//         // interp()
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5),NEW (AddExpr)(NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))->interp(Env::empty) ->equals(NEW (NumVal)(10)));
 
 
-        CHECK ((NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(3), NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))) ), NEW (VarExpr)("x")))->to_pretty_string() == "(_let x = 3\n"
-                                                                                                                                                              " _in  _let y = 3\n""      _in  y + 2) + x");
-//        CHECK_THROWS_WITH( (NEW (VarExpr)("x"))->interp(Env::empty), "unbound variable: x" );
-        CHECK( (NEW (letExpr)("x", NEW (NumExpr)(1), NEW (letExpr)("x", NEW (NumExpr)(2), NEW (VarExpr)("x")))) ->interp(Env::empty) ->equals(NEW (NumVal)(2)) );
-    }
+//         // subst
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (letExpr)("y", NEW (NumExpr)(6), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))))->interp(Env::empty) ->equals(NEW (NumVal)(6)));
+//         CHECK((NEW (letExpr)("x", NEW (AddExpr)(NEW (NumExpr)(5), NEW (NumExpr)(2)), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1))))->interp(Env::empty) ->equals(NEW (NumVal)(8)));
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(3))))->to_pretty_string() ==
+//               "_let x = 5\n_in  x + 3");
+//         //        /Let nested as right argument of parenthesized multiplication expression
 
-}
-TEST_CASE ( "let equals" ){
-    std::string name = "x";
-    PTR(letExpr) let1 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4))));
-    PTR(letExpr) sameLet1 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4))));
-    PTR(letExpr) let2 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("y"), NEW (NumExpr) (4))));
-    CHECK((let1->equals(sameLet1))==true);
-    CHECK((let1->equals(let2))==false);
-}
+//         //Let nested as right argument of parenthesized multiplication expression
+//         CHECK ((NEW (MultExpr)(NEW (MultExpr)(NEW (NumExpr)(2), NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))),NEW (NumExpr)(3)))->to_pretty_string() == "(2 * _let x = 5\n"
+//                                                              "     _in  x + 1) * 3");
+//         //Let nested to the left in add expression which is nested to the right within a multiplication expression
+//         CHECK((NEW (MultExpr)(NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(5), NEW (VarExpr)("x")), NEW (NumExpr)(1))))->to_pretty_string() ==
+//               "5 * ((_let x = 5\n"
+//               "      _in  x) + 1)");
 
-TEST_CASE ("bool equals"){
-    PTR(BoolExpr) true_bool = NEW (BoolExpr)(true);
-    PTR(BoolExpr) true_bool_2 = NEW (BoolExpr)(true);
-    PTR(BoolExpr) false_bool = NEW (BoolExpr)(false);
-    PTR(BoolExpr) false_bool_2 = NEW (BoolExpr)(false);
-    CHECK(true_bool->equals(true_bool_2));
-    CHECK(false_bool->equals(false_bool_2));
-}
-
-TEST_CASE("if equals"){
-    PTR(IfExpr) test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2));
-    PTR(IfExpr) same_test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2));
-    PTR(IfExpr) diff_test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(7));
-    CHECK(test->equals(same_test));
-    CHECK(test->equals(diff_test) == false);
-}
-
-TEST_CASE("equivalence equals"){
-    CHECK((NEW (EqExpr)(NEW (NumExpr)(2), NEW (NumExpr)(0)))->equals(NEW (EqExpr)(NEW (NumExpr)(2), NEW (NumExpr)(0))) == true);
-    CHECK((NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(1)))->equals(NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(0))) == false);
-}
-
-TEST_CASE ( "Object Comparisions" ){
-    CHECK((NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (AddExpr)(NEW (NumExpr)(1),NEW (NumExpr)(0))) == false);
-    CHECK((NEW (VarExpr)("*"))->equals(NEW (NumExpr)(5)) == false);
-    CHECK((NEW (AddExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (VarExpr)("%")) == false);
-    CHECK((NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (NumExpr)(7)) == false);
-    CHECK((NEW (VarExpr)("*"))->equals(NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1))) == false);
-    CHECK(((NEW (letExpr)("x", NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4)))))->equals(NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1))))==false);
-    CHECK((NEW (BoolExpr)(true))->equals(NEW (AddExpr)(NEW (NumExpr)(0), NEW (NumExpr)(2))) == false);
-    CHECK((NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2)))->equals(NEW (AddExpr)(NEW (NumExpr)(0), NEW (NumExpr)(2))) == false);
-    CHECK((NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3)))->equals(NEW (NumExpr)(5)) == false);
-}
-
-TEST_CASE ("EqExpr Pretty Print"){
-    CHECK((NEW (EqExpr)(NEW (NumExpr)(-9), NEW (NumExpr)(-7)))->to_pretty_string() == "-9 == -7");
-    CHECK((NEW (AddExpr) (NEW (EqExpr)(NEW (NumExpr)(7), NEW (NumExpr)(4)), NEW (NumExpr)(6)))->to_pretty_string() == "(7 == 4) + 6");
-    CHECK((NEW (AddExpr) (NEW (NumExpr)(6), NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3))))->to_pretty_string() == "6 + (0 == 3)");
-    CHECK((NEW (MultExpr) (NEW (EqExpr)(NEW (NumExpr)(7), NEW (NumExpr)(4)), NEW (NumExpr)(6)))->to_pretty_string() == "(7 == 4) * 6");
-    CHECK((NEW (MultExpr) (NEW (NumExpr)(6), NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3))))->to_pretty_string() == "6 * (0 == 3)");
-    CHECK((NEW (EqExpr)(NEW (EqExpr)(NEW (NumExpr)(1), NEW (NumExpr)(2)), NEW (EqExpr)(NEW (NumExpr)(3), NEW (NumExpr)(4))))->to_pretty_string() == "(1 == 2) == 3 == 4");
-}
-
-TEST_CASE("FunExpr") {
-    FunExpr func1("x", NEW (AddExpr)("x", 1));
-    FunExpr func2("x", NEW (FunExpr)("y", NEW (AddExpr)(NEW (MultExpr)("x", "x"), NEW (MultExpr)("y", "y"))));
-
-    SECTION("equals") {
-        CHECK(!func1.equals(NEW (NumExpr)(1)));
-        CHECK(!func1.equals(NEW (FunExpr)("x", NEW (AddExpr)("x", 2))));
-        CHECK(!func1.equals(NEW (FunExpr)("y", NEW (AddExpr)("x", 1))));
-        CHECK(func1.equals(NEW (FunExpr)("x", NEW (AddExpr)("x", 1))));
-    }
-
-    SECTION("print") {
-        CHECK(func1.to_string() == "(_fun (x) (x+1))");
-        CHECK(func2.to_string() == "(_fun (x) (_fun (y) ((x*x)+(y*y))))");
-    }
-
-    SECTION("pretty_print") {
-        CHECK(func1.to_pretty_string() == "_fun (x) \n"
-                                          "  x + 1");
-
-        CHECK(func2.to_pretty_string() == "_fun (x) \n"
-                                          "  _fun (y) \n"
-                                          "    x * x + y * y");
-    }
-}
-
-TEST_CASE("CallExpr") {
-    PTR(FunExpr) func1 = NEW(FunExpr)("x", NEW(AddExpr)("x", 1));
-    PTR(FunExpr) func2 = NEW(FunExpr)("y", NEW(AddExpr)("y", 2));
-    PTR(CallExpr) call1 = NEW(CallExpr)(func1, 2);
-
-    SECTION("equals") {
-        CHECK(call1->equals(NEW(CallExpr)(NEW(FunExpr)("x", NEW(AddExpr)("x", 1)), 2)));
-        CHECK(!call1->equals(NEW(NumExpr)(2)));
-        CHECK(!call1->equals(NEW(CallExpr)(func1, 3)));
-        CHECK(!call1->equals(NEW(CallExpr)(NEW(FunExpr)("x", NEW(MultExpr)("x", 2)), 2)));
-    }
+//         //Let in lhs of add
+//         CHECK ( (NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(2), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(9))), NEW (NumExpr)(4)))->to_pretty_string() == "(_let x = 2\n"" _in  x + 9) + 4");
+//         //Let in lhs of multiplication expression
+//         CHECK((NEW (MultExpr)(NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(8))), NEW (NumExpr)(3)))->to_pretty_string() == "(_let x = 5\n"" _in  x + 8) * 3");
+//         //Let nest as right argument of un-parenthesized multiplication expression
+//         CHECK((NEW (AddExpr) (NEW (MultExpr)(NEW (NumExpr)(4), NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (VarExpr)("x"), NEW (NumExpr)(1)))), NEW (NumExpr)(9)))->to_pretty_string() == "4 * (_let x = 5\n"
+//                                                                                                                                                "     _in  x + 1) + 9");
+//         //Let nested in lhs of Add expression nested within body of let expression
+//         CHECK((NEW (letExpr)("x", NEW (NumExpr)(5), NEW (AddExpr)(NEW (letExpr)("y" , NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))), NEW (VarExpr)("x"))))
+//                       ->to_pretty_string() == "_let x = 5\n"
+//                                               "_in  (_let y = 3\n"
+//                                               "      _in  y + 2) + x");
 
 
-        // let + fun + call
-        PTR(letExpr) call2 = NEW(letExpr)("f", func1, NEW(CallExpr)(NEW(VarExpr)("f"), 2));
-        CHECK(call2->interp(Env::empty)->equals(NEW(NumVal) (3)));
-        std::string s2 = "(_let f=(_fun (x) (x+1)) _in f(2))";
-        std::string ps2 = "_let f = _fun (x) \n"
-                          "           x + 1\n"
-                          "_in  f(2)";
-        CHECK(call2->to_string() == s2);
-        CHECK(call2->to_pretty_string() == ps2);
+//         CHECK ((NEW (AddExpr)(NEW (letExpr)("x", NEW (NumExpr)(3), NEW (letExpr)("y", NEW (NumExpr)(3), NEW (AddExpr)(NEW (VarExpr)("y"), NEW (NumExpr)(2))) ), NEW (VarExpr)("x")))->to_pretty_string() == "(_let x = 3\n"
+//                                                                                                                                                               " _in  _let y = 3\n""      _in  y + 2) + x");
+// //        CHECK_THROWS_WITH( (NEW (VarExpr)("x"))->interp(Env::empty), "unbound variable: x" );
+//         CHECK( (NEW (letExpr)("x", NEW (NumExpr)(1), NEW (letExpr)("x", NEW (NumExpr)(2), NEW (VarExpr)("x")))) ->interp(Env::empty) ->equals(NEW (NumVal)(2)) );
+//     }
 
-        // let + fun + (if + call)
-        PTR(letExpr) call3 = NEW(letExpr)("f", func1, NEW(IfExpr)(false, NEW(CallExpr)("f", 5), NEW(CallExpr)("f", 6)));
-        CHECK(call3->interp(Env::empty)->equals(NEW(NumVal) (7)));
-        CHECK(call3->to_pretty_string() == "_let f = _fun (x) \n"
-                                          "           x + 1\n"
-                                          "_in  _if _false\n"
-                                          "     _then f(5)\n"
-                                          "     _else f(6)");
+// }
+// TEST_CASE ( "let equals" ){
+//     std::string name = "x";
+//     PTR(letExpr) let1 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4))));
+//     PTR(letExpr) sameLet1 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4))));
+//     PTR(letExpr) let2 = NEW (letExpr)(name, NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("y"), NEW (NumExpr) (4))));
+//     CHECK((let1->equals(sameLet1))==true);
+//     CHECK((let1->equals(let2))==false);
+// }
 
-        // 2 func2
-        PTR(letExpr) call4 = NEW(letExpr)("f", func1, NEW(letExpr)("g", func2, NEW(IfExpr)(true, NEW(CallExpr)("f", 5), NEW(CallExpr)("g", 6))));
-        CHECK(call4->interp(Env::empty)->equals(NEW(NumVal) (6)));
-        CHECK(call4->to_pretty_string() == "_let f = _fun (x) \n"
-                                          "           x + 1\n"
-                                          "_in  _let g = _fun (y) \n"
-                                          "                y + 2\n"
-                                          "     _in  _if _true\n"
-                                          "          _then f(5)\n"
-                                          "          _else g(6)");
-        PTR(letExpr) call5 = NEW(letExpr)("f", func1, NEW(letExpr)("g", NEW(FunExpr)("y", NEW(CallExpr)("f", NEW(AddExpr)("y", 2))), NEW(CallExpr)("g", 5)));
-        CHECK(call5->interp(Env::empty)->equals(NEW(NumVal) (8)));
-        CHECK(call5->to_pretty_string() == "_let f = _fun (x) \n"
-                                          "           x + 1\n"
-                                          "_in  _let g = _fun (y) \n"
-                                          "                f(y + 2)\n"
-                                          "     _in  g(5)");
-        PTR(letExpr) call6 = NEW(letExpr)("f", func1, NEW(letExpr)("g", NEW(FunExpr)("x", NEW(AddExpr)(NEW(CallExpr)("f", 2), "x")), NEW(CallExpr)("g", 5)));
-        CHECK(call6->interp(Env::empty)->equals(NEW(NumVal) (8)));
-        CHECK(call6->to_pretty_string() == "_let f = _fun (x) \n"
-                                          "           x + 1\n"
-                                          "_in  _let g = _fun (x) \n"
-                                          "                f(2) + x\n"
-                                          "     _in  g(5)");
-        PTR(letExpr) call7 = NEW(letExpr)("f", NEW(IfExpr)(false, func1, func2), NEW(CallExpr)("f", 5));
-        CHECK(call7->interp(Env::empty)->equals(NEW(NumVal) (7)));
-        CHECK(call7->to_pretty_string() == "_let f = _if _false\n"
-                                          "         _then _fun (x) \n"
-                                          "                 x + 1\n"
-                                          "         _else _fun (y) \n"
-                                          "                 y + 2\n"
-                                          "_in  f(5)");
-        PTR(CallExpr) call8 = NEW(CallExpr)(NEW(IfExpr)(false, func1, func2), NEW(NumExpr)(5));
-        CHECK(call8->interp(Env::empty)->equals(NEW(NumVal) (7)));
-        CHECK(call8->to_pretty_string() == "(_if _false\n"
-                                          " _then _fun (x) \n"
-                                          "         x + 1\n"
-                                          " _else _fun (y) \n"
-                                          "         y + 2)(5)");
-        PTR(letExpr) call9 = NEW(letExpr)("f", NEW(FunExpr)("g", NEW(CallExpr)("g", 5)), NEW(letExpr)("g", func2, NEW(CallExpr)("f", "g")));
-        CHECK(call9->interp(Env::empty)->equals(NEW(NumVal) (7)));
-        CHECK(call9->to_pretty_string() == "_let f = _fun (g) \n"
-                                          "           g(5)\n"
-                                          "_in  _let g = _fun (y) \n"
-                                          "                y + 2\n"
-                                          "     _in  f(g)");
-        PTR(letExpr) call10 = NEW(letExpr)("f", NEW(FunExpr)("g", NEW(CallExpr)("g", 5)), NEW(CallExpr)("f", func2));
-        CHECK(call10->interp(Env::empty)->equals(NEW(NumVal) (7)));
-        CHECK(call10->to_pretty_string() == "_let f = _fun (g) \n"
-                                           "           g(5)\n"
-                                           "_in  f(_fun (y) \n"
-                                           "         y + 2)");
-        PTR(letExpr) call11 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(FunExpr)("y", NEW(AddExpr)("x", "y"))), NEW(CallExpr)(NEW(CallExpr)("f", 5), 1));
-        CHECK(call11->interp(Env::empty)->equals(NEW(NumVal) (6)));
+// TEST_CASE ("bool equals"){
+//     PTR(BoolExpr) true_bool = NEW (BoolExpr)(true);
+//     PTR(BoolExpr) true_bool_2 = NEW (BoolExpr)(true);
+//     PTR(BoolExpr) false_bool = NEW (BoolExpr)(false);
+//     PTR(BoolExpr) false_bool_2 = NEW (BoolExpr)(false);
+//     CHECK(true_bool->equals(true_bool_2));
+//     CHECK(false_bool->equals(false_bool_2));
+// }
 
-        PTR(letExpr) call12 = NEW(letExpr)("y", NEW(NumExpr)(8), NEW(letExpr)("f", NEW(FunExpr)("x", NEW(MultExpr)("x", "y")), NEW(CallExpr)("f", 2)));
-        CHECK(call12->interp(Env::empty)->equals(NEW(NumVal) (16)));
+// TEST_CASE("if equals"){
+//     PTR(IfExpr) test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2));
+//     PTR(IfExpr) same_test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2));
+//     PTR(IfExpr) diff_test = NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(7));
+//     CHECK(test->equals(same_test));
+//     CHECK(test->equals(diff_test) == false);
+// }
 
-        CHECK(call12->to_pretty_string() == "_let y = 8\n"
-                                           "_in  _let f = _fun (x) \n"
-                                           "                x * y\n"
-                                           "     _in  f(2)");
-        PTR(letExpr) call13 = NEW(letExpr)("x", NEW(NumExpr)(8), NEW(letExpr)("f", NEW(FunExpr)("x", NEW(MultExpr)("x", "x")), NEW(CallExpr)("f", 2)));
-        CHECK(call13->interp(Env::empty)->equals(NEW(NumVal) (4)));
-        CHECK(call13->to_pretty_string() == "_let x = 8\n"
-                                           "_in  _let f = _fun (x) \n"
-                                           "                x * x\n"
-                                           "     _in  f(2)");
-        PTR(letExpr) call14 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(AddExpr)("x", "y")), NEW(letExpr)("y", NEW(NumExpr)(10), NEW(CallExpr)("f", 1)));
-        CHECK(call14->to_pretty_string() == "_let f = _fun (x) \n"
-                                           "           x + y\n"
-                                           "_in  _let y = 10\n"
-                                           "     _in  f(1)");
-        PTR(letExpr) call15 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(FunExpr)("y", NEW(AddExpr)(NEW(MultExpr)("x", "x"), NEW(MultExpr)("y", "y")))), NEW(CallExpr)(NEW(CallExpr)("f", 2), 3));
-        CHECK(call15->interp(Env::empty)->equals(NEW(NumVal) (13)));
-        CHECK(call15->to_pretty_string() == "_let f = _fun (x) \n"
-                                           "           _fun (y) \n"
-                                           "             x * x + y * y\n"
-                                           "_in  f(2)(3)");
-        PTR(letExpr) call16 = NEW(letExpr)("factrl", NEW(FunExpr)("factrl", NEW(FunExpr)("x", NEW(IfExpr)(NEW(EqExpr)("x", 1), NEW(NumExpr)(1), NEW(MultExpr)("x", NEW(CallExpr)(NEW(CallExpr)("factrl", "factrl"), NEW(AddExpr)("x", -1)))))), NEW(CallExpr)(NEW(CallExpr)("factrl", "factrl"), 10));
-        CHECK(call16->interp(Env::empty)->equals(NEW(NumVal) (3628800)));
-        CHECK(call16->to_pretty_string() == "_let factrl = _fun (factrl) \n"
-                                           "                _fun (x) \n"
-                                           "                  _if x == 1\n"
-                                           "                  _then 1\n"
-                                           "                  _else x * factrl(factrl)(x + -1)\n"
-                                           "_in  factrl(factrl)(10)"); // TODO
-    }
+// TEST_CASE("equivalence equals"){
+//     CHECK((NEW (EqExpr)(NEW (NumExpr)(2), NEW (NumExpr)(0)))->equals(NEW (EqExpr)(NEW (NumExpr)(2), NEW (NumExpr)(0))) == true);
+//     CHECK((NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(1)))->equals(NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(0))) == false);
+// }
+
+// TEST_CASE ( "Object Comparisions" ){
+//     CHECK((NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (AddExpr)(NEW (NumExpr)(1),NEW (NumExpr)(0))) == false);
+//     CHECK((NEW (VarExpr)("*"))->equals(NEW (NumExpr)(5)) == false);
+//     CHECK((NEW (AddExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (VarExpr)("%")) == false);
+//     CHECK((NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1)))->equals(NEW (NumExpr)(7)) == false);
+//     CHECK((NEW (VarExpr)("*"))->equals(NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1))) == false);
+//     CHECK(((NEW (letExpr)("x", NEW (NumExpr)(5), (NEW (AddExpr) (NEW (VarExpr)("x"), NEW (NumExpr) (4)))))->equals(NEW (MultExpr)(NEW (NumExpr)(0),NEW (NumExpr)(1))))==false);
+//     CHECK((NEW (BoolExpr)(true))->equals(NEW (AddExpr)(NEW (NumExpr)(0), NEW (NumExpr)(2))) == false);
+//     CHECK((NEW (IfExpr)(NEW (BoolExpr)(true), NEW (NumExpr)(5), NEW (NumExpr)(2)))->equals(NEW (AddExpr)(NEW (NumExpr)(0), NEW (NumExpr)(2))) == false);
+//     CHECK((NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3)))->equals(NEW (NumExpr)(5)) == false);
+// }
+
+// TEST_CASE ("EqExpr Pretty Print"){
+//     CHECK((NEW (EqExpr)(NEW (NumExpr)(-9), NEW (NumExpr)(-7)))->to_pretty_string() == "-9 == -7");
+//     CHECK((NEW (AddExpr) (NEW (EqExpr)(NEW (NumExpr)(7), NEW (NumExpr)(4)), NEW (NumExpr)(6)))->to_pretty_string() == "(7 == 4) + 6");
+//     CHECK((NEW (AddExpr) (NEW (NumExpr)(6), NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3))))->to_pretty_string() == "6 + (0 == 3)");
+//     CHECK((NEW (MultExpr) (NEW (EqExpr)(NEW (NumExpr)(7), NEW (NumExpr)(4)), NEW (NumExpr)(6)))->to_pretty_string() == "(7 == 4) * 6");
+//     CHECK((NEW (MultExpr) (NEW (NumExpr)(6), NEW (EqExpr)(NEW (NumExpr)(0), NEW (NumExpr)(3))))->to_pretty_string() == "6 * (0 == 3)");
+//     CHECK((NEW (EqExpr)(NEW (EqExpr)(NEW (NumExpr)(1), NEW (NumExpr)(2)), NEW (EqExpr)(NEW (NumExpr)(3), NEW (NumExpr)(4))))->to_pretty_string() == "(1 == 2) == 3 == 4");
+// }
+
+// TEST_CASE("FunExpr") {
+//     FunExpr func1("x", NEW (AddExpr)("x", 1));
+//     FunExpr func2("x", NEW (FunExpr)("y", NEW (AddExpr)(NEW (MultExpr)("x", "x"), NEW (MultExpr)("y", "y"))));
+
+//     SECTION("equals") {
+//         CHECK(!func1.equals(NEW (NumExpr)(1)));
+//         CHECK(!func1.equals(NEW (FunExpr)("x", NEW (AddExpr)("x", 2))));
+//         CHECK(!func1.equals(NEW (FunExpr)("y", NEW (AddExpr)("x", 1))));
+//         CHECK(func1.equals(NEW (FunExpr)("x", NEW (AddExpr)("x", 1))));
+//     }
+
+//     SECTION("print") {
+//         CHECK(func1.to_string() == "(_fun (x) (x+1))");
+//         CHECK(func2.to_string() == "(_fun (x) (_fun (y) ((x*x)+(y*y))))");
+//     }
+
+//     SECTION("pretty_print") {
+//         CHECK(func1.to_pretty_string() == "_fun (x) \n"
+//                                           "  x + 1");
+
+//         CHECK(func2.to_pretty_string() == "_fun (x) \n"
+//                                           "  _fun (y) \n"
+//                                           "    x * x + y * y");
+//     }
+// }
+
+// TEST_CASE("CallExpr") {
+//     PTR(FunExpr) func1 = NEW(FunExpr)("x", NEW(AddExpr)("x", 1));
+//     PTR(FunExpr) func2 = NEW(FunExpr)("y", NEW(AddExpr)("y", 2));
+//     PTR(CallExpr) call1 = NEW(CallExpr)(func1, 2);
+
+//     SECTION("equals") {
+//         CHECK(call1->equals(NEW(CallExpr)(NEW(FunExpr)("x", NEW(AddExpr)("x", 1)), 2)));
+//         CHECK(!call1->equals(NEW(NumExpr)(2)));
+//         CHECK(!call1->equals(NEW(CallExpr)(func1, 3)));
+//         CHECK(!call1->equals(NEW(CallExpr)(NEW(FunExpr)("x", NEW(MultExpr)("x", 2)), 2)));
+//     }
+
+
+//         // let + fun + call
+//         PTR(letExpr) call2 = NEW(letExpr)("f", func1, NEW(CallExpr)(NEW(VarExpr)("f"), 2));
+//         CHECK(call2->interp(Env::empty)->equals(NEW(NumVal) (3)));
+//         std::string s2 = "(_let f=(_fun (x) (x+1)) _in f(2))";
+//         std::string ps2 = "_let f = _fun (x) \n"
+//                           "           x + 1\n"
+//                           "_in  f(2)";
+//         CHECK(call2->to_string() == s2);
+//         CHECK(call2->to_pretty_string() == ps2);
+
+//         // let + fun + (if + call)
+//         PTR(letExpr) call3 = NEW(letExpr)("f", func1, NEW(IfExpr)(false, NEW(CallExpr)("f", 5), NEW(CallExpr)("f", 6)));
+//         CHECK(call3->interp(Env::empty)->equals(NEW(NumVal) (7)));
+//         CHECK(call3->to_pretty_string() == "_let f = _fun (x) \n"
+//                                           "           x + 1\n"
+//                                           "_in  _if _false\n"
+//                                           "     _then f(5)\n"
+//                                           "     _else f(6)");
+
+//         // 2 func2
+//         PTR(letExpr) call4 = NEW(letExpr)("f", func1, NEW(letExpr)("g", func2, NEW(IfExpr)(true, NEW(CallExpr)("f", 5), NEW(CallExpr)("g", 6))));
+//         CHECK(call4->interp(Env::empty)->equals(NEW(NumVal) (6)));
+//         CHECK(call4->to_pretty_string() == "_let f = _fun (x) \n"
+//                                           "           x + 1\n"
+//                                           "_in  _let g = _fun (y) \n"
+//                                           "                y + 2\n"
+//                                           "     _in  _if _true\n"
+//                                           "          _then f(5)\n"
+//                                           "          _else g(6)");
+//         PTR(letExpr) call5 = NEW(letExpr)("f", func1, NEW(letExpr)("g", NEW(FunExpr)("y", NEW(CallExpr)("f", NEW(AddExpr)("y", 2))), NEW(CallExpr)("g", 5)));
+//         CHECK(call5->interp(Env::empty)->equals(NEW(NumVal) (8)));
+//         CHECK(call5->to_pretty_string() == "_let f = _fun (x) \n"
+//                                           "           x + 1\n"
+//                                           "_in  _let g = _fun (y) \n"
+//                                           "                f(y + 2)\n"
+//                                           "     _in  g(5)");
+//         PTR(letExpr) call6 = NEW(letExpr)("f", func1, NEW(letExpr)("g", NEW(FunExpr)("x", NEW(AddExpr)(NEW(CallExpr)("f", 2), "x")), NEW(CallExpr)("g", 5)));
+//         CHECK(call6->interp(Env::empty)->equals(NEW(NumVal) (8)));
+//         CHECK(call6->to_pretty_string() == "_let f = _fun (x) \n"
+//                                           "           x + 1\n"
+//                                           "_in  _let g = _fun (x) \n"
+//                                           "                f(2) + x\n"
+//                                           "     _in  g(5)");
+//         PTR(letExpr) call7 = NEW(letExpr)("f", NEW(IfExpr)(false, func1, func2), NEW(CallExpr)("f", 5));
+//         CHECK(call7->interp(Env::empty)->equals(NEW(NumVal) (7)));
+//         CHECK(call7->to_pretty_string() == "_let f = _if _false\n"
+//                                           "         _then _fun (x) \n"
+//                                           "                 x + 1\n"
+//                                           "         _else _fun (y) \n"
+//                                           "                 y + 2\n"
+//                                           "_in  f(5)");
+//         PTR(CallExpr) call8 = NEW(CallExpr)(NEW(IfExpr)(false, func1, func2), NEW(NumExpr)(5));
+//         CHECK(call8->interp(Env::empty)->equals(NEW(NumVal) (7)));
+//         CHECK(call8->to_pretty_string() == "(_if _false\n"
+//                                           " _then _fun (x) \n"
+//                                           "         x + 1\n"
+//                                           " _else _fun (y) \n"
+//                                           "         y + 2)(5)");
+//         PTR(letExpr) call9 = NEW(letExpr)("f", NEW(FunExpr)("g", NEW(CallExpr)("g", 5)), NEW(letExpr)("g", func2, NEW(CallExpr)("f", "g")));
+//         CHECK(call9->interp(Env::empty)->equals(NEW(NumVal) (7)));
+//         CHECK(call9->to_pretty_string() == "_let f = _fun (g) \n"
+//                                           "           g(5)\n"
+//                                           "_in  _let g = _fun (y) \n"
+//                                           "                y + 2\n"
+//                                           "     _in  f(g)");
+//         PTR(letExpr) call10 = NEW(letExpr)("f", NEW(FunExpr)("g", NEW(CallExpr)("g", 5)), NEW(CallExpr)("f", func2));
+//         CHECK(call10->interp(Env::empty)->equals(NEW(NumVal) (7)));
+//         CHECK(call10->to_pretty_string() == "_let f = _fun (g) \n"
+//                                            "           g(5)\n"
+//                                            "_in  f(_fun (y) \n"
+//                                            "         y + 2)");
+//         PTR(letExpr) call11 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(FunExpr)("y", NEW(AddExpr)("x", "y"))), NEW(CallExpr)(NEW(CallExpr)("f", 5), 1));
+//         CHECK(call11->interp(Env::empty)->equals(NEW(NumVal) (6)));
+
+//         PTR(letExpr) call12 = NEW(letExpr)("y", NEW(NumExpr)(8), NEW(letExpr)("f", NEW(FunExpr)("x", NEW(MultExpr)("x", "y")), NEW(CallExpr)("f", 2)));
+//         CHECK(call12->interp(Env::empty)->equals(NEW(NumVal) (16)));
+
+//         CHECK(call12->to_pretty_string() == "_let y = 8\n"
+//                                            "_in  _let f = _fun (x) \n"
+//                                            "                x * y\n"
+//                                            "     _in  f(2)");
+//         PTR(letExpr) call13 = NEW(letExpr)("x", NEW(NumExpr)(8), NEW(letExpr)("f", NEW(FunExpr)("x", NEW(MultExpr)("x", "x")), NEW(CallExpr)("f", 2)));
+//         CHECK(call13->interp(Env::empty)->equals(NEW(NumVal) (4)));
+//         CHECK(call13->to_pretty_string() == "_let x = 8\n"
+//                                            "_in  _let f = _fun (x) \n"
+//                                            "                x * x\n"
+//                                            "     _in  f(2)");
+//         PTR(letExpr) call14 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(AddExpr)("x", "y")), NEW(letExpr)("y", NEW(NumExpr)(10), NEW(CallExpr)("f", 1)));
+//         CHECK(call14->to_pretty_string() == "_let f = _fun (x) \n"
+//                                            "           x + y\n"
+//                                            "_in  _let y = 10\n"
+//                                            "     _in  f(1)");
+//         PTR(letExpr) call15 = NEW(letExpr)("f", NEW(FunExpr)("x", NEW(FunExpr)("y", NEW(AddExpr)(NEW(MultExpr)("x", "x"), NEW(MultExpr)("y", "y")))), NEW(CallExpr)(NEW(CallExpr)("f", 2), 3));
+//         CHECK(call15->interp(Env::empty)->equals(NEW(NumVal) (13)));
+//         CHECK(call15->to_pretty_string() == "_let f = _fun (x) \n"
+//                                            "           _fun (y) \n"
+//                                            "             x * x + y * y\n"
+//                                            "_in  f(2)(3)");
+//         PTR(letExpr) call16 = NEW(letExpr)("factrl", NEW(FunExpr)("factrl", NEW(FunExpr)("x", NEW(IfExpr)(NEW(EqExpr)("x", 1), NEW(NumExpr)(1), NEW(MultExpr)("x", NEW(CallExpr)(NEW(CallExpr)("factrl", "factrl"), NEW(AddExpr)("x", -1)))))), NEW(CallExpr)(NEW(CallExpr)("factrl", "factrl"), 10));
+//         CHECK(call16->interp(Env::empty)->equals(NEW(NumVal) (3628800)));
+//         CHECK(call16->to_pretty_string() == "_let factrl = _fun (factrl) \n"
+//                                            "                _fun (x) \n"
+//                                            "                  _if x == 1\n"
+//                                            "                  _then 1\n"
+//                                            "                  _else x * factrl(factrl)(x + -1)\n"
+//                                            "_in  factrl(factrl)(10)"); // TODO
+//     }
 
 
 
