@@ -1,0 +1,21 @@
+structureName, dimension, k, n, time
+quadTree,2,2,100,7607
+quadTree,2,4,100,16595
+quadTree,2,8,100,26609
+quadTree,2,10,100,36986
+quadTree,2,16,100,48182
+quadTree,2,2,1000,75977
+quadTree,2,4,1000,158759
+quadTree,2,8,1000,247987
+quadTree,2,10,1000,339727
+quadTree,2,16,1000,436635
+quadTree,2,2,10000,725314
+quadTree,2,4,10000,1477508
+quadTree,2,8,10000,2266795
+quadTree,2,10,10000,3066148
+quadTree,2,16,10000,3900801
+quadTree,2,2,100000,7329104
+quadTree,2,4,100000,15087270
+quadTree,2,8,100000,22728965
+quadTree,2,10,100000,30068320
+quadTree,2,16,100000,37694075
