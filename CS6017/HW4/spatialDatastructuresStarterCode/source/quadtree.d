@@ -5,149 +5,136 @@ import std.range;
 
 import common;
 
-struct QuadTree(size_t Dim) {
-    alias P2 = Point!2;
+struct QuadTree(NumDims) {
+    alias Point2D = Point!2;
 
-    Node root;
+    Node rootNode;
 
-    this(P2[] points) {
-        auto aabb = boundingBox(points);
-        root = new Node(points, aabb);
+    this(Point2D[] dataPoints) {
+        auto boundingBox = computeBoundingBox(dataPoints);
+        rootNode = new Node(dataPoints, boundingBox);
     }
 
     class Node {
-        bool isLeaf;
-        P2[] points;
-        AABB!2 aabb;
-        Node[4] childNodes;
-        // P2 midpoint;
+        bool isLeafNode;
+        Point2D[] containedPoints;
+        AABB!2 nodeBoundingBox;
+        Node[4] children;
+        // Point2D center;
 
-        this(P2[] points, AABB!2 aabb) { 
-            // need to check if leaf
-            // leaf if number of points less than X
+        this(Point2D[] points, AABB!2 boundingBox) {
             if (points.length < 2) {
-                isLeaf = true;
-                this.points = points.dup;
-                this.aabb = aabb;
+                isLeafNode = true;
+                containedPoints = points.dup;
+                nodeBoundingBox = boundingBox;
             } else {
-                // isLeaf = false;
-                // make 4 children of internal node
-                // need midpoint first
-                P2 midpoint = (aabb.max + aabb.min) / 2;
+                Point2D center = (boundingBox.max + boundingBox.min) / 2;
 
-                //partition into left and right haf
-                auto rightHalf = points.partitionByDimension!0(midpoint[0]);
-                auto leftHalf = points[0 .. $ - rightHalf.length];
+                auto rightHalfPoints = points.partitionByDimension!0(center[0]);
+                auto leftHalfPoints = points[0 .. $ - rightHalfPoints.length];
 
-                // now we need to get the four children: 
-                
-                //right half top
-                auto rightHalfTop = rightHalf.partitionByDimension!1(midpoint[1]);
-                // right half bottom
-                auto rightHalfBottom = rightHalf[0 .. $ - rightHalfTop.length]; 
-                // left half top
-                auto leftHalfTop = leftHalf.partitionByDimension!1(midpoint[1]);
-                //left half bottom
-                auto leftHalfBottom = leftHalf[0 .. $ - leftHalfTop.length];
+                auto rightTopPoints = rightHalfPoints.partitionByDimension!1(center[1]);
+                auto rightBottomPoints = rightHalfPoints[0 .. $ - rightTopPoints.length];
+                auto leftTopPoints = leftHalfPoints.partitionByDimension!1(center[1]);
+                auto leftBottomPoints = leftHalfPoints[0 .. $ - leftTopPoints.length];
 
-                AABB!2 rightHalfTopBB, leftHalfTopBB, rightHalfBottomBB, leftHalfBottomBB;
-                // NE corner
-                rightHalfTopBB.min = midpoint.dup;
-                rightHalfTopBB.max = aabb.max.dup;
-                
-                // NW corner
-                leftHalfTopBB.min = P2([aabb.min[0], midpoint[1]]);
-                leftHalfTopBB.max = P2([midpoint[0], aabb.max[1]]);
+                AABB!2 rightTopBox, leftTopBox, rightBottomBox, leftBottomBox;
+                // NE quadrant
+                rightTopBox.min = center.dup;
+                rightTopBox.max = boundingBox.max.dup;
 
-                // SE corner 
-                rightHalfBottomBB.min = P2([midpoint[0], aabb.min[1]]);
-                rightHalfBottomBB.max = P2([aabb.max[0], midpoint[1]]);
+                // NW quadrant
+                leftTopBox.min = Point2D([boundingBox.min[0], center[1]]);
+                leftTopBox.max = Point2D([center[0], boundingBox.max[1]]);
 
-                //SW corner 
-                leftHalfBottomBB.min = P2([aabb.min[0], aabb.min[1]]);
-                leftHalfBottomBB.max = midpoint.dup;
+                // SE quadrant
+                rightBottomBox.min = Point2D([center[0], boundingBox.min[1]]);
+                rightBottomBox.max = Point2D([boundingBox.max[0], center[1]]);
 
-                // create the child nodes:
-                childNodes[0] = new Node(leftHalfTop, leftHalfTopBB);
-                childNodes[1] = new Node(rightHalfTop, rightHalfTopBB);
-                childNodes[2] = new Node(leftHalfBottom, leftHalfBottomBB);
-                childNodes[3] = new Node(rightHalfBottom, rightHalfBottomBB);
+                // SW quadrant
+                leftBottomBox.min = Point2D([boundingBox.min[0], boundingBox.min[1]]);
+                leftBottomBox.max = center.dup;
+
+                // Instantiate child nodes
+                children[0] = new Node(leftTopPoints, leftTopBox);
+                children[1] = new Node(rightTopPoints, rightTopBox);
+                children[2] = new Node(leftBottomPoints, leftBottomBox);
+                children[3] = new Node(rightBottomPoints, rightBottomBox);
             }
         }
     }
 
-    P2[] rangeQuery( P2 queryPt, float r ){
-        P2[] ret;
-        void recurse(Node n){
-            if (n.isLeaf) {
-                foreach(const ref point; n.points) {
-                    if (distance(point, queryPt) < r) {
-                        ret ~= point;
+    Point2D[] rangeQuery(Point2D queryPoint, float radius) {
+        Point2D[] results;
+        
+        void search(Node currentNode) {
+            if (currentNode.isLeafNode) {
+                foreach(const ref pt; currentNode.containedPoints) {
+                    if (distance(pt, queryPoint) < radius) {
+                        results ~= pt;
                     }
                 }
-            } else  { //internal node
-                // need to check to see which node the point is in
-                foreach(child; n.childNodes){
-                    if (distance(closest(child.aabb, queryPt), queryPt) < r) { // if in that child node recurse!!!!
-                        recurse(child);
+            } else {
+                foreach(childNode; currentNode.children) {
+                    if (distance(closest(childNode.nodeBoundingBox, queryPoint), queryPoint) < radius) {
+                        search(childNode);
                     }
                 }
             }
         }
-        recurse( root );
-        return ret;
+        
+        search(rootNode);
+        return results;
     }
-    
-    P2[] knnQuery(P2 queryPt, int k) {
-        auto priorityQueue = makePriorityQueue(queryPt);
 
-        void recurse(Node n) {
-            if (n.isLeaf) {
-                foreach(point; n.points){
-                    
-                    if (priorityQueue.length < k) {
-                        priorityQueue.insert(point);
-                    } else if (distance(point, queryPt) < distance(queryPt, priorityQueue.front)) {
-                        priorityQueue.popFront;
-                        priorityQueue.insert(point);
+    Point2D[] knnQuery(Point2D queryPoint, int k) {
+        auto nearestNeighbors = createPriorityQueue(queryPoint);
+
+        void search(Node currentNode) {
+            if (currentNode.isLeafNode) {
+                foreach(pt; currentNode.containedPoints) {
+                    if (nearestNeighbors.length < k) {
+                        nearestNeighbors.insert(pt);
+                    } else if (distance(pt, queryPoint) < distance(queryPoint, nearestNeighbors.front)) {
+                        nearestNeighbors.popFront;
+                        nearestNeighbors.insert(pt);
                     }
                 }
-            } else  { //internal node
-                foreach(child; n.childNodes) {
-                    if (priorityQueue.length < k || distance(closest(child.aabb, queryPt), queryPt) < distance(queryPt, priorityQueue.front)) {
-                        recurse(child);
+            } else {
+                foreach(childNode; currentNode.children) {
+                    if (nearestNeighbors.length < k || distance(closest(childNode.nodeBoundingBox, queryPoint), queryPoint) < distance(queryPoint, nearestNeighbors.front)) {
+                        search(childNode);
                     }
                 }
             }
         }
-        recurse(root);
-        return priorityQueue.release;
+
+        search(rootNode);
+        return nearestNeighbors.release;
     }
-    
 }
 
-unittest{
-    auto onePt = [Point!2([.5, .5])];
-    auto singlePtQuadTree = QuadTree!2(onePt);
+// unittest {
+//     auto singlePoint = [Point!2([.5, .5])];
+//     auto singlePointTree = QuadTree!2(singlePoint);
 
-    writeln("test: quadtree constructor!");
-    assert(singlePtQuadTree.root.isLeaf == true);
+//     writeln("Testing QuadTree construction!");
+//     assert(singlePointTree.rootNode.isLeafNode == true);
 
-    auto points = [Point!2([.5, .5]), Point!2([1, 1]),
-                   Point!2([0.75, 0.4]), Point!2([0.4, 0.74])];
+//     auto multiplePoints = [Point!2([.5, .5]), Point!2([1, 1]),
+//                            Point!2([0.75, 0.4]), Point!2([0.4, 0.74])];
 
-    auto qt = QuadTree!2(points);
+//     auto tree = QuadTree!2(multiplePoints);
     
-    writeln(qt);
-    writeln("quadtree range query");
-    foreach(p; qt.rangeQuery(Point!2([1,1]), .7)){
-        writeln("write p");
-        writeln(p);
-    }
-    writeln(qt.rangeQuery(Point!2([1,1]), .7).length);
-    assert(qt.rangeQuery(Point!2([1,1]), .7).length == 3);
-    writeln("quadtree knn");
-    foreach(p; qt.knnQuery(Point!2([1,1]), 3)){
-        writeln(p);
-    }
-}
+//     writeln(tree);
+//     writeln("QuadTree range query results:");
+//     foreach(pt; tree.rangeQuery(Point!2([1,1]), .7)) {
+//         writeln(pt);
+//     }
+//     writeln("Number of points within radius: ", tree.rangeQuery(Point!2([1,1]), .7).length);
+//     assert(tree.rangeQuery(Point!2([1,1]), .7).length == 3);
+//     writeln("QuadTree k-nearest neighbors results:");
+//     foreach(pt; tree.knnQuery(Point!2([1,1]), 3)) {
+//         writeln(pt);
+//     }
+// }

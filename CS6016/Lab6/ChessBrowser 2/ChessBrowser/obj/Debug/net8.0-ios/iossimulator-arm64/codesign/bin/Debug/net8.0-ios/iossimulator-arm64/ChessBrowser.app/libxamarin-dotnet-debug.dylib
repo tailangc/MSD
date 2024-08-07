@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - /Users/tailangcao/myGithubRepo/CS6016/Lab6/ChessBrowser 2/ChessBrowser/bin/Debug/net8.0-ios/iossimulator-arm64/ChessBrowser.app/libxamarin-dotnet-debug.dylib
