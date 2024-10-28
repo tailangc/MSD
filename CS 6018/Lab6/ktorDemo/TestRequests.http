@@ -1,0 +1,47 @@
+###
+
+POST http://127.0.0.1:8080/posts/create
+Content-Type: application/json
+
+{
+  "text" : "First post"
+}
+
+###
+
+POST http://127.0.0.1:8080/posts/create
+Content-Type: application/json
+
+{
+  "text" : "Second post"
+}
+
+###
+
+POST http://127.0.0.1:8080/posts/create
+Content-Type: application/json
+
+{
+  "text" : "Third post"
+}
+
+####
+
+### Get all posts
+GET http://127.0.0.1:8080/posts
+
+####
+
+####
+
+### Get post by id
+GET http://127.0.0.1:8080/posts/byid?id=2
+
+####
+
+#Delete post by id
+DELETE http://127.0.0.1:8080/posts/delete?id=2
+
+####
+
+GET http://127.0.0.1:8080/posts
